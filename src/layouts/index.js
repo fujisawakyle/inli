@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-
-import Header from '../components/Header'
-import './index.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import data from '../data/data.json';
+import Header from '../components/Header';
+import './index.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -11,25 +11,34 @@ const TemplateWrapper = ({ children }) => (
       title="Gatsby Default Starter"
       meta={[
         { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'keywords', content: 'sample, something' }
       ]}
     />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+    <Header navLinks={data.navLinkTitles} />
+    {console.log(data.navLinkTitles)}
+    <div>{children()}</div>
   </div>
-)
+);
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
+  children: PropTypes.func
+};
 
-export default TemplateWrapper
+// export const query = graphql`
+//   query TemplateWrapper {
+//     allDataJson {
+//       edges {
+//         node {
+//           navLinkTitles {
+//             first
+//             second
+//             third
+//             fourth
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
+
+export default TemplateWrapper;
