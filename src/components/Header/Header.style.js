@@ -8,12 +8,12 @@ export const Container = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
-export const Logo = styled.div`
-  width: 5%;
-  max-width: 200px;
+export const Logo = styled.img`
+  width: 100px;
+  vertical-align: middle;
 `;
 
 export const NavLink = styled.li`
@@ -23,5 +23,5 @@ export const NavLink = styled.li`
 `;
 
 export const NavLinkYellow = styled(NavLink)`
-  color: yellow;
+  color: #fec400;
 `;
