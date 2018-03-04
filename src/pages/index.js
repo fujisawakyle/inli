@@ -2,10 +2,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import ModalTrigger from '../components/Modal/ModalTrigger';
 import data from '../data/data.json';
+import HeroVideo from '../components/HeroVideo/HeroVideo';
 
 export default () => {
   return (
     <div>
+      <HeroVideo videoURL={data.videoURL} />
+
       <ModalTrigger
         buttonText={data.buttonText.first}
         text={data.overlayText.first}
