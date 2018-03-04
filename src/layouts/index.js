@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import data from '../data/data.json';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import './index.css';
 
 const TemplateWrapper = ({ children }) => (

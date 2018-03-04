@@ -1,3 +1,16 @@
 {
-  "navLinkTitles": ["exposed", "learn the truth", "take action", "follow along"]
+  "navLinkTitles": [
+    "exposed",
+    "learn the truth",
+    "take action",
+    "follow along"
+  ],
+  "overlayText": {
+    "first": "First text",
+    "second": "Second text"
+  },
+  "buttonText": {
+    "first": "button 1",
+    "second": "button 2"
+  }
 }

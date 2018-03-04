@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import { Container, Logo, NavLink, NavLinkYellow } from './style';
+import { Container, Logo, NavLink, NavLinkYellow } from './Header.style';
 import _ from 'lodash';
 
 const Header = ({ navLinks }) => (

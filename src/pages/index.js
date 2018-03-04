@@ -1,8 +1,22 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import ModalTrigger from '../components/Modal/ModalTrigger';
+import Overlay from '../components/Overlay/Overlay';
+import data from '../data/data.json';
 
-export default ({ data }) => {
-  return <div />;
+export default () => {
+  return (
+    <div>
+      <ModalTrigger
+        buttonText={data.buttonText.first}
+        text={data.overlayText.first}
+      />
+      <ModalTrigger
+        buttonText={data.buttonText.second}
+        text={data.overlayText.second}
+      />
+    </div>
+  );
 };
 
 // export const IndexPage = ({ data }) => (
