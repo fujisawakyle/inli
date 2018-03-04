@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import ModalTrigger from '../components/Modal/ModalTrigger';
-import Overlay from '../components/Overlay/Overlay';
 import data from '../data/data.json';
 
 export default () => {
