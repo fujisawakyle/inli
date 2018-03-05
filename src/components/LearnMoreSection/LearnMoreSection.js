@@ -17,13 +17,6 @@ export default class LearnMoreSection extends Component {
             text={this.props.text}
           />
         </div>
-        <br />
-        <div />
-        <br />
-        <div />
-        <br />
-        <div />
-        <br />
       </Container>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ModalContent from '../Modal/ModalContent';
 import { Modal, ModalManager } from 'react-dynamic-modal';
-import { Button } from './ModalTrigger.style';
+import { Button, Centered } from './ModalTrigger.style';
 
 export default class Popup extends Component {
   openModal = () => {
@@ -11,13 +11,11 @@ export default class Popup extends Component {
   };
   render() {
     return (
-      <div>
-        <div>
-          <Button type="button" onClick={this.openModal}>
-            {this.props.buttonText}
-          </Button>{' '}
-        </div>
-      </div>
+      <Centered>
+        <Button type="button" onClick={this.openModal}>
+          {this.props.buttonText}
+        </Button>{' '}
+      </Centered>
     );
   }
 }

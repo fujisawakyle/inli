@@ -9,3 +9,9 @@ export const Button = styled.button`
   padding: 0.5em 1.5em;
   border: none;
 `;
+
+export const Centered = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
