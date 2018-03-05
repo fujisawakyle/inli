@@ -4,6 +4,7 @@ import ModalTrigger from '../components/Modal/ModalTrigger';
 import data from '../data/data.json';
 import HeroVideo from '../components/HeroVideo/HeroVideo';
 import LearnMoreSection from '../components/LearnMoreSection/LearnMoreSection';
+import ActionsBar from '../components/ActionsBar/ActionsBar';
 
 export default () => {
   return (
@@ -17,6 +18,7 @@ export default () => {
         third={data.learnMoreFirst.third}
         background="https://the-humane-league-homepage.s3.amazonaws.com/THL17-comms-share-image.jpg"
       />
+      <ActionsBar />
       <LearnMoreSection
         buttonText={data.buttonText.second}
         text={data.overlayText.second}

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: url(${props => props.background});
   background-position: center center;
-  filter: drop-shadow(8px 8px 10px gray);
   display: flex;
   justify-content: center;
   align-items: center;
