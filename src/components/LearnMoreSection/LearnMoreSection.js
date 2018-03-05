@@ -9,15 +9,13 @@ export default class LearnMoreSection extends Component {
     return (
       <Container background={this.props.background}>
         <div>
-          <SmallText>
-            {this.props.first} <br />
-            <br /> <LargeText>{this.props.second}</LargeText>{' '}
-            <SmallText>{this.props.third}</SmallText>{' '}
-            <ModalTrigger
-              buttonText={this.props.buttonText}
-              text={this.props.text}
-            />
-          </SmallText>
+          <SmallText>{this.props.first}</SmallText>
+          <LargeText>{this.props.second}</LargeText>
+          <SmallText>{this.props.third}</SmallText>
+          <ModalTrigger
+            buttonText={this.props.buttonText}
+            text={this.props.text}
+          />
         </div>
         <br />
         <div />
