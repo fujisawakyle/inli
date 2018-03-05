@@ -13,9 +13,9 @@ export const RespVideo = styled.div`
   object,
   embed {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -2px;
+    left: -2px;
+    width: 101%;
+    height: 101%;
   }
 `;
