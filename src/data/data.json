@@ -10,8 +10,18 @@
     "second": "Second text"
   },
   "buttonText": {
-    "first": "button 1",
-    "second": "button 2"
+    "first": "learn more 1",
+    "second": "learn more 2"
   },
-  "videoURL": "https://www.youtube.com/embed/kyyM8iAjglA"
+  "videoURL": "https://www.youtube.com/embed/kyyM8iAjglA",
+  "learnMoreFirst": {
+    "first": "McDonald's has chosen to ",
+    "second": "mislead consumers",
+    "third": "with hollow promises that lack meaningful change"
+  },
+  "learnMoreSecond": {
+    "first": "short intro to another button",
+    "second": "call out",
+    "third": "why this is important"
+  }
 }

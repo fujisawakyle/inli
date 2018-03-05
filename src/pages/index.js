@@ -3,19 +3,27 @@ import Link from 'gatsby-link';
 import ModalTrigger from '../components/Modal/ModalTrigger';
 import data from '../data/data.json';
 import HeroVideo from '../components/HeroVideo/HeroVideo';
+import LearnMoreSection from '../components/LearnMoreSection/LearnMoreSection';
 
 export default () => {
   return (
     <div>
       <HeroVideo videoURL={data.videoURL} />
-
-      <ModalTrigger
+      <LearnMoreSection
         buttonText={data.buttonText.first}
         text={data.overlayText.first}
+        first={data.learnMoreFirst.first}
+        second={data.learnMoreFirst.second}
+        third={data.learnMoreFirst.third}
+        background="https://the-humane-league-homepage.s3.amazonaws.com/THL17-comms-share-image.jpg"
       />
-      <ModalTrigger
+      <LearnMoreSection
         buttonText={data.buttonText.second}
         text={data.overlayText.second}
+        background="https://the-humane-league-share.s3.amazonaws.com/tac-share.png"
+        first={data.learnMoreSecond.first}
+        second={data.learnMoreSecond.second}
+        third={data.learnMoreSecond.third}
       />
     </div>
   );
