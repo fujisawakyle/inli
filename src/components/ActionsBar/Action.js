@@ -18,24 +18,10 @@ export default class Action extends Component {
     facebookValue: data.actionText.action4.post,
     copied: false
   };
-  handleTwitterChange = e => {
-    this.setState({ twitterValue: e.target.value });
-  };
 
-  handleEmailRecipientChange = e => {
-    this.setState({ emailRecipientValue: e.target.value });
-  };
-
-  handleEmailSubjectChange = e => {
-    this.setState({ emailAddressValue: e.target.value });
-  };
-
-  handleEmailBodyChange = e => {
-    this.setState({ emailBodyValue: e.target.value });
-  };
-
-  handleFacebookChange = e => {
-    this.setState({ facebookValue: e.target.value, copied: false });
+  handleChange = (e, type) => {
+    console.log('e', e);
+    this.setState({ [type]: e.target.value });
   };
 
   onCopy = () => {
@@ -48,15 +34,17 @@ export default class Action extends Component {
         break;
       case '2':
         window.open(
-          `https://twitter.com/intent/tweet?text=${this.state.twitterValue}`
+          `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+            this.state.twitterValue
+          )}`
         );
         break;
       case '3':
         window.location.href = `mailto:${
           this.state.emailRecipientValue
-        }?subject=${this.state.emailSubjectValue}&body=${
+        }?subject=${this.state.emailSubjectValue}&body=${encodeURIComponent(
           this.state.emailBodyValue
-        }`;
+        )}`;
         break;
       case '4':
         window.open('https://facebook.com/thehumaneleague');
@@ -84,8 +72,9 @@ export default class Action extends Component {
           <div>
             <Tweet
               type="text"
+              maxLength="280"
               value={this.state.twitterValue}
-              onChange={this.handleTwitterChange}
+              onChange={e => this.handleChange(e, 'twitterValue')}
             />
             <br />
           </div>
@@ -97,19 +86,19 @@ export default class Action extends Component {
             <EmailRecipient
               type="text"
               value={this.state.emailRecipientValue}
-              onChange={this.state.handleEmailRecipientChange}
+              onChange={e => this.handleChange(e, 'emailRecipientValue')}
             />
             <br />
             <EmailSubject
               type="text"
               value={this.state.emailSubjectValue}
-              onChange={this.handleEmailSubjectChange}
+              onChange={e => this.handleChange(e, 'emailSubjectValue')}
             />
             <br />
             <EmailBody
               type="text"
-              value={decodeURI(this.state.emailBodyValue)}
-              onChange={this.handleEmailBodyChange}
+              value={decodeURIComponent(this.state.emailBodyValue)}
+              onChange={e => this.handleChange(e, 'emailBodyValue')}
             />
             <br />
           </div>
@@ -121,7 +110,7 @@ export default class Action extends Component {
             <FacebookPost
               type="text"
               value={this.state.facebookValue}
-              onChange={this.handleFacebookChange}
+              onChange={e => this.handleChange(e, 'facebookValue')}
             />
             <br />
             <CopyToClipboard

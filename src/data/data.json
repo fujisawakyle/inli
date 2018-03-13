@@ -36,7 +36,7 @@
     },
     "action2": {
       "title": "Share on Twitter",
-      "tweet": "@thehumaneleague Here's some twitter sample text #thl",
+      "tweet": "@thehumaneleague Here's some twitter sample text #thl 🐷",
       "button": "Tweet"
     },
     "action3": {
