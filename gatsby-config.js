@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter'
+    title: 'Gatsby Test site for McD',
+    description: 'This is the test site description'
   },
   plugins: [
     {
