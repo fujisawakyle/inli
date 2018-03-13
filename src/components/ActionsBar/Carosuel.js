@@ -38,7 +38,7 @@ export default class ActionSlider extends Component {
 
     return (
       <div style={{ position: 'relative' }}>
-        <Carousel decorators={decorators}>
+        <Carousel dragging={false} decorators={decorators}>
           <Action addCheck={this.addCheck} actionNumber="1" />
           <Action addCheck={this.addCheck} actionNumber="2" />
           <Action addCheck={this.addCheck} actionNumber="3" />
