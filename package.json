@@ -12,6 +12,7 @@
     "gatsby-transformer-json": "^1.0.15",
     "lodash": "^4.17.5",
     "nuka-carousel": "^3.1.0",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dynamic-modal": "https://github.com/fujisawakyle/react-dynamic-modal/tarball/master",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.20.0",

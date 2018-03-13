@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import data from '../../data/data.json';
 import {
-  TwitterText,
+  Tweet,
   EmailRecipient,
   EmailSubject,
-  EmailBody
+  EmailBody,
+  FacebookPost
 } from './Action.style';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default class Action extends Component {
   state = {
-    twitterValue: data.actionText.action1.tweet,
-    emailRecipientValue: data.actionText.action2.recipient,
-    emailSubjectValue: data.actionText.action2.subject,
-    emailBodyValue: data.actionText.action2.body
+    twitterValue: data.actionText.action2.tweet,
+    emailRecipientValue: data.actionText.action3.recipient,
+    emailSubjectValue: data.actionText.action3.subject,
+    emailBodyValue: data.actionText.action3.body,
+    facebookValue: data.actionText.action4.post,
+    copied: false
   };
   handleTwitterChange = e => {
     this.setState({ twitterValue: e.target.value });
@@ -30,6 +34,14 @@ export default class Action extends Component {
     this.setState({ emailBodyValue: e.target.value });
   };
 
+  handleFacebookChange = e => {
+    this.setState({ facebookValue: e.target.value, copied: false });
+  };
+
+  onCopy = () => {
+    this.setState({ copied: true });
+  };
+
   handleSubmit = actionNumber => {
     switch (actionNumber) {
       case '1':
@@ -45,6 +57,9 @@ export default class Action extends Component {
         }?subject=${this.state.emailSubjectValue}&body=${
           this.state.emailBodyValue
         }`;
+        break;
+      case '4':
+        window.open('https://facebook.com/thehumaneleague');
     }
     alert(`you submitted action #${actionNumber}`);
   };
@@ -67,7 +82,7 @@ export default class Action extends Component {
       case '2':
         html = (
           <div>
-            <TwitterText
+            <Tweet
               type="text"
               value={this.state.twitterValue}
               onChange={this.handleTwitterChange}
@@ -100,6 +115,27 @@ export default class Action extends Component {
           </div>
         );
         break;
+      case '4':
+        html = (
+          <div>
+            <FacebookPost
+              type="text"
+              value={this.state.facebookValue}
+              onChange={this.handleFacebookChange}
+            />
+            <br />
+            <CopyToClipboard
+              onCopy={this.onCopy}
+              text={this.state.facebookValue}
+            >
+              <button>Copy</button>
+            </CopyToClipboard>
+            {this.state.copied ? (
+              <span style={{ color: 'red' }}>Copied.</span>
+            ) : null}
+            <br />
+          </div>
+        );
     }
     return (
       <div
