@@ -6,7 +6,7 @@ export default class Action extends Component {
   state = {
     value: "Here's some default text"
   };
-  handleChange = () => {
+  handleChange = e => {
     this.setState({ value: e.target.value });
   };
 
@@ -15,7 +15,9 @@ export default class Action extends Component {
       case '1':
         break;
       case '2':
-        window.open(`https://google.com/action${this.state.value}`);
+        window.open(
+          `https://twitter.com/intent/tweet?text=${this.state.value}`
+        );
         break;
     }
     alert(`you submitted action #${actionNumber}`);
