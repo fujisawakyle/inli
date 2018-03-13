@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../layouts/media';
 
 export const Container = styled.div`
   background: #303030;

@@ -31,16 +31,20 @@
   },
   "actionText": {
     "action1": {
-      "first": "Sign our Petition"
+      "first": "Sign our Petition",
+      "button": "Sign"
     },
     "action2": {
-      "first": "Share on Facebook"
+      "first": "Share on Twitter",
+      "button": "Tweet"
     },
     "action3": {
-      "first": "Share on Twitter"
+      "first": "Email the leadership",
+      "button": "Email"
     },
     "action4": {
-      "first": "Email the leadership"
+      "first": "Share on Facebook",
+      "button": "Go to Facebook"
     }
   }
 }
