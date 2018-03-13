@@ -11,7 +11,7 @@
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-json": "^1.0.15",
     "lodash": "^4.17.5",
-    "nuka-carousel": "https://github.com/fujisawakyle/nuka-carousel/tarball/master",
+    "nuka-carousel": "^3.1.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dynamic-modal": "https://github.com/fujisawakyle/react-dynamic-modal/tarball/master",
     "react-helmet": "^5.2.0",
