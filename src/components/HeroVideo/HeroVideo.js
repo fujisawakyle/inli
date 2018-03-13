@@ -11,8 +11,8 @@ export default class HeroVideo extends Component {
           width="560"
           height="315"
           src={this.props.videoURL}
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
         />
       </RespVideo>
     );

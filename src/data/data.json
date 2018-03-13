@@ -14,6 +14,11 @@
     "second": "learn more 2"
   },
   "videoURL": "https://www.youtube.com/embed/kyyM8iAjglA",
+  "takeAction": {
+    "title": "take action",
+    "subtitle":
+      "Let McDonald's know that their chicken welfare policy is unacceptable!"
+  },
   "learnMoreFirst": {
     "first": "McDonald's has chosen to ",
     "second": "mislead consumers",
@@ -23,5 +28,19 @@
     "first": "short intro to another button",
     "second": "call out",
     "third": "why this is important"
+  },
+  "actionText": {
+    "action1": {
+      "first": "Sign our Petition"
+    },
+    "action2": {
+      "first": "Share on Facebook"
+    },
+    "action3": {
+      "first": "Share on Twitter"
+    },
+    "action4": {
+      "first": "Email the leadership"
+    }
   }
 }

@@ -19,13 +19,7 @@ export const Title = styled.h1`
   text-align: center;
   margin-top: 1rem;
 `;
-
-export const Action = styled.div`
-  width: 90%;
-  background: grey;
-  border: 2px solid white;
-  height: 400px;
-  ${media.md`
-    width: 33.33%;
-    `};
+export const Subtitle = styled.h4`
+  text-align: center;
+  margin-top: 1rem;
 `;

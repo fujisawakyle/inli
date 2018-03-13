@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Title, Action } from './ActionsBar.style';
+import { Container, Title, Subtitle } from './ActionsBar.style';
+import ActionSlider from './Carosuel';
+import data from '../../data/data.json';
 
 export default class ActionsBar extends Component {
   state = {};
@@ -7,12 +9,9 @@ export default class ActionsBar extends Component {
   render() {
     return (
       <div>
-        <Title>Take action</Title>
-        <Container>
-          <Action />
-          <Action />
-          <Action />
-        </Container>
+        <Title>{data.takeAction.title}</Title>
+        <Subtitle>{data.takeAction.subtitle}</Subtitle>
+        <ActionSlider />
       </div>
     );
   }

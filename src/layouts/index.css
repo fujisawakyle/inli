@@ -623,3 +623,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.slider-decorator-2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
