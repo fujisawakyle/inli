@@ -31,19 +31,24 @@
   },
   "actionText": {
     "action1": {
-      "first": "Sign our Petition",
+      "title": "Sign our Petition",
+      "tweet": "@thehumaneleague Here's some sample text #thl",
       "button": "Sign"
     },
     "action2": {
-      "first": "Share on Twitter",
+      "title": "Share on Twitter",
+      "recipient": "info@thehumaneleague.org",
+      "subject": "Quit that",
+      "body":
+        "Dear%20Leadership,%0A%0AYou%20need%20to%20quit%20it.%0A%0ACheers,%0AMe",
       "button": "Tweet"
     },
     "action3": {
-      "first": "Email the leadership",
+      "title": "Email the leadership",
       "button": "Email"
     },
     "action4": {
-      "first": "Share on Facebook",
+      "title": "Share on Facebook",
       "button": "Go to Facebook"
     }
   }
