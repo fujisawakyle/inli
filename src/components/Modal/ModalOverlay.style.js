@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const OverlayExitButton = styled.div`
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 30px;
+  right: 45px;
 
   width: 50px;
   height: 50px;
@@ -13,7 +13,10 @@ export const OverlayExitButton = styled.div`
   align-items: center;
 
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: red;
+  font-size: 1.8rem;
 
   cursor: pointer;
 `;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ModalTrigger from '../Modal/ModalTrigger';
-import { Container, SmallText, LargeText } from './LearnMoreSection.style';
+import { Container, SmallText, LargeText } from './SadTruthSection.style';
 
-export default class LearnMoreSection extends Component {
+export default class SadTruthSection extends Component {
   state = {};
 
   render() {

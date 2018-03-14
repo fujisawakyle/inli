@@ -1,13 +1,38 @@
 {
   "navLinkTitles": [
-    "exposed",
-    "learn the truth",
-    "take action",
-    "follow along"
+    {
+      "title": "The Sad Truth",
+      "anchor": "sadTruth"
+    },
+    {
+      "title": "Take Action",
+      "anchor": "takeAction"
+    },
+    {
+      "title": "How a McNugget is Made",
+      "anchor": "mcNugget"
+    },
+    {
+      "title": "Why Can't McDonald's?",
+      "anchor": "why"
+    },
+    {
+      "title": "Where's Ronald?",
+      "anchor": "ronald"
+    },
+    {
+      "title": "Follow the Campaign",
+      "anchor": "campaign"
+    },
+    {
+      "title": "Media Resources",
+      "anchor": "media"
+    }
   ],
-  "overlayText": {
-    "first": "First text",
-    "second": "Second text"
+  "social": {
+    "facebookURL": "https://www.facebook.com/thehumaneleague",
+    "instagramURL": "https://www.instagram.com/thehumaneleague",
+    "twitterURL": "https://www.twitter.com/thehumaneleague"
   },
   "buttonText": {
     "first": "learn more 1",
@@ -19,16 +44,43 @@
     "subtitle":
       "Let McDonald's know that their chicken welfare policy is unacceptable!"
   },
-  "learnMoreFirst": {
-    "first": "McDonald's has chosen to ",
-    "second": "mislead consumers",
-    "third": "with hollow promises that lack meaningful change"
+  "sadTruth": {
+    "buttonText": "learn more",
+    "first":
+      "Consumers deserve to know where McDonald's chicken really comes from.",
+    "second": "The sad truth",
+    "overlayText": {
+      "title": "The Sad Truth",
+      "first":
+        "There is a growing national boycott against McDonald's for allowing extreme animal cruelty in it's chicken supply chain. While nearly 100 companies, including competitors such as Burger King and Subway, have produced policies that take meaninful and measurable steps to address these animal cruelty issues, McDonald's has instead released a policy that fails to address several important welfare issues.",
+      "second":
+        "Under current conditions, chickens in McDonald's supply chain suffer from:",
+      "third":
+        "As one of the world's largest most influential companies, McDonald's has the power to impact the entire food industry as well as the lives of millions of chickens.",
+      "fourth":
+        "Instead, McDonald's has chosen to mislead consumers with hollow promises that lack meaningful change."
+    }
   },
-  "learnMoreSecond": {
-    "first": "short intro to another button",
-    "second": "call out",
-    "third": "why this is important"
+  "mcNugget": {
+    "buttonText": "learn more",
+    "first": "",
+    "second": "How a mcnugget is made",
+    "third":
+      "Want to see what goes into making one of McDonald's signature menu items?",
+    "overlayText": {
+      "title": "How a mcnugget is made"
+    }
   },
+  "ronald": {
+    "buttonText": "watch videos",
+    "first": "",
+    "second": "Where's Ronald?",
+    "third": "See what Ronald McDonald has been up to...",
+    "overlayText": {
+      "title": "Where's Ronald?"
+    }
+  },
+
   "actionText": {
     "action1": {
       "title": "Sign our Petition",

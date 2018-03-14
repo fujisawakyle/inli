@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
-import ModalContent from '../Modal/ModalContent';
+import ModalOverlay from '../Modal/ModalOverlay';
 import { Modal, ModalManager } from 'react-dynamic-modal';
-import { Button, Centered } from './ModalTrigger.style';
+import { Button, Centered, ModalClickContainer } from './ModalTrigger.style';
 
-export default class Popup extends Component {
+export default class ModalTrigger extends Component {
   openModal = () => {
     ModalManager.open(
-      <ModalContent text={this.props.text} onRequestClose={() => true} />
+      <ModalOverlay
+        markupToDisplay={this.props.markupToDisplay}
+        onRequestClose={() => true}
+      />
     );
   };
   render() {
     return (
       <Centered>
-        <Button type="button" onClick={this.openModal}>
-          {this.props.buttonText}
-        </Button>{' '}
+        <ModalClickContainer onClick={this.openModal}>
+          {this.props.triggerItem}
+        </ModalClickContainer>
       </Centered>
     );
   }

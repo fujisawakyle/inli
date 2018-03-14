@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Modal, ModalManager, Effect } from 'react-dynamic-modal';
-import { OverlayExitButton } from './ModalContent.style';
+import { OverlayExitButton } from './ModalOverlay.style';
 
-export default class ModalContent extends Component {
+export default class ModalOverlay extends Component {
   render() {
-    const { text, onRequestClose } = this.props;
+    const { markupToDisplay, onRequestClose } = this.props;
     return (
       <Modal onRequestClose={onRequestClose} effect={Effect.ScaleUp}>
         <OverlayExitButton onClick={ModalManager.close}>X</OverlayExitButton>
-        <h1>{text}</h1>
+        {markupToDisplay}
       </Modal>
     );
   }
