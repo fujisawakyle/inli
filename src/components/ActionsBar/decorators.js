@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import media from '../../layouts/media';
+import chevron from '../../assets/png/chevron.png';
 
 export default [
   {
@@ -11,7 +12,7 @@ export default [
 
       getButtonStyles = disabled => ({
         border: 0,
-        background: 'rgba(0,0,0,0.4)',
+        background: 'transparent',
         color: 'white',
         padding: 10,
         outline: 0,
@@ -27,7 +28,7 @@ export default [
             )}
             onClick={this.handleClick}
           >
-            PREVIOUS
+            <img src={chevron} />
           </button>
         );
       }
@@ -44,12 +45,13 @@ export default [
 
       getButtonStyles = disabled => ({
         border: 0,
-        background: 'rgba(0,0,0,0.4)',
+        background: 'transparent',
         color: 'white',
         padding: 10,
         outline: 0,
         opacity: disabled ? 0 : 1,
-        cursor: 'pointer'
+        cursor: 'pointer',
+        transform: 'rotateY(180deg)'
       });
 
       render() {
@@ -61,7 +63,7 @@ export default [
             )}
             onClick={this.handleClick}
           >
-            NEXT
+            <img src={chevron} />
           </button>
         );
       }
