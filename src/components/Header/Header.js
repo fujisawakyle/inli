@@ -71,6 +71,7 @@ const Header = ({ navLinks }) => (
         {Social}
         <DonateButton>Donate</DonateButton>
         <ModalTrigger
+          modalTransition="fade"
           triggerItem={<Menu src={menuIcon} />}
           markupToDisplay={Navbar}
         />

@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../../data/data.json';
+import { ModalManager } from 'react-dynamic-modal';
 
 import { FlexCenter, Container, Title, ShortHR } from './ModalMarkup.style';
 

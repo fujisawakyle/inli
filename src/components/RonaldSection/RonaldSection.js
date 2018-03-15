@@ -13,6 +13,7 @@ export default class RonaldSection extends Component {
           <LargeText>{this.props.second}</LargeText>
           <SmallText>{this.props.third}</SmallText>
           <ModalTrigger
+            modalTransition="scaleUp"
             triggerItem={this.props.triggerItem}
             markupToDisplay={this.props.markupToDisplay}
           />

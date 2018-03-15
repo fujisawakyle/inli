@@ -13,6 +13,8 @@ export default class McNuggetSection extends Component {
           <LargeText>{this.props.second}</LargeText>
           <SmallText>{this.props.third}</SmallText>
           <ModalTrigger
+            bgColor="orange"
+            modalTransition="scaleUp"
             triggerItem={this.props.triggerItem}
             markupToDisplay={this.props.markupToDisplay}
           />

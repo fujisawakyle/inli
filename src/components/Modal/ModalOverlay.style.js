@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const OverlayExitButton = styled.div`
   position: absolute;
-  top: 30px;
-  right: 45px;
+  top: 10px;
+  right: 15px;
 
   width: 50px;
   height: 50px;
