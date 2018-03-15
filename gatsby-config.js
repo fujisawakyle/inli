@@ -9,6 +9,13 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`
+      },
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `raleway\:700`,
+          `source sans pro\:300,400` // you can also specify font weights and styles
+        ]
       }
     },
     'gatsby-plugin-react-helmet',

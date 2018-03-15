@@ -3,7 +3,9 @@ import Link from 'gatsby-link';
 import {
   FlexCenter,
   Container,
+  LogoContainer,
   Logo,
+  LogoText,
   ItemsContainer,
   SocialBlock,
   SocialIcon,
@@ -19,8 +21,9 @@ import data from '../../data/data.json';
 
 import ModalTrigger from '../Modal/ModalTrigger';
 
-import headerLogo from '../../assets/svg/THL18-vertical-logo-white.svg';
-import menuIcon from '../../assets/svg/lines.svg';
+import INLILogo from '../../assets/svg/INLILogo.svg';
+import INLILogoText from '../../assets/svg/INLILogoText.svg';
+import menuIcon from '../../assets/svg/menuIcon.svg';
 import facebookIcon from '../../assets/svg/facebook.svg';
 import instagramIcon from '../../assets/svg/instagram.svg';
 import twitterIcon from '../../assets/svg/twitter.svg';
@@ -65,7 +68,10 @@ const Header = ({ navLinks }) => (
   <div>
     <Container>
       <Link to="/">
-        <Logo src={headerLogo} />
+        <LogoContainer>
+          <Logo src={INLILogo} />
+          <LogoText src={INLILogoText} />
+        </LogoContainer>
       </Link>
       <ItemsContainer>
         {Social}
