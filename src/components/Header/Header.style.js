@@ -78,6 +78,12 @@ export const SocialIcon = styled.img`
 export const DonateButton = styled.div`
   font-family: Raleway;
   display: none;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(#bf2026, #ef4446);
+  }
+
   ${media.md`
     display: inline-block;
     width: 127px;

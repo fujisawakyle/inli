@@ -46,9 +46,9 @@
   },
   "sadTruth": {
     "buttonText": "learn more",
-    "first":
+    "first": "The sad truth",
+    "second":
       "Consumers deserve to know where McDonald's chicken really comes from.",
-    "second": "The sad truth",
     "overlayText": {
       "title": "The Sad Truth",
       "first":

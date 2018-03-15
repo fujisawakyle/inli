@@ -8,6 +8,8 @@ import McNuggetSection from '../components/McNuggetSection/McNuggetSection';
 import RonaldSection from '../components/RonaldSection/RonaldSection';
 import ActionsBar from '../components/ActionsBar/ActionsBar';
 import { RedButton } from '../components/Buttons/Buttons.style';
+import sadTruthBgSm from '../assets/images/campaigns-mcdonalds-website-sad-truth-small.jpg';
+import sadTruthBgLg from '../assets/images/campaigns-mcdonalds-website-sad-truth-large.jpg';
 import {
   SadTruthMarkup,
   McNuggetMarkup,
@@ -25,7 +27,8 @@ export default () => {
         first={data.sadTruth.first}
         second={data.sadTruth.second}
         third={data.sadTruth.third}
-        background="https://the-humane-league-homepage.s3.amazonaws.com/THL17-comms-share-image.jpg"
+        backgroundSm={sadTruthBgSm}
+        backgroundLg={sadTruthBgLg}
       />
       <a name="takeAction" />
       <ActionsBar />

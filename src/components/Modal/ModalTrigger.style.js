@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ModalClickContainer = styled.div`
+  z-index: 1;
   cursor: pointer;
 `;
 

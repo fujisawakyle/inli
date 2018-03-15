@@ -75,7 +75,7 @@ const Header = ({ navLinks }) => (
       </Link>
       <ItemsContainer>
         {Social}
-        <DonateButton>Donate</DonateButton>
+        <DonateButton href="#">Donate</DonateButton>
         <ModalTrigger
           modalTransition="fade"
           triggerItem={<Menu src={menuIcon} />}

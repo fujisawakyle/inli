@@ -1,22 +1,57 @@
 import styled from 'styled-components';
+import media from '../../layouts/media';
 
 export const Container = styled.div`
-  background: url(${props => props.background});
-  background-position: center center;
+  position: relative;
+  background: url(${props => props.backgroundSm});
+  background-size: cover;
+  background-position: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  padding: 3rem 0;
+  font-family: 'Raleway', sans-serif;
+  ${media.md`
+    background: url(${props => props.backgroundLg});
+    background-size: cover;
+  `};
+`;
+
+export const DarkOpaqueFilter = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 `;
 
 export const SmallText = styled.h4`
   color: white;
   text-align: center;
-  margin-bottom: 1rem;
+  line-height: 1.5;
+  width: 60%;
+  font-weight: 500;
+
+  z-index: 1;
+  margin-bottom: 1.5rem;
+
+  ${media.md`
+    width: 340px;
+  `};
 `;
 export const LargeText = styled.h1`
   color: white;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 1rem;
+  font-weight: 900;
+  font-size: 1rem;
+
+  z-index: 1;
+  margin-bottom: 1.5rem;
+
+  ${media.md`
+    font-size: 3rem;
+  `};
 `;
