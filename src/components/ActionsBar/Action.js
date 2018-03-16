@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import data from '../../data/data.json';
 import {
+  Container,
+  ActionIcon,
+  ActionTitle,
+  ActionFields,
   Tweet,
   EmailRecipient,
   EmailSubject,
@@ -52,11 +56,11 @@ export default class Action extends Component {
     alert(`you submitted action #${actionNumber}`);
   };
   render() {
-    let html;
+    let html, buttonRender;
     switch (this.props.actionNumber) {
       case '1':
         html = (
-          <div
+          <ActionFields
             className="ngp-form"
             data-form-url="https://actions.everyaction.com/v1/Forms/75X6VAefDkqf42b3crezsA2"
             data-fastaction-endpoint="https://fastaction.ngpvan.com"
@@ -69,7 +73,7 @@ export default class Action extends Component {
         break;
       case '2':
         html = (
-          <div>
+          <ActionFields>
             <Tweet
               type="text"
               maxLength="280"
@@ -77,12 +81,12 @@ export default class Action extends Component {
               onChange={e => this.handleChange(e, 'twitterValue')}
             />
             <br />
-          </div>
+          </ActionFields>
         );
         break;
       case '3':
         html = (
-          <div>
+          <ActionFields>
             <EmailRecipient
               type="text"
               value={this.state.emailRecipientValue}
@@ -101,12 +105,12 @@ export default class Action extends Component {
               onChange={e => this.handleChange(e, 'emailBodyValue')}
             />
             <br />
-          </div>
+          </ActionFields>
         );
         break;
       case '4':
         html = (
-          <div>
+          <ActionFields>
             <FacebookPost
               type="text"
               value={this.state.facebookValue}
@@ -123,15 +127,11 @@ export default class Action extends Component {
               <span style={{ color: 'red' }}>Copied.</span>
             ) : null}
             <br />
-          </div>
+          </ActionFields>
         );
     }
-    return (
-      <div
-        style={{ background: 'orange', height: '500px', textAlign: 'center' }}
-      >
-        <h1>{data.actionText['action' + [this.props.actionNumber]].title}</h1>
-        {html}
+    if (this.props.actionNumber !== '1') {
+      buttonRender = (
         <button
           onClick={() => {
             this.props.addCheck(this.props.actionNumber);
@@ -140,7 +140,17 @@ export default class Action extends Component {
         >
           {data.actionText['action' + [this.props.actionNumber]].button}
         </button>
-      </div>
+      );
+    }
+    return (
+      <Container>
+        <ActionIcon src={this.props.actionIcon} />
+        <ActionTitle>
+          {data.actionText['action' + [this.props.actionNumber]].title}
+        </ActionTitle>
+        {html}
+        {buttonRender}
+      </Container>
     );
   }
 }

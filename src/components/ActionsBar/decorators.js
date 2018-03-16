@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import media from '../../layouts/media';
-import chevron from '../../assets/png/chevron.png';
+import chevronIcon from '../../assets/png/chevron.png';
+import styled from 'styled-components';
+
+const Chevron = styled.img`
+  height: 50px;
+`;
 
 export default [
   {
@@ -16,7 +21,7 @@ export default [
         color: 'white',
         padding: 10,
         outline: 0,
-        opacity: disabled ? 0 : 1,
+        opacity: disabled ? 0 : 0.6,
         cursor: 'pointer'
       });
 
@@ -28,7 +33,7 @@ export default [
             )}
             onClick={this.handleClick}
           >
-            <img src={chevron} />
+            <Chevron src={chevronIcon} />
           </button>
         );
       }
@@ -49,7 +54,7 @@ export default [
         color: 'white',
         padding: 10,
         outline: 0,
-        opacity: disabled ? 0 : 1,
+        opacity: disabled ? 0 : 0.6,
         cursor: 'pointer',
         transform: 'rotateY(180deg)'
       });
@@ -63,7 +68,7 @@ export default [
             )}
             onClick={this.handleClick}
           >
-            <img src={chevron} />
+            <Chevron src={chevronIcon} />
           </button>
         );
       }

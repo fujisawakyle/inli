@@ -18,11 +18,11 @@ export default class ActionsBar extends Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Title>{data.takeAction.title}</Title>
         <Subtitle>{data.takeAction.subtitle}</Subtitle>
         <ActionSlider />
-      </div>
+      </Container>
     );
   }
 }

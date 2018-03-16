@@ -29,21 +29,15 @@
       "anchor": "media"
     }
   ],
+
   "social": {
     "facebookURL": "https://www.facebook.com/thehumaneleague",
     "instagramURL": "https://www.instagram.com/thehumaneleague",
     "twitterURL": "https://www.twitter.com/thehumaneleague"
   },
-  "buttonText": {
-    "first": "learn more 1",
-    "second": "learn more 2"
-  },
+
   "videoURL": "https://www.youtube.com/embed/kyyM8iAjglA",
-  "takeAction": {
-    "title": "take action",
-    "subtitle":
-      "Let McDonald's know that their chicken welfare policy is unacceptable!"
-  },
+
   "sadTruth": {
     "buttonText": "learn more",
     "first": "The sad truth",
@@ -61,6 +55,13 @@
         "Instead, McDonald's has chosen to mislead consumers with hollow promises that lack meaningful change."
     }
   },
+
+  "takeAction": {
+    "title": "take action",
+    "subtitle":
+      "Let McDonald's know that you won't be fooled by their weak chicken welfare policy"
+  },
+
   "mcNugget": {
     "buttonText": "learn more",
     "first": "",
@@ -71,6 +72,7 @@
       "title": "How a mcnugget is made"
     }
   },
+
   "ronald": {
     "buttonText": "watch videos",
     "first": "",

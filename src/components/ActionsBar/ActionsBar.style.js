@@ -2,24 +2,41 @@ import styled from 'styled-components';
 import media from '../../layouts/media';
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-
+  padding: 1rem 0;
+  color: white;
+  background: #ef4446;
+  z-index: 1;
+  padding: 3rem 0;
   ${media.md`
-    flex-direction: row;
+    
   `};
 `;
 
 export const Title = styled.h1`
+  color: white;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 1rem;
+  font-weight: 900;
+
+  z-index: 1;
+  margin-bottom: 1.5rem;
+
+  ${media.md`
+  font-size: 3rem;
+`};
 `;
 export const Subtitle = styled.h4`
+  color: white;
   text-align: center;
-  margin-top: 1rem;
+  line-height: 1.5;
+  width: 60%;
+  font-weight: 500;
+  margin: 0 auto;
+
+  z-index: 1;
+  margin-bottom: 1.5rem;
+
+  ${media.md`
+    width: 340px;
+  `};
 `;

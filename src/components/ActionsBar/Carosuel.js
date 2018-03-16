@@ -4,6 +4,8 @@ import { Check1, Check2, Check3, Check4 } from './Checks';
 import Action from './Action';
 import decorators from './decorators';
 
+import petitionIcon from '../../assets/svg/petitionIcon.svg';
+
 export default class ActionSlider extends Component {
   state = {
     check1: false,
@@ -37,9 +39,15 @@ export default class ActionSlider extends Component {
     }
 
     return (
-      <div style={{ position: 'relative' }}>
+      <div
+        style={{ position: 'relative', margin: '0 auto', maxWidth: '600px' }}
+      >
         <Carousel dragging={false} decorators={decorators}>
-          <Action addCheck={this.addCheck} actionNumber="1" />
+          <Action
+            actionIcon={petitionIcon}
+            addCheck={this.addCheck}
+            actionNumber="1"
+          />
           <Action addCheck={this.addCheck} actionNumber="2" />
           <Action addCheck={this.addCheck} actionNumber="3" />
           <Action addCheck={this.addCheck} actionNumber="4" />

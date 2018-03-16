@@ -27,7 +27,21 @@ export const DarkOpaqueFilter = styled.div`
   background: rgba(0, 0, 0, 0.6);
 `;
 
-export const SmallText = styled.h4`
+export const Title = styled.h1`
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+
+  z-index: 1;
+  margin-bottom: 1.5rem;
+
+  ${media.md`
+    font-size: 3rem;
+  `};
+`;
+
+export const Subtitle = styled.h4`
   color: white;
   text-align: center;
   line-height: 1.5;
@@ -39,19 +53,5 @@ export const SmallText = styled.h4`
 
   ${media.md`
     width: 340px;
-  `};
-`;
-export const LargeText = styled.h1`
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 900;
-  font-size: 1rem;
-
-  z-index: 1;
-  margin-bottom: 1.5rem;
-
-  ${media.md`
-    font-size: 3rem;
   `};
 `;

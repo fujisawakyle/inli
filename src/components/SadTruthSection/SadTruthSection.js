@@ -3,8 +3,8 @@ import ModalTrigger from '../Modal/ModalTrigger';
 import {
   Container,
   DarkOpaqueFilter,
-  SmallText,
-  LargeText
+  Title,
+  Subtitle
 } from './SadTruthSection.style';
 
 export default class SadTruthSection extends Component {
@@ -17,8 +17,8 @@ export default class SadTruthSection extends Component {
         backgroundLg={this.props.backgroundLg}
       >
         <DarkOpaqueFilter />
-        <LargeText>{this.props.first}</LargeText>
-        <SmallText>{this.props.second}</SmallText>
+        <Title>{this.props.first}</Title>
+        <Subtitle>{this.props.second}</Subtitle>
 
         <ModalTrigger
           modalTransition="scaleUp"

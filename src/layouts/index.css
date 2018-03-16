@@ -642,5 +642,49 @@ legend.at-legend {
   display: none;
 }
 form.clearfix {
-  background: orange;
+  max-width: 380px;
+}
+.at-form section form.clearfix {
+  margin: 0 auto;
+}
+form label.at-text,
+form label.at-check,
+.text {
+  color: white;
+}
+
+.ngp-form section.at-inner {
+  background: #ef4446;
+}
+
+form .at-row.at-row-solo.at-row-full.UpdateMyProfile {
+  display: none;
+}
+
+form .at-form-submit.clearfix {
+  display: flex;
+  justify-content: center;
+}
+
+form input.at-submit.btn-at.btn-at-primary {
+  background: #ef4446;
+  border: 2px solid white;
+  border-radius: 1em;
+  padding: 0.4em 0.9em;
+  font-family: 'Raleway';
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+form .at.at-check input + span {
+  margin-bottom: 0;
+}
+
+form input[type='checkbox'] + span:before {
+  background: white;
+}
+
+form label input[type='checkbox']:checked + span:before {
+  background: white;
 }
