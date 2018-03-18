@@ -52,7 +52,22 @@
       "third":
         "As one of the world's largest most influential companies, McDonald's has the power to impact the entire food industry as well as the lives of millions of chickens.",
       "fourth":
-        "Instead, McDonald's has chosen to mislead consumers with hollow promises that lack meaningful change."
+        "Instead, McDonald's has chosen to mislead consumers with hollow promises that lack meaningful change.",
+      "image1": {
+        "first": "Unnatural growth",
+        "second": "from being selectedly bred/",
+        "third": "genetically manipulated"
+      },
+      "image2": {
+        "first": "Ammonia burns",
+        "second": "from the toxic fumes from",
+        "third": "their own waste"
+      },
+      "image3": {
+        "first": "Debilitating injuries",
+        "second": "from being crippled by the weight of",
+        "third": "their own oversized bodies"
+      }
     }
   },
 
@@ -64,9 +79,8 @@
 
   "mcNugget": {
     "buttonText": "learn more",
-    "first": "",
-    "second": "How a mcnugget is made",
-    "third":
+    "first": "How a mcnugget is made",
+    "second":
       "Want to see what goes into making one of McDonald's signature menu items?",
     "overlayText": {
       "title": "How a mcnugget is made"
@@ -75,9 +89,8 @@
 
   "ronald": {
     "buttonText": "watch videos",
-    "first": "",
-    "second": "Where's Ronald?",
-    "third": "See what Ronald McDonald has been up to...",
+    "first": "Where's Ronald?",
+    "second": "See what Ronald McDonald has been up to...",
     "overlayText": {
       "title": "Where's Ronald?"
     }
@@ -94,7 +107,7 @@
       "button": "Tweet"
     },
     "action3": {
-      "title": "Email the leadership",
+      "title": "Email McDonald's leadership",
       "recipient": "info@thehumaneleague.org",
       "subject": "Quit that",
       "body":

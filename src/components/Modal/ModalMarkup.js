@@ -2,7 +2,29 @@ import React from 'react';
 import data from '../../data/data.json';
 import { ModalManager } from 'react-dynamic-modal';
 
-import { FlexCenter, Container, Title, ShortHR } from './ModalMarkup.style';
+import {
+  FlexCenter,
+  Container,
+  Title,
+  ShortHR,
+  ConditionsImage,
+  ConditionsImageBottomRight,
+  ConditionsImageCenter,
+  ContentContainer,
+  Number,
+  Content,
+  ImageTitle,
+  Description
+} from './ModalMarkup.style';
+import img1Sm from '../../assets/images/campaigns-mcdonalds-website-learnmore-small-1.jpg';
+import img1Md from '../../assets/images/campaigns-mcdonalds-website-learnmore-medium-1.jpg';
+import img1Lg from '../../assets/images/campaigns-mcdonalds-website-learnmore-large-1.jpg';
+import img2Sm from '../../assets/images/campaigns-mcdonalds-website-learnmore-small-2.jpg';
+import img2Md from '../../assets/images/campaigns-mcdonalds-website-learnmore-medium-2.jpg';
+import img2Lg from '../../assets/images/campaigns-mcdonalds-website-learnmore-large-2.jpg';
+import img3Sm from '../../assets/images/campaigns-mcdonalds-website-learnmore-small-3.jpg';
+import img3Md from '../../assets/images/campaigns-mcdonalds-website-learnmore-medium-3.jpg';
+import img3Lg from '../../assets/images/campaigns-mcdonalds-website-learnmore-large-3.jpg';
 
 export const SadTruthMarkup = (
   <FlexCenter>
@@ -12,9 +34,38 @@ export const SadTruthMarkup = (
       <p>{data.sadTruth.overlayText.first}</p>
       <p>{data.sadTruth.overlayText.second}</p>
 
-      <img src="http://placehold.it/600x300" />
-      <img src="http://placehold.it/600x300" />
-      <img src="http://placehold.it/600x300" />
+      <ConditionsImage background1={img1Md}>
+        <ContentContainer>
+          <Number>1</Number>
+          <Content>
+            <ImageTitle>{data.sadTruth.overlayText.image1.first}</ImageTitle>
+            <Description>{data.sadTruth.overlayText.image1.second}</Description>
+            <Description>{data.sadTruth.overlayText.image1.third}</Description>
+          </Content>
+        </ContentContainer>
+      </ConditionsImage>
+      <ConditionsImageBottomRight background1={img2Sm} background2={img2Lg}>
+        <ContentContainer>
+          <Number>2</Number>
+          <Content>
+            <ImageTitle>{data.sadTruth.overlayText.image2.first}</ImageTitle>
+            <Description>{data.sadTruth.overlayText.image2.second}</Description>
+            <Description>{data.sadTruth.overlayText.image2.third}</Description>
+          </Content>
+        </ContentContainer>
+      </ConditionsImageBottomRight>
+
+      <ConditionsImageCenter background1={img3Sm} background2={img3Md}>
+        <ContentContainer>
+          <Number>3</Number>
+          <Content>
+            <ImageTitle>{data.sadTruth.overlayText.image3.first}</ImageTitle>
+            <Description>{data.sadTruth.overlayText.image3.second}</Description>
+            <Description>{data.sadTruth.overlayText.image3.third}</Description>
+          </Content>
+        </ContentContainer>
+      </ConditionsImageCenter>
+
       <br />
 
       <p>{data.sadTruth.overlayText.third}</p>

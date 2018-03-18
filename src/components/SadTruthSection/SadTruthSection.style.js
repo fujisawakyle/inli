@@ -15,6 +15,7 @@ export const Container = styled.div`
   ${media.md`
     background: url(${props => props.backgroundLg});
     background-size: cover;
+    padding: 6rem 0;
   `};
 `;
 
