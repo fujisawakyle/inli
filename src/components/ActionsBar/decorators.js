@@ -8,6 +8,9 @@ const Chevron = styled.img`
 `;
 
 export default [
+  // these are the styles for the slider's
+  // 'previous and next slide buttons and
+  // the slider dots
   {
     component: class extends React.Component {
       handleClick = e => {
@@ -62,6 +65,7 @@ export default [
       render() {
         return (
           <button
+            className="rightSlide"
             style={this.getButtonStyles(
               this.props.currentSlide + this.props.slidesToScroll >=
                 this.props.slideCount && !this.props.wrapAround

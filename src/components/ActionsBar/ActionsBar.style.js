@@ -7,6 +7,7 @@ export const Container = styled.div`
   background: #ef4446;
   z-index: 1;
   padding: 3rem 0;
+
   ${media.md`
     
   `};
@@ -17,7 +18,6 @@ export const Title = styled.h1`
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
-
   z-index: 1;
   margin-bottom: 1.5rem;
 
@@ -32,7 +32,6 @@ export const Subtitle = styled.h4`
   width: 60%;
   font-weight: 500;
   margin: 0 auto;
-
   z-index: 1;
   margin-bottom: 1.5rem;
 

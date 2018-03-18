@@ -4,12 +4,17 @@ import {
   Container,
   ActionIcon,
   ActionTitle,
+  LongActionTitle,
+  ActionHR,
   ActionFields,
   Tweet,
+  ActionInputLabel,
   EmailRecipient,
   EmailSubject,
   EmailBody,
-  FacebookPost
+  FacebookPost,
+  CopyButton,
+  Button
 } from './Action.style';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
@@ -23,13 +28,48 @@ export default class Action extends Component {
     copied: false
   };
 
+  // wait to execute callback until specific element with class name found
+  waitUntilLoaded = (className, callback, waitTime) => {
+    let maxtime = waitTime;
+    let start = new Date().getTime();
+    let interval = setInterval(() => {
+      if (new Date().getTime() - start < maxtime) {
+        if (document.getElementsByClassName(className)[0]) {
+          clearInterval(interval);
+          callback();
+        }
+      }
+    }, 100);
+  };
+
+  componentDidMount() {
+    // allow petition button to load
+    this.waitUntilLoaded(
+      'at-submit btn-at btn-at-primary',
+      () => {
+        let submit = document.getElementsByClassName(
+          'at-submit btn-at btn-at-primary'
+        );
+        submit[0].onclick = () => {
+          this.props.handleActionTaken('1');
+        };
+      },
+      10000
+    );
+  }
+
   handleChange = (e, type) => {
-    console.log('e', e);
     this.setState({ [type]: e.target.value });
   };
 
   onCopy = () => {
     this.setState({ copied: true });
+    if (document.getElementById('copyButton')) {
+      document.getElementById('copyButton').style.display = 'inline-block';
+    }
+    setTimeout(() => {
+      document.getElementById('copyButton').style.display = 'none';
+    }, 1000);
   };
 
   handleSubmit = actionNumber => {
@@ -46,17 +86,16 @@ export default class Action extends Component {
       case '3':
         window.location.href = `mailto:${
           this.state.emailRecipientValue
-        }?subject=${this.state.emailSubjectValue}&body=${encodeURIComponent(
+        }?subject=${this.state.emailSubjectValue}&body=${
           this.state.emailBodyValue
-        )}`;
+        }`;
         break;
       case '4':
         window.open('https://facebook.com/thehumaneleague');
     }
-    alert(`you submitted action #${actionNumber}`);
   };
   render() {
-    let html, buttonRender;
+    let title, html, buttonRender;
     switch (this.props.actionNumber) {
       case '1':
         html = (
@@ -87,18 +126,21 @@ export default class Action extends Component {
       case '3':
         html = (
           <ActionFields>
+            <ActionInputLabel> To </ActionInputLabel>
             <EmailRecipient
               type="text"
               value={this.state.emailRecipientValue}
               onChange={e => this.handleChange(e, 'emailRecipientValue')}
             />
             <br />
+            <ActionInputLabel> Subject </ActionInputLabel>
             <EmailSubject
               type="text"
               value={this.state.emailSubjectValue}
               onChange={e => this.handleChange(e, 'emailSubjectValue')}
             />
             <br />
+            <ActionInputLabel> Message </ActionInputLabel>
             <EmailBody
               type="text"
               value={decodeURIComponent(this.state.emailBodyValue)}
@@ -121,33 +163,49 @@ export default class Action extends Component {
               onCopy={this.onCopy}
               text={this.state.facebookValue}
             >
-              <button>Copy</button>
+              <CopyButton>Copy</CopyButton>
             </CopyToClipboard>
             {this.state.copied ? (
-              <span style={{ color: 'red' }}>Copied.</span>
+              <span id="copyButton" style={{ color: 'white' }}>
+                Copied.
+              </span>
             ) : null}
             <br />
           </ActionFields>
         );
     }
+    // don't render a button for the petition action
+    // an embedded button is fetched
     if (this.props.actionNumber !== '1') {
       buttonRender = (
-        <button
+        <Button
           onClick={() => {
-            this.props.addCheck(this.props.actionNumber);
+            this.props.handleActionTaken(this.props.actionNumber);
             this.handleSubmit(this.props.actionNumber);
           }}
         >
           {data.actionText['action' + [this.props.actionNumber]].button}
-        </button>
+        </Button>
+      );
+      title = (
+        <LongActionTitle>
+          {data.actionText['action' + [this.props.actionNumber]].title}
+          <ActionHR />
+        </LongActionTitle>
+      );
+    } else {
+      title = (
+        <ActionTitle>
+          {data.actionText['action' + [this.props.actionNumber]].title}
+          <ActionHR />
+        </ActionTitle>
       );
     }
+
     return (
       <Container>
         <ActionIcon src={this.props.actionIcon} />
-        <ActionTitle>
-          {data.actionText['action' + [this.props.actionNumber]].title}
-        </ActionTitle>
+        {title}
         {html}
         {buttonRender}
       </Container>

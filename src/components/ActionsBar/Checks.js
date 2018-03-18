@@ -1,4 +1,5 @@
 import React from 'react';
+import checkIcon from '../../assets/svg/checkIcon.svg';
 
 export const Check1 = (
   <img
@@ -6,9 +7,9 @@ export const Check1 = (
       position: 'absolute',
       left: '50%',
       bottom: '32',
-      transform: 'translateX(-98px)'
+      transform: 'translateX(-95px)'
     }}
-    src="http://placehold.it/20x20"
+    src={checkIcon}
   />
 );
 export const Check2 = (
@@ -19,7 +20,7 @@ export const Check2 = (
       bottom: '32',
       transform: 'translateX(-39px)'
     }}
-    src="http://placehold.it/20x20"
+    src={checkIcon}
   />
 );
 
@@ -29,9 +30,9 @@ export const Check3 = (
       position: 'absolute',
       left: '50%',
       bottom: '32',
-      transform: 'translateX(19px)'
+      transform: 'translateX(17px)'
     }}
-    src="http://placehold.it/20x20"
+    src={checkIcon}
   />
 );
 export const Check4 = (
@@ -40,8 +41,8 @@ export const Check4 = (
       position: 'absolute',
       left: '50%',
       bottom: '32',
-      transform: 'translateX(78px)'
+      transform: 'translateX(72px)'
     }}
-    src="http://placehold.it/20x20"
+    src={checkIcon}
   />
 );
