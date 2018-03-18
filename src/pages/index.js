@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import ModalTrigger from '../components/Modal/ModalTrigger';
 import data from '../data/data.json';
+import Header from '../components/Header/Header';
 import HeroVideo from '../components/HeroVideo/HeroVideo';
 import SadTruthSection from '../components/SadTruthSection/SadTruthSection';
 import McNuggetSection from '../components/McNuggetSection/McNuggetSection';
@@ -10,6 +11,7 @@ import ActionsBar from '../components/ActionsBar/ActionsBar';
 import { RedButton } from '../components/Buttons/Buttons.style';
 import sadTruthBgSm from '../assets/images/campaigns-mcdonalds-website-sad-truth-small.jpg';
 import sadTruthBgLg from '../assets/images/campaigns-mcdonalds-website-sad-truth-large.jpg';
+import mcNuggetImgSm from '../assets/images/campaigns-mcdonalds-website-chicken-nugget-small.png';
 import {
   SadTruthMarkup,
   McNuggetMarkup,
@@ -19,6 +21,7 @@ import {
 export default () => {
   return (
     <div>
+      <Header />
       <HeroVideo videoURL={data.videoURL} />
       <a name="sadTruth" />
       <SadTruthSection
@@ -36,7 +39,7 @@ export default () => {
       <McNuggetSection
         triggerItem={<RedButton>{data.mcNugget.buttonText}</RedButton>}
         markupToDisplay={McNuggetMarkup}
-        background="https://the-humane-league-share.s3.amazonaws.com/tac-share.png"
+        imgSm={mcNuggetImgSm}
         first={data.mcNugget.first}
         second={data.mcNugget.second}
         third={data.mcNugget.third}

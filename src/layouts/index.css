@@ -5,6 +5,7 @@ html {
 }
 body {
   margin: 0;
+  background: black;
 }
 article,
 aside,
@@ -200,7 +201,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -651,6 +652,9 @@ form label.at-text,
 form label.at-check,
 .text {
   color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .ngp-form section.at-inner {
@@ -668,7 +672,7 @@ form .at-form-submit.clearfix {
 
 form input.at-submit.btn-at.btn-at-primary {
   background: #ef4446;
-  border: 2px solid white;
+  border: 2.5px solid white;
   border-radius: 1em;
   padding: 0.4em 0.9em;
   font-family: 'Raleway';

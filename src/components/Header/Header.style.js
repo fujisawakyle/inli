@@ -11,8 +11,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: fixed;
+  top: 0;
   z-index: 2;
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -22,12 +22,14 @@ export const Container = styled.div`
     height: 3em;
   `};
 `;
+
 export const LogoContainer = styled.div`
-  width: 185px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 185px;
   margin-left: 1em;
+
   ${media.md`
     width: 150px;
   `};
@@ -36,6 +38,8 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
   width: 50px;
   vertical-align: middle;
+  margin-right: 10px;
+
   ${media.md`
     width: 40px;
   `};
@@ -44,6 +48,7 @@ export const Logo = styled.img`
 export const LogoText = styled.img`
   width: 120px;
   vertical-align: middle;
+
   ${media.md`
     width: 100px;
   `};
@@ -54,19 +59,21 @@ export const ItemsContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   margin-right: 1.5em;
+
   ${media.md`
     width: 350px;
     justify-content: space-between;
-    
   `};
 `;
+
 export const SocialBlock = styled.div`
   display: none;
+
   ${media.md`
-    width: 95px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 95px;
   `};
 `;
 
@@ -75,6 +82,7 @@ export const SocialIcon = styled.img`
   max-height: 25px;
   vertical-align: middle;
 `;
+
 export const DonateButton = styled.div`
   font-family: Raleway;
   display: none;
@@ -97,6 +105,7 @@ export const DonateButton = styled.div`
     font-weight: bold;
   `};
 `;
+
 export const Menu = styled.img`
   width: 35px;
   vertical-align: middle;
@@ -104,8 +113,8 @@ export const Menu = styled.img`
 
 export const NavContainer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 `;
@@ -125,6 +134,7 @@ export const NavLink = styled.li`
   list-style: none;
   padding: 1em 0;
 `;
+
 export const NavLinkUpper = styled(NavLink)`
   text-transform: uppercase;
 `;

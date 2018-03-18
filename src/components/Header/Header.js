@@ -24,9 +24,9 @@ import ModalTrigger from '../Modal/ModalTrigger';
 import INLILogo from '../../assets/svg/INLILogo.svg';
 import INLILogoText from '../../assets/svg/INLILogoText.svg';
 import menuIcon from '../../assets/svg/menuIcon.svg';
-import facebookIcon from '../../assets/svg/facebook.svg';
-import instagramIcon from '../../assets/svg/instagram.svg';
-import twitterIcon from '../../assets/svg/twitter.svg';
+import facebookIcon from '../../assets/svg/facebookIcon.svg';
+import instagramIcon from '../../assets/svg/instagramIcon.svg';
+import twitterIcon from '../../assets/svg/twitterIcon.svg';
 
 import { ModalManager } from 'react-dynamic-modal';
 
@@ -64,33 +64,24 @@ let Navbar = (
   </NavContainer>
 );
 
-const Header = ({ navLinks }) => (
-  <div>
-    <Container>
+const Header = () => (
+  <Container>
+    <LogoContainer>
       <Link to="/">
-        <LogoContainer>
-          <Logo src={INLILogo} />
-          <LogoText src={INLILogoText} />
-        </LogoContainer>
+        <Logo src={INLILogo} />
+        <LogoText src={INLILogoText} />
       </Link>
-      <ItemsContainer>
-        {Social}
-        <DonateButton href="#">Donate</DonateButton>
-        <ModalTrigger
-          modalTransition="fade"
-          triggerItem={<Menu src={menuIcon} />}
-          markupToDisplay={Navbar}
-        />
-      </ItemsContainer>
-      {/* {navLinks.map(function(link) {
-        return (
-          <Link to={'/' + link.split(' ').join('')}>
-            <NavLink key={link}>{link}</NavLink>
-          </Link>
-        );
-      })} */}
-    </Container>
-  </div>
+    </LogoContainer>
+    <ItemsContainer>
+      {Social}
+      <DonateButton href="#">Donate</DonateButton>
+      <ModalTrigger
+        modalTransition="fade"
+        triggerItem={<Menu src={menuIcon} />}
+        markupToDisplay={Navbar}
+      />
+    </ItemsContainer>
+  </Container>
 );
 
 export default Header;
