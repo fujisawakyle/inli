@@ -60,18 +60,3 @@ export const ImageLarge = styled.img`
         max-width: 670px;
     `};
 `;
-
-export const DynamicImage = styled.div`
-  width: 273px;
-  height: 445px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background: url(${props => props.imgSm});
-  ${media.md`
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-    background: url(${props => props.imgLg});
-`};
-`;
