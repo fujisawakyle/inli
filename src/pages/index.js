@@ -8,6 +8,7 @@ import SadTruthSection from '../components/SadTruthSection/SadTruthSection';
 import McNuggetSection from '../components/McNuggetSection/McNuggetSection';
 import WhySection from '../components/WhySection/WhySection';
 import RonaldSection from '../components/RonaldSection/RonaldSection';
+import SocialSection from '../components/SocialSection/SocialSection';
 import ActionsBar from '../components/ActionsBar/ActionsBar';
 import { RedButton } from '../components/Buttons/Buttons.style';
 import sadTruthBgSm from '../assets/images/campaigns-mcdonalds-website-sad-truth-small.jpg';
@@ -63,6 +64,7 @@ export default () => {
         second={data.ronald.second}
         third={data.ronald.third}
       />
+      <SocialSection first={data.social.first} />
     </div>
   );
 };
