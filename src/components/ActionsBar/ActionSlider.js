@@ -32,16 +32,15 @@ export default class ActionSlider extends Component {
   };
 
   componentDidMount() {
-    // allow petition button to load
+    // wait 10 minutes for petition thank you div
     this.waitUntilLoaded(
       'content thankYou',
       () => {
         setTimeout(() => {
           this.handleActionTaken('1');
         }, 1000);
-        console.log('action');
       },
-      10000
+      600000
     );
   }
 
