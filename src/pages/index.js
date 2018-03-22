@@ -6,11 +6,14 @@ import Header from '../components/Header/Header';
 import HeroVideo from '../components/HeroVideo/HeroVideo';
 import SadTruthSection from '../components/SadTruthSection/SadTruthSection';
 import McNuggetSection from '../components/McNuggetSection/McNuggetSection';
+import WhySection from '../components/WhySection/WhySection';
 import RonaldSection from '../components/RonaldSection/RonaldSection';
 import ActionsBar from '../components/ActionsBar/ActionsBar';
 import { RedButton } from '../components/Buttons/Buttons.style';
 import sadTruthBgSm from '../assets/images/campaigns-mcdonalds-website-sad-truth-small.jpg';
 import sadTruthBgLg from '../assets/images/campaigns-mcdonalds-website-sad-truth-large.jpg';
+import companyLogoSm from '../assets/svg/why/company-logos-mobile.svg';
+import companyLogoLg from '../assets/svg/why/company-logos-desktop.svg';
 import mcNuggetImgSm from '../assets/images/campaigns-mcdonalds-website-chicken-nugget-small.png';
 import {
   SadTruthMarkup,
@@ -43,6 +46,13 @@ export default () => {
         first={data.mcNugget.first}
         second={data.mcNugget.second}
         third={data.mcNugget.third}
+      />
+      <a name="why" />
+      <WhySection
+        imgSm={companyLogoSm}
+        imgLg={companyLogoLg}
+        first={data.why.first}
+        second={data.why.second}
       />
       <a name="ronald" />
       <RonaldSection

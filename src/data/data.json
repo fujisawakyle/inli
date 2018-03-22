@@ -87,6 +87,11 @@
     }
   },
 
+  "why": {
+    "first": "These companies committed to meaningful welfare reform,",
+    "second": "Why won't McDonald's?"
+  },
+
   "ronald": {
     "buttonText": "watch videos",
     "first": "Where's Ronald?",
