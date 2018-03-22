@@ -17,6 +17,34 @@ export default class ActionSlider extends Component {
     check4: false
   };
 
+  // wait to execute callback until specific element with class name found
+  waitUntilLoaded = (className, callback, waitTime) => {
+    let maxtime = waitTime;
+    let start = new Date().getTime();
+    let interval = setInterval(() => {
+      if (new Date().getTime() - start < maxtime) {
+        if (document.getElementsByClassName(className)[0]) {
+          clearInterval(interval);
+          callback();
+        }
+      }
+    }, 100);
+  };
+
+  componentDidMount() {
+    // allow petition button to load
+    this.waitUntilLoaded(
+      'content thankYou',
+      () => {
+        setTimeout(() => {
+          this.handleActionTaken('1');
+        }, 1000);
+        console.log('action');
+      },
+      10000
+    );
+  }
+
   handleActionTaken = actionNum => {
     // identify correct check mark
     let checkState = {};
@@ -51,6 +79,7 @@ export default class ActionSlider extends Component {
       >
         <Carousel dragging={false} decorators={decorators}>
           <Action
+            onClick={e => e.stopPropagation()}
             actionIcon={petitionIcon}
             handleActionTaken={this.handleActionTaken}
             actionNumber="1"

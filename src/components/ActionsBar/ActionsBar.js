@@ -11,7 +11,7 @@ export default class ActionsBar extends Component {
 
     // load EA script
     script.src = 'https://d1aqhv4sn5kxtx.cloudfront.net/actiontag/at.js';
-    script.crossOrigin = 'anonymous';
+    //script.crossOrigin = 'anonymous';
     script.async = true;
 
     document.body.appendChild(script);

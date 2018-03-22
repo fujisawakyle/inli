@@ -28,36 +28,6 @@ export default class Action extends Component {
     copied: false
   };
 
-  // wait to execute callback until specific element with class name found
-  waitUntilLoaded = (className, callback, waitTime) => {
-    let maxtime = waitTime;
-    let start = new Date().getTime();
-    let interval = setInterval(() => {
-      if (new Date().getTime() - start < maxtime) {
-        if (document.getElementsByClassName(className)[0]) {
-          clearInterval(interval);
-          callback();
-        }
-      }
-    }, 100);
-  };
-
-  componentDidMount() {
-    // allow petition button to load
-    this.waitUntilLoaded(
-      'at-submit btn-at btn-at-primary',
-      () => {
-        let submit = document.getElementsByClassName(
-          'at-submit btn-at btn-at-primary'
-        );
-        submit[0].onclick = () => {
-          this.props.handleActionTaken('1');
-        };
-      },
-      10000
-    );
-  }
-
   handleChange = (e, type) => {
     this.setState({ [type]: e.target.value });
   };
