@@ -11,6 +11,9 @@ export default class ModalTrigger extends Component {
   };
 
   openModal = () => {
+    setTimeout(() => {
+      document.getElementById('___gatsby').classList.add('blur');
+    }, 200);
     const ModalName = this.modalTransitions[this.props.modalTransition];
     ModalManager.open(
       <ModalName
