@@ -687,6 +687,10 @@ form input.at-submit.btn-at.btn-at-primary {
   filter: blur(4px);
 }
 
+.fixed {
+  position: fixed;
+}
+
 form .at.at-check input + span {
   margin-bottom: 0;
 }

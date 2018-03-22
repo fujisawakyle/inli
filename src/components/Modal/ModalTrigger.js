@@ -12,7 +12,7 @@ export default class ModalTrigger extends Component {
 
   openModal = () => {
     setTimeout(() => {
-      document.getElementById('___gatsby').classList.add('blur');
+      document.getElementById('___gatsby').classList.add('blur', 'fixed');
     }, 200);
     const ModalName = this.modalTransitions[this.props.modalTransition];
     ModalManager.open(

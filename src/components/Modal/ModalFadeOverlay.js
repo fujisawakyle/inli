@@ -5,7 +5,7 @@ import { OverlayExitButton } from './ModalOverlay.style';
 export default class ModalOverlay extends Component {
   closeModal = () => {
     ModalManager.close();
-    document.getElementById('___gatsby').classList.remove('blur');
+    document.getElementById('___gatsby').classList.remove('blur', 'fixed');
   };
 
   render() {
