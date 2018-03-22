@@ -650,8 +650,9 @@ form.clearfix {
 }
 form label.at-text,
 form label.at-check,
+form label.error,
 .text {
-  color: white;
+  color: white !important;
   font-family: 'Raleway', sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
@@ -696,4 +697,14 @@ form input[type='checkbox'] + span:before {
 
 form label input[type='checkbox']:checked + span:before {
   background: white;
+}
+
+form small.error {
+  color: white !important;
+  margin-bottom: 0 !important;
+}
+
+.content.thankYou {
+  color: white;
+  margin-top: 1em;
 }
