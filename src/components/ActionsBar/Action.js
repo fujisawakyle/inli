@@ -54,11 +54,11 @@ export default class Action extends Component {
         );
         break;
       case '3':
-        window.location.href = `mailto:${
-          this.state.emailRecipientValue
-        }?subject=${this.state.emailSubjectValue}&body=${
-          this.state.emailBodyValue
-        }`;
+        window.open(
+          `mailto:${this.state.emailRecipientValue}?subject=${
+            this.state.emailSubjectValue
+          }&body=${this.state.emailBodyValue}`
+        );
         break;
       case '4':
         window.open('https://facebook.com/thehumaneleague');
