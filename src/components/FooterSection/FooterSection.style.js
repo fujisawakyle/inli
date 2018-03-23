@@ -8,10 +8,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   font-family: 'Raleway', sans-serif;
   ${media.md`
-    padding: 2rem 0;
+    padding: 1rem 0;
   `};
 `;
 
@@ -23,4 +23,5 @@ export const Disclaimer = styled.p`
   text-align: center;
   font-size: 0.2em;
   color: #888;
+  margin-bottom: 0;
 `;

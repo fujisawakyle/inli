@@ -8,10 +8,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
   font-family: 'Raleway', sans-serif;
   ${media.md`
-    padding: 1rem 0;
+    padding: 2rem 0;
   `};
 `;
 
@@ -36,6 +36,6 @@ export const ShortHR = styled.hr`
 `;
 
 export const TwitterContainer = styled.div`
-  width: 90%;
+  width: 70%;
   max-width: 720px;
 `;
