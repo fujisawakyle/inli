@@ -8,6 +8,23 @@ export default class ModalScaleUpOverlay extends Component {
     document.getElementById('___gatsby').classList.remove('blur', 'fixed');
   };
 
+  componentDidMount() {
+    //allow ESC key to close modal
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      var isEscape = false;
+      if ('key' in evt) {
+        isEscape = evt.key == 'Escape' || evt.key == 'Esc';
+      } else {
+        isEscape = evt.keyCode == 27;
+      }
+      if (isEscape) {
+        ModalManager.close();
+        document.getElementById('___gatsby').classList.remove('blur', 'fixed');
+      }
+    };
+  }
+
   render() {
     const { markupToDisplay, onRequestClose, bgColor } = this.props;
     const defaultBgColor = 'rgba(43, 43, 43, .9)';
@@ -22,8 +39,7 @@ export default class ModalScaleUpOverlay extends Component {
         effect={Effect.ScaleUp}
       >
         <OverlayExitButton onClick={this.closeModal}>X</OverlayExitButton>
-
-        {markupToDisplay}
+        <div className="yes">{markupToDisplay}</div>
       </Modal>
     );
   }
