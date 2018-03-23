@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
+import Link from 'gatsby-link';
 
 import { RedButton } from '../components/Buttons/Buttons.style';
 
@@ -39,9 +40,11 @@ const RedButtonWhiteBorder = styled(RedButton)`
 export default () => {
   return (
     <Container>
-      <Logo>
-        <SVG src={INLILogoText} />
-      </Logo>
+      <Link to="/">
+        <Logo>
+          <SVG src={INLILogoText} />
+        </Logo>
+      </Link>
       <Title>Volunteer Tool Kit</Title>
       <a href={toolkitPDF} target="_blank">
         <RedButtonWhiteBorder>open pdf</RedButtonWhiteBorder>
