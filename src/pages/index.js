@@ -5,21 +5,25 @@ import data from '../data/data.json';
 import Header from '../components/Header/Header';
 import HeroVideo from '../components/HeroVideo/HeroVideo';
 import SadTruthSection from '../components/SadTruthSection/SadTruthSection';
+import ActionsBar from '../components/ActionsBar/ActionsBar';
 import McNuggetSection from '../components/McNuggetSection/McNuggetSection';
 import WhySection from '../components/WhySection/WhySection';
 import RonaldSection from '../components/RonaldSection/RonaldSection';
 import SocialSection from '../components/SocialSection/SocialSection';
-import ActionsBar from '../components/ActionsBar/ActionsBar';
+import MediaSection from '../components/MediaSection/MediaSection.js';
+import FooterSection from '../components/FooterSection/FooterSection';
 import { RedButton } from '../components/Buttons/Buttons.style';
 import sadTruthBgSm from '../assets/images/campaigns-mcdonalds-website-sad-truth-small.jpg';
 import sadTruthBgLg from '../assets/images/campaigns-mcdonalds-website-sad-truth-large.jpg';
 import companyLogoSm from '../assets/svg/why/company-logos-mobile.svg';
 import companyLogoLg from '../assets/svg/why/company-logos-desktop.svg';
 import mcNuggetImgSm from '../assets/images/campaigns-mcdonalds-website-chicken-nugget-small.png';
+
 import {
   SadTruthMarkup,
   McNuggetMarkup,
-  RonaldMarkup
+  RonaldMarkup,
+  MediaMarkup
 } from '../components/Modal/ModalMarkup';
 
 export default () => {
@@ -59,12 +63,17 @@ export default () => {
       <RonaldSection
         triggerItem={<RedButton>{data.ronald.buttonText}</RedButton>}
         markupToDisplay={RonaldMarkup}
-        background="https://the-humane-league-homepage.s3.amazonaws.com/THL17-comms-share-image.jpg"
         first={data.ronald.first}
         second={data.ronald.second}
         third={data.ronald.third}
       />
       <SocialSection first={data.social.first} />
+      <MediaSection
+        triggerItem={<RedButton>{data.media.buttonText}</RedButton>}
+        markupToDisplay={MediaMarkup}
+        first={data.media.first}
+      />
+      <FooterSection />
     </div>
   );
 };

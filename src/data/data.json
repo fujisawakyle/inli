@@ -103,7 +103,22 @@
   "social": {
     "first": "follow the campaign"
   },
-
+  "media": {
+    "buttonText": "more info",
+    "first": "Media Resources",
+    "overlayText": {
+      "title": "Media Resources",
+      "first": "Download a variety of resources below:",
+      "second": "for further information or to schedule an interview,",
+      "third": "contact Jessie Lingenfelter, jlingenfelter@thehumaneleague.org",
+      "button1": "press release",
+      "button2": "infographic",
+      "button3": "background info"
+    }
+  },
+  "footer": {
+    "disclaimer": "Images representative of farms in McDonald's supply chain"
+  },
   "actionText": {
     "action1": {
       "title": "Sign our Petition",
