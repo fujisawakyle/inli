@@ -12,6 +12,9 @@ import {
 } from '../Modal/ModalMarkup';
 
 export default class ModalTrigger extends Component {
+  state = {
+    anchorModalShown: false
+  };
   modalTransitions = {
     fade: ModalFadeOverlay,
     scaleUp: ModalScaleUpOverlay
@@ -25,6 +28,7 @@ export default class ModalTrigger extends Component {
       window.location.href.indexOf('#mediainfo') != -1
     ) {
       this.openModal();
+      this.setState({ anchorModalShown: true });
     }
   }
 
@@ -34,18 +38,22 @@ export default class ModalTrigger extends Component {
     }, 200);
     const ModalName = this.modalTransitions[this.props.modalTransition];
     let markup;
-    if (window.location.href.indexOf('#sadtruthinfo') != -1) {
-      markup = SadTruthMarkup;
-    } else if (window.location.href.indexOf('#mcnuggetinfo') != -1) {
-      markup = McNuggetMarkup;
-    } else if (window.location.href.indexOf('#ronaldinfo') != -1) {
-      markup = RonaldMarkup;
-    } else if (window.location.href.indexOf('#mediainfo') != -1) {
-      markup = MediaMarkup;
+    let bgColor;
+    if (!this.state.anchorModalShown) {
+      if (window.location.href.indexOf('#sadtruthinfo') != -1) {
+        markup = SadTruthMarkup;
+      } else if (window.location.href.indexOf('#mcnuggetinfo') != -1) {
+        markup = McNuggetMarkup;
+        bgColor = 'rgba(255,44,60,0.9)';
+      } else if (window.location.href.indexOf('#ronaldinfo') != -1) {
+        markup = RonaldMarkup;
+      } else if (window.location.href.indexOf('#mediainfo') != -1) {
+        markup = MediaMarkup;
+      }
     }
     ModalManager.open(
       <ModalName
-        bgColor={this.props.bgColor}
+        bgColor={bgColor || this.props.bgColor}
         markupToDisplay={markup || this.props.markupToDisplay}
         onRequestClose={() => true}
       />
