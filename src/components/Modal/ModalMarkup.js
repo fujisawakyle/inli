@@ -40,6 +40,7 @@ import symptoms from '../../assets/svg/mcnugget/symptoms.svg';
 import warehouses from '../../assets/svg/mcnugget/warehouses.svg';
 import slaughter from '../../assets/svg/mcnugget/slaughter.svg';
 import companies from '../../assets/svg/mcnugget/companies.svg';
+import infographicFile from '../../assets/downloads/truth-behind-mcnuggets-infographic.pdf';
 
 import { RedButton } from '../Buttons/Buttons.style';
 
@@ -133,7 +134,9 @@ export const MediaMarkup = (
       <Subtitle>{data.media.overlayText.first}</Subtitle>
       <RedButton>{data.media.overlayText.button1}</RedButton>
       <br />
-      <RedButton>{data.media.overlayText.button2}</RedButton>
+      <a href={infographicFile} target="_blank">
+        <RedButton>{data.media.overlayText.button2}</RedButton>
+      </a>
       <br />
       <RedButton>{data.media.overlayText.button3}</RedButton>
       <br />
