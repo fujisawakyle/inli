@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../../data/data.json';
+import SVG from 'react-inlinesvg';
 import { ModalManager } from 'react-dynamic-modal';
 
 import {
@@ -10,6 +11,7 @@ import {
   DynamicWidth,
   Order1,
   DynamicWidthOrder1,
+  MobileMarginBottom,
   Container,
   Title,
   Subtitle,
@@ -99,17 +101,29 @@ export const McNuggetMarkup = (
       <Title>{data.mcNugget.overlayText.title}</Title>
       <ShortHR />
       <FlexColumnToRow>
-        <Order1 src={chicks} />
-        <DynamicWidth src={comparison} />
+        <Order1>
+          <img src={chicks} />
+        </Order1>
+        <DynamicWidth>
+          <SVG className="comparisonSVG" src={comparison} />
+        </DynamicWidth>
       </FlexColumnToRow>
       <FlexColumnToRowFixedHeight>
         <FlexColumn>
-          <img src={symptoms} />
-          <img src={warehouses} />
+          <MobileMarginBottom>
+            <SVG  src={symptoms} />
+          </MobileMarginBottom>
+          <MobileMarginBottom>
+            <SVG src={warehouses} />
+          </MobileMarginBottom>
         </FlexColumn>
         <FlexColumn>
-          <DynamicWidthOrder1 src={slaughter} />
-          <img src={companies} />
+          <DynamicWidthOrder1>
+            <MobileMarginBottom>
+              <SVG src={slaughter} />
+            </MobileMarginBottom>
+          </DynamicWidthOrder1>
+          <SVG src={companies} />
         </FlexColumn>
       </FlexColumnToRowFixedHeight>
     </Container>

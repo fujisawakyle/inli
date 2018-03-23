@@ -12,8 +12,11 @@ export const FlexColumnToRow = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 1em;
+
   ${media.md`
     flex-direction: row;
+    margin-bottom: 0;
   `};
 `;
 
@@ -26,12 +29,12 @@ export const FlexColumnToRowFixedHeight = styled(FlexColumnToRow)`
 export const FlexColumn = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   height: 100%;
 `;
 
-export const DynamicWidth = styled.img`
+export const DynamicWidth = styled.div`
   width: 90%;
   ${media.md`
    width: 55%;
@@ -49,6 +52,13 @@ export const DynamicWidthOrder1 = styled(Order1)`
     width: 100%;
   `};
 `;
+
+export const MobileMarginBottom = styled.div`
+  margin-bottom: 1em;
+  ${media.md`
+    margin-bottom: 0;
+  `}
+`
 
 export const Container = styled.div`
   width: 75%;

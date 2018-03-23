@@ -683,14 +683,6 @@ form input.at-submit.btn-at.btn-at-primary {
   margin: 0;
 }
 
-.blur {
-  filter: blur(4px);
-}
-
-.fixed {
-  position: fixed;
-}
-
 form .at.at-check input + span {
   margin-bottom: 0;
 }
@@ -712,3 +704,27 @@ form small.error {
   color: white;
   margin-top: 1em;
 }
+
+/*
+McNugget Overlay
+*/
+
+.isvg svg{
+  width: 100%;
+}
+
+/*
+Modal/Overlay
+*/
+.blur {
+  filter: blur(4px);
+}
+.fixed {
+  //position: fixed;
+  width: 100%;
+}
+
+/*
+SocialSection
+*/
+
