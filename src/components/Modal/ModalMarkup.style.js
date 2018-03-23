@@ -7,9 +7,52 @@ export const FlexCenter = styled.div`
   justify-content: center;
 `;
 
+export const FlexColumnToRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  ${media.md`
+    flex-direction: row;
+  `};
+`;
+
+export const FlexColumnToRowFixedHeight = styled(FlexColumnToRow)`
+  ${media.md`
+    height: 500px;
+  `};
+`;
+
+export const FlexColumn = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+`;
+
+export const DynamicWidth = styled.img`
+  width: 90%;
+  ${media.md`
+   width: 55%;
+  `};
+`;
+
+export const Order1 = styled(DynamicWidth)`
+  ${media.md`
+    order: 1;
+  `};
+`;
+
+export const DynamicWidthOrder1 = styled(Order1)`
+  ${media.md`
+    width: 100%;
+  `};
+`;
+
 export const Container = styled.div`
   width: 75%;
-  max-width: 700px;
+  max-width: 650px;
   height: 100%;
   padding: 3em 0;
   display: flex;
@@ -17,6 +60,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: 'Raleway';
+  transform: none;
 `;
 
 export const Title = styled.h1`
@@ -24,6 +68,10 @@ export const Title = styled.h1`
   text-align: center;
   margin-bottom: 1rem;
   font-weight: 900;
+`;
+
+export const Subtitle = styled.h3`
+  text-align: center;
 `;
 
 export const ShortHR = styled.hr`
@@ -91,4 +139,8 @@ export const Description = styled.p`
   font-size: 0.8em;
   line-height: 1.4;
   margin-bottom: 0;
+`;
+
+export const DescriptionCenter = styled(Description)`
+  text-align: center;
 `;

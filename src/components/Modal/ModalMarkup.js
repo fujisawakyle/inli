@@ -4,8 +4,15 @@ import { ModalManager } from 'react-dynamic-modal';
 
 import {
   FlexCenter,
+  FlexColumnToRow,
+  FlexColumnToRowFixedHeight,
+  FlexColumn,
+  DynamicWidth,
+  Order1,
+  DynamicWidthOrder1,
   Container,
   Title,
+  Subtitle,
   ShortHR,
   ConditionsImage,
   ConditionsImageBottomRight,
@@ -14,7 +21,8 @@ import {
   Number,
   Content,
   ImageTitle,
-  Description
+  Description,
+  DescriptionCenter
 } from './ModalMarkup.style';
 import img1Sm from '../../assets/images/campaigns-mcdonalds-website-learnmore-small-1.jpg';
 import img1Md from '../../assets/images/campaigns-mcdonalds-website-learnmore-medium-1.jpg';
@@ -25,6 +33,15 @@ import img2Lg from '../../assets/images/campaigns-mcdonalds-website-learnmore-la
 import img3Sm from '../../assets/images/campaigns-mcdonalds-website-learnmore-small-3.jpg';
 import img3Md from '../../assets/images/campaigns-mcdonalds-website-learnmore-medium-3.jpg';
 import img3Lg from '../../assets/images/campaigns-mcdonalds-website-learnmore-large-3.jpg';
+
+import chicks from '../../assets/png/mcnugget/grouping-of-chicks-shadow.png';
+import comparison from '../../assets/svg/mcnugget/comparison.svg';
+import symptoms from '../../assets/svg/mcnugget/symptoms.svg';
+import warehouses from '../../assets/svg/mcnugget/warehouses.svg';
+import slaughter from '../../assets/svg/mcnugget/slaughter.svg';
+import companies from '../../assets/svg/mcnugget/companies.svg';
+
+import { RedButton } from '../Buttons/Buttons.style';
 
 export const SadTruthMarkup = (
   <FlexCenter>
@@ -80,7 +97,20 @@ export const McNuggetMarkup = (
     <Container>
       <Title>{data.mcNugget.overlayText.title}</Title>
       <ShortHR />
-      <p>pending content</p>
+      <FlexColumnToRow>
+        <Order1 src={chicks} />
+        <DynamicWidth src={comparison} />
+      </FlexColumnToRow>
+      <FlexColumnToRowFixedHeight>
+        <FlexColumn>
+          <img src={symptoms} />
+          <img src={warehouses} />
+        </FlexColumn>
+        <FlexColumn>
+          <DynamicWidthOrder1 src={slaughter} />
+          <img src={companies} />
+        </FlexColumn>
+      </FlexColumnToRowFixedHeight>
     </Container>
   </FlexCenter>
 );
@@ -91,6 +121,27 @@ export const RonaldMarkup = (
       <Title>{data.ronald.overlayText.title}</Title>
       <ShortHR />
       <p>pending content</p>
+    </Container>
+  </FlexCenter>
+);
+
+export const MediaMarkup = (
+  <FlexCenter>
+    <Container>
+      <Title>{data.media.overlayText.title}</Title>
+      <ShortHR />
+      <Subtitle>{data.media.overlayText.first}</Subtitle>
+      <RedButton>{data.media.overlayText.button1}</RedButton>
+      <br />
+      <RedButton>{data.media.overlayText.button2}</RedButton>
+      <br />
+      <RedButton>{data.media.overlayText.button3}</RedButton>
+      <br />
+      <DescriptionCenter>
+        {data.media.overlayText.second}
+        <br />
+        {data.media.overlayText.third}
+      </DescriptionCenter>
     </Container>
   </FlexCenter>
 );
