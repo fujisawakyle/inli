@@ -49,7 +49,15 @@ let Navbar = (
     <NavList>
       {data.navLinkTitles.map(function(link) {
         return (
-          <a onClick={ModalManager.close} href={`#${link.anchor}`}>
+          <a
+            onClick={() => {
+              ModalManager.close();
+              document
+                .getElementById('___gatsby')
+                .classList.remove('blur', 'fixed');
+            }}
+            href={`#${link.anchor}`}
+          >
             <NavLink key={link.anchor}>{link.title}</NavLink>
           </a>
         );
