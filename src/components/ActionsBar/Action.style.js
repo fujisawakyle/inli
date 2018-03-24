@@ -20,13 +20,13 @@ export const ActionIcon = styled.img`
 export const ActionTitle = styled.h2`
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 0 auto;
   /* width: 365px; */
 
   ${media.sm`
     /* width: 422px; */
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   `};
 `;
 
@@ -129,7 +129,15 @@ export const Button = styled.div`
   cursor: pointer;
   &:hover,
   &:active {
+    background: #eaeaea;
+    border-color: #eaeaea;
+    color: #ef4446;
+    box-shadow: 0 6px 5px 3px rgba(0,0,0,0.1);
+  }
+
+  &:active {
     background: #ef4446;
+    border-color: #fff;
     color: #fff;
     box-shadow: inset 0 4px 5px 3px rgba(0,0,0,0.1);
   }

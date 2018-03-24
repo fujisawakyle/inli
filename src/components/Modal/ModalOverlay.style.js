@@ -13,9 +13,9 @@ export const OverlayExitButton = styled.div`
   align-items: center;
 
   color: white;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   border-radius: 50%;
-  background: red;
+  /* background: red; */
   font-size: 1.8rem;
 
   cursor: pointer;

@@ -9,7 +9,7 @@ export default class WhySection extends Component {
   render() {
     return (
       <Container>
-        <Logo src={thlLogo} />
+        <a style={{marginBottom: '1em'}} href="https://thehumaneleague.org" target="_blank"><Logo src={thlLogo} /></a>
         <Disclaimer>{data.footer.disclaimer}</Disclaimer>
       </Container>
     );

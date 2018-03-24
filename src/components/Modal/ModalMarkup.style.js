@@ -13,6 +13,7 @@ export const FlexColumnToRow = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-bottom: 1em;
+  width: 100%;
 
   ${media.md`
     flex-direction: row;
@@ -21,9 +22,6 @@ export const FlexColumnToRow = styled.div`
 `;
 
 export const FlexColumnToRowFixedHeight = styled(FlexColumnToRow)`
-  ${media.md`
-    height: 500px;
-  `};
 `;
 
 export const FlexColumn = styled.div`
@@ -32,12 +30,16 @@ export const FlexColumn = styled.div`
   justify-content: space-around;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+  ${media.md`
+   width: 50%;
+  `};
 `;
 
 export const DynamicWidth = styled.div`
-  width: 90%;
+  width: 100%;
   ${media.md`
-   width: 55%;
+   width: 50%;
   `};
 `;
 
@@ -50,19 +52,29 @@ export const Order1 = styled(DynamicWidth)`
 export const DynamicWidthOrder1 = styled(Order1)`
   ${media.md`
     width: 100%;
+    margin-bottom: 1em;
   `};
 `;
 
 export const MobileMarginBottom = styled.div`
   margin-bottom: 1em;
-  ${media.md`
-    margin-bottom: 0;
-  `}
-`
+  width: 100%;
+
+  &.how__graphic {
+
+    &--symptoms {
+      margin-bottom: 2em;
+    }
+
+    &--companies {
+      margin-bottom: 2em;
+    }
+  }
+`;
 
 export const Container = styled.div`
-  width: 75%;
-  max-width: 650px;
+  width: 90%;
+  max-width: 40rem;
   height: 100%;
   padding: 3em 0;
   display: flex;
@@ -71,6 +83,19 @@ export const Container = styled.div`
   align-items: center;
   font-family: 'Raleway';
   transform: none;
+
+  &.container--how {
+    max-width: 60rem;
+  }
+
+  .how__graphic {
+    margin-bottom: 2rem;
+  }
+
+  p {
+    width: 100%;
+    font-weight: 500;
+  }
 `;
 
 export const Title = styled.h1`
@@ -84,17 +109,29 @@ export const TitleNoMarginBottom = styled(Title)`
   margin-bottom: 0;
 `
 
-export const Subtitle = styled.h3`
+export const Subtitle = styled.h2`
   text-align: center;
 `;
 
 export const ShortHR = styled.hr`
-  width: 200px;
-  border-bottom: 2px solid #efefef;
+    background: none;
+    border-bottom: 2px solid rgba(255,255,255,0.6);
+    width: 95%;
+    max-width: 10em;
+`;
+
+export const Intro = styled.h4`
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.2rem;
 `;
 
 export const ConditionsImage = styled.div`
-  background: url(${props => props.background1});
+  background: linear-gradient(
+    rgba(0,0,0,.8) 12%,
+    transparent 54%
+    ),
+    url(${props => props.background1});
   margin: 0 auto;
   width: 100%;
   height: 300px;
@@ -105,7 +142,11 @@ export const ConditionsImage = styled.div`
 export const ConditionsImageBottomRight = styled(ConditionsImage)`
   background-position: bottom right;
   ${media.md`
-  background: url(${props => props.background2});
+  background: linear-gradient(
+    rgba(0,0,0,.8) 12%,
+    transparent 54%
+    ),
+    url(${props => props.background2});
     background-size: cover;
     background-position: bottom right;
   `};
@@ -114,7 +155,11 @@ export const ConditionsImageBottomRight = styled(ConditionsImage)`
 export const ConditionsImageCenter = styled(ConditionsImage)`
   background-position: center;
   ${media.sm`
-    background: url(${props => props.background2});
+    background: linear-gradient(
+    rgba(0,0,0,.8) 12%,
+    transparent 54%
+    ),
+    url(${props => props.background2});
     background-size: cover;
     background-position: center;
   `};
@@ -124,18 +169,34 @@ export const ContentContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 1em 0;
+  padding: 0 0.5em;
+  width: 95%;
+  max-width: 18em;
+  margin: 1em auto;
 `;
 
 export const Number = styled.div`
   border: 2px solid #efefef;
   border-radius: 50%;
   background: rgb(193, 33, 38);
-  font-family: 'Source Sans Pro';
+  font-family: 'Raleway';
   font-size: 1.8em;
   font-weight: 700;
   padding: 8px 12px 11px 12px;
   margin-right: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5em;
+  height: 1.5em;
+
+  &.number--three {
+
+    & > div {
+      position: relative;
+      bottom: .07em;
+    }
+  }
 `;
 
 export const Content = styled.div`

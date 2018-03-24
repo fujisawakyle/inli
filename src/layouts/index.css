@@ -204,11 +204,11 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
-  font-kerning: normal;
+  /* font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt'; */
 }
 img {
   max-width: 100%;
@@ -230,7 +230,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 0;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -247,7 +247,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -264,7 +264,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -281,7 +281,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -298,7 +298,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -315,7 +315,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -736,10 +736,16 @@ form input.at-submit.btn-at.btn-at-primary {
 
 form input.at-submit.btn-at.btn-at-primary:hover,
 form input.at-submit.btn-at.btn-at-primary:active {
+  background: #eaeaea;
+  border-color: #eaeaea;
+  color: #ef4446;
+  box-shadow: 0 6px 5px 3px rgba(0,0,0,0.1);
+}
+
+form input.at-submit.btn-at.btn-at-primary:active {
   background: #ef4446;
-  /* border: 2.5px solid #fff; */
+  border-color: #fff;
   color: #fff;
-  box-shadow: none;
   box-shadow: inset 0 4px 5px 3px rgba(0,0,0,0.1);
 }
 
@@ -760,6 +766,24 @@ form input.at-submit.btn-at.btn-at-primary:active {
 .at input[type="color"]:focus,
 .at textarea:focus {
   border-color: #a91e22 !important;
+}
+
+.at input[type="text"]:focus,
+.at input[type="password"]:focus,
+.at input[type="date"]:focus,
+.at input[type="datetime"]:focus,
+.at input[type="datetime-local"]:focus,
+.at input[type="month"]:focus,
+.at input[type="week"]:focus,
+.at input[type="email"]:focus,
+.at input[type="number"]:focus,
+.at input[type="search"]:focus,
+.at input[type="tel"]:focus,
+.at input[type="time"]:focus,
+.at input[type="url"]:focus,
+.at input[type="color"]:focus,
+.at textarea:focus {
+  box-shadow: 0 0 5px rgba(0,0,0,0.2) !important;
 }
 
 

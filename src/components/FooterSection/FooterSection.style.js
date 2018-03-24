@@ -16,12 +16,17 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 300px;
+  width: 95%;
+  max-width: 300px;
 `;
 
 export const Disclaimer = styled.p`
   text-align: center;
-  font-size: 0.2em;
+  font-size: 0.6rem;
   color: #888;
   margin-bottom: 0;
+
+  ${media.sm`
+    font-size: .2rem;
+  `};
 `;
