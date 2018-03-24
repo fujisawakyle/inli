@@ -80,6 +80,10 @@ export const Title = styled.h1`
   font-weight: 900;
 `;
 
+export const TitleNoMarginBottom = styled(Title)`
+  margin-bottom: 0;
+`
+
 export const Subtitle = styled.h3`
   text-align: center;
 `;

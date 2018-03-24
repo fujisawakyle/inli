@@ -14,6 +14,7 @@ import {
   MobileMarginBottom,
   Container,
   Title,
+  TitleNoMarginBottom,
   Subtitle,
   ShortHR,
   ConditionsImage,
@@ -98,8 +99,8 @@ export const SadTruthMarkup = (
 export const McNuggetMarkup = (
   <FlexCenter>
     <Container>
-      <Title>{data.mcNugget.overlayText.title}</Title>
-      <ShortHR />
+      <TitleNoMarginBottom>{data.mcNugget.overlayText.title}</TitleNoMarginBottom>
+      <Subtitle>{data.mcNugget.overlayText.subtitle}</Subtitle>
       <FlexColumnToRow>
         <Order1>
           <img src={chicks} />
