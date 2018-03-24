@@ -54,10 +54,11 @@ export default class Action extends Component {
         );
         break;
       case '3':
+        let body = encodeURIComponent(this.state.emailBodyValue);
         window.open(
           `mailto:${this.state.emailRecipientValue}?subject=${
             this.state.emailSubjectValue
-          }&body=${this.state.emailBodyValue}`
+          }&body=${body}`
         );
         break;
       case '4':
