@@ -92,7 +92,7 @@ export const SocialIcon = styled.img`
 `;
 
 export const DonateButton = styled(RedButton)`
-  width: 127px;
+  width: 130px;
   padding: 0.2em 0.9em;
 `;
 
@@ -128,7 +128,7 @@ export const NavLink = styled.li`
 
   &:hover,
   &:active {
-    color: rgba(255,255,255,.7);
+    color: rgba(255, 255, 255, 0.7);
   }
 `;
 
@@ -137,7 +137,7 @@ export const NavLinkUpper = styled(NavLink)`
 `;
 
 export const NavSeparator = styled.div`
-  border-bottom: 1px solid rgba(255,255,255,0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   width: 95%;
   margin: 0 auto;
   max-width: 8em;
