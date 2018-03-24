@@ -2,9 +2,14 @@ import styled from 'styled-components';
 import media from '../../layouts/media';
 
 export const Container = styled.div`
-  height: 660px;
   background: #ef4446;
   text-align: center;
+  height: 580px;
+  background: #ef4446;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const ActionIcon = styled.img`
@@ -17,10 +22,11 @@ export const ActionTitle = styled.h2`
   font-weight: 600;
   font-size: 2rem;
   margin: 0 auto;
-  width: 365px;
+  /* width: 365px; */
 
   ${media.sm`
-    width: 422px;
+    /* width: 422px; */
+    font-size: 1.4rem;
   `};
 `;
 
@@ -29,14 +35,16 @@ export const LongActionTitle = styled(ActionTitle)`
 `;
 
 export const ActionHR = styled.hr`
-  margin: 1rem auto;
-  border-bottom: 2.5px solid white;
-  width: 60%;
+    margin: 0.9rem auto 0.6rem !important;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    max-width: 5em;
+    background: none;
 `;
 
 export const ActionFields = styled.div`
   width: 80%;
   margin: 0 auto;
+  position: relative;
 `;
 
 export const ActionInputLabel = styled.h5`
@@ -50,19 +58,42 @@ export const ActionInputLabel = styled.h5`
 
 export const ActionInput = styled.input`
   border-radius: 2px;
-  padding: 0.6em 0 0.6em 0.3em;
+  padding: .5rem;
   border: none;
   width: 90%;
   max-width: 335px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: .9rem;
+  background: rgba(255,255,255,0.3);
+  color: #fff;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.5);
+  }
 `;
 export const ActionTextarea = styled.textarea`
   border-radius: 2px;
-  padding: 0.2em 0.6em;
-  height: 250px;
+  padding: .5rem;
+  height: 150px;
   width: 90%;
   max-width: 335px;
   border: none;
   resize: none;
+  color: #444343;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: .9rem;
+  line-height: 1.3;
+  background: rgba(255,255,255,0.3);
+  color: #fff;
+  border: 1px solid transparent;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.5);
+  }
 `;
 
 export const Tweet = styled(ActionTextarea)`
@@ -78,11 +109,13 @@ export const EmailBody = styled(ActionTextarea)`
 `;
 
 export const FacebookPost = styled(ActionTextarea)`
-  margin: 1em auto;
+  margin: 1em auto 0;
 `;
 
 export const Button = styled.div`
-  background: #ef4446;
+  background: #fff;
+  color: #ef4446;
+  box-shadow: 0 4px 5px 3px rgba(0,0,0,0.1);
   border: 2.5px solid white;
   border-radius: 1em;
   padding: 0.4em 0.9em;
@@ -91,10 +124,54 @@ export const Button = styled.div`
   font-weight: 600;
   text-transform: uppercase;
   margin: 0 auto;
-  width: 9em;
+  width: auto;
+  display: inline-block;
   cursor: pointer;
+  &:hover,
+  &:active {
+    background: #ef4446;
+    color: #fff;
+    box-shadow: inset 0 4px 5px 3px rgba(0,0,0,0.1);
+  }
 `;
 
-export const CopyButton = styled(Button)`
-  width: 5em;
+export const CopyButton = styled.div`
+  display: inline-block;
+  position: relative;
+  top: -3.7em;
+  left: 10em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: #b9b9b9;
+  padding: 0em 0.3em;
+  border-radius: 6px;
+  line-height: 1.9;
+
+  &:hover,
+  &:active {
+    background: #a7a4a4;
+  }
+
+  &.copy-btn--email {
+    position: absolute;
+    top: auto;
+    right: 4.7rem;
+    left: auto;
+
+    &Recip {
+      top: 3.1rem;
+    }
+
+    &Subj {
+      bottom: 12.2rem;
+    }
+
+    &Body {
+      bottom: 1.8rem;
+      right: 5.5rem;
+    }
+  }
 `;

@@ -14,8 +14,9 @@ import {
   EmailBody,
   FacebookPost,
   CopyButton,
-  Button
+  Button,
 } from './Action.style';
+
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default class Action extends Component {
@@ -32,13 +33,13 @@ export default class Action extends Component {
     this.setState({ [type]: e.target.value });
   };
 
-  onCopy = () => {
+  onCopy = (id) => {
     this.setState({ copied: true });
-    if (document.getElementById('copyButton')) {
-      document.getElementById('copyButton').style.display = 'inline-block';
+    if (document.getElementById(id)) {
+      document.getElementById(id).style.display = 'inline-block';
     }
     setTimeout(() => {
-      document.getElementById('copyButton').style.display = 'none';
+      document.getElementById(id).style.display = 'none';
     }, 1000);
   };
 
@@ -97,26 +98,36 @@ export default class Action extends Component {
       case '3':
         html = (
           <ActionFields>
-            <ActionInputLabel> To </ActionInputLabel>
+            <ActionInputLabel>To</ActionInputLabel>
             <EmailRecipient
               type="text"
               value={this.state.emailRecipientValue}
               onChange={e => this.handleChange(e, 'emailRecipientValue')}
             />
-            <br />
             <ActionInputLabel> Subject </ActionInputLabel>
             <EmailSubject
               type="text"
               value={this.state.emailSubjectValue}
               onChange={e => this.handleChange(e, 'emailSubjectValue')}
             />
-            <br />
             <ActionInputLabel> Message </ActionInputLabel>
             <EmailBody
               type="text"
               value={decodeURIComponent(this.state.emailBodyValue)}
               onChange={e => this.handleChange(e, 'emailBodyValue')}
             />
+            <CopyToClipboard
+              className="copy-btn copy-btn--email copy-btn--emailBody"
+              onCopy={this.onCopy.bind(this, 'confirmBody')}
+              text={this.state.emailBodyValue}
+            >
+              <CopyButton>Copy</CopyButton>
+            </CopyToClipboard>
+            {this.state.copied ? (
+              <div id="confirmBody" className="copyConfirm copyConfirm--emailBody">
+                Copied.
+              </div>
+            ) : null}
             <br />
           </ActionFields>
         );
@@ -131,15 +142,15 @@ export default class Action extends Component {
             />
             <br />
             <CopyToClipboard
-              onCopy={this.onCopy}
+              onCopy={this.onCopy.bind(this, 'confirmFB')}
               text={this.state.facebookValue}
             >
               <CopyButton>Copy</CopyButton>
             </CopyToClipboard>
             {this.state.copied ? (
-              <span id="copyButton" style={{ color: 'white' }}>
+              <div id="confirmFB" className="copyConfirm copyConfirm--FB">
                 Copied.
-              </span>
+              </div>
             ) : null}
             <br />
           </ActionFields>

@@ -74,7 +74,7 @@
   "takeAction": {
     "title": "take action",
     "subtitle":
-      "Let McDonald's know that you won't be fooled by their weak chicken welfare policy"
+      "Let McDonald's know that you won't be fooled by their weak chicken welfare policy."
   },
 
   "mcNugget": {
@@ -127,15 +127,15 @@
     },
     "action2": {
       "title": "Share on Twitter",
-      "tweet": "@thehumaneleague Here's some twitter sample text #thl 🐷",
+      "tweet": "It's time for @Mcdonalds to stop misleading consumers with hollow promises and commit to an animal welfare policy with meaningfully changes to address the animal cruelty in its chicken supply chain! VIDEO LINK #BoycottMcDonalds #ImNotLovingIt",
       "button": "Tweet"
     },
     "action3": {
       "title": "Email McDonald's leadership",
-      "recipient": "info@thehumaneleague.org",
-      "subject": "Quit that",
+      "recipient": "francesca.debiase@us.mcd.com, diana.dram@us.mcd.com, ignacio.blanco-traba@eu.mcd.com, keith.kenny@eu.mcd.com, townsend.bailey@us.mcd.com",
+      "subject": "Supply Chain Inquiry",
       "body":
-        "Dear%20Leadership,%0A%0AYou%20need%20to%20quit%20it.%0A%0ACheers,%0AMe",
+        "Dear Ms. DeBiase,%0A%0AAs one of the world's largest and most influential companies, McDonald's has the opportunity to impact the lives of millions of chickens. Unfortunately, McDonald's has chosen instead to produce a misleading and subpar animal welfare policy that fails completely to address several important welfare issues including the cruel and unnatural growth of the chickens and the deplorable living conditions the chickens are forced to live in. This is unacceptable.%0A%0AIt's time for McDonald's to do better.%0A%0ASincerely,%0A",
       "button": "Email"
     },
     "action4": {

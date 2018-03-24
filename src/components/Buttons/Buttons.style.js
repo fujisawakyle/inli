@@ -9,8 +9,10 @@ export const RedButton = styled.button`
   padding: 0.4em 0.9em;
   border: none;
   font-weight: bold;
+  transition: background .05s ease;
   cursor: pointer;
   &:hover {
-    background: linear-gradient(#bf2026, #ef4446);
+    // background: linear-gradient(#bf2026, #ef4446);
+    background: rgb(158, 28, 32);
   }
 `;

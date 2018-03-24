@@ -625,13 +625,48 @@ pre tt:after {
   }
 }
 
-/* 
+/*
 Nuka Carousel
 */
 .slider-decorator-2 {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.slider-list {
+  height: 38rem !important;
+}
+
+/*
+Copy Button
+*/
+.copyConfirm {
+  color: #b9b9b9 !important;
+  position: absolute;
+  font-size: .7rem;
+}
+
+.copyConfirm--FB {
+  bottom: 0;
+  right: 5.1rem;
+}
+
+.copyConfirm--emailBody {
+  bottom: -.3rem !important;
+  right: 5.5rem;
+}
+
+.copyConfirm--emailRecip {
+  top: 5.1rem;
+  right: 5rem;
+  bottom: auto !important
+}
+
+.copyConfirm--emailSubj {
+  bottom: 5.1rem;
+  right: 5rem;
+  bottom: auto !important
 }
 
 /*
@@ -658,6 +693,19 @@ form label.error,
   font-weight: 400;
 }
 
+.at label {
+  text-align: left;
+}
+
+.at label.error,
+.at .error small.error {
+  color: #fec327 !important;
+}
+
+.at .error small.error {
+  font-size: .65rem;
+}
+
 .ngp-form section.at-inner {
   background: #ef4446;
 }
@@ -672,8 +720,7 @@ form .at-form-submit.clearfix {
 }
 
 form input.at-submit.btn-at.btn-at-primary {
-  background: #ef4446;
-  border: 2.5px solid white;
+  border: 2.5px solid #fff;
   border-radius: 1em;
   padding: 0.4em 0.9em;
   font-family: 'Raleway';
@@ -681,18 +728,63 @@ form input.at-submit.btn-at.btn-at-primary {
   font-weight: 600;
   text-transform: uppercase;
   margin: 0;
+  transition: box-shadow .2s ease;
+  background: #fff;
+  color: #ef4446;
+  box-shadow: 0 4px 5px 3px rgba(0,0,0,0.1);
 }
 
+form input.at-submit.btn-at.btn-at-primary:hover,
+form input.at-submit.btn-at.btn-at-primary:active {
+  background: #ef4446;
+  /* border: 2.5px solid #fff; */
+  color: #fff;
+  box-shadow: none;
+  box-shadow: inset 0 4px 5px 3px rgba(0,0,0,0.1);
+}
+
+/* Text Inputs */
+.at input[type="text"]:focus,
+.at input[type="password"]:focus,
+.at input[type="date"]:focus,
+.at input[type="datetime"]:focus,
+.at input[type="datetime-local"]:focus,
+.at input[type="month"]:focus,
+.at input[type="week"]:focus,
+.at input[type="email"]:focus,
+.at input[type="number"]:focus,
+.at input[type="search"]:focus,
+.at input[type="tel"]:focus,
+.at input[type="time"]:focus,
+.at input[type="url"]:focus,
+.at input[type="color"]:focus,
+.at textarea:focus {
+  border-color: #a91e22 !important;
+}
+
+
+/* Checkboxes */
 form .at.at-check input + span {
   margin-bottom: 0;
 }
 
-form input[type='checkbox'] + span:before {
-  background: white;
+.at input[type="checkbox"]:hover+span:before {
+  border-color: #a91e22 !important;
 }
 
-form label input[type='checkbox']:checked + span:before {
-  background: white;
+.at input[type="checkbox"]:focus+span:before {
+  box-shadow: 0 0 4px 0 #c12227 !important;
+  border-color: #c12227 !important;
+}
+
+.at input[type="checkbox"]:active+span:before {
+  border-color: #a91e22 !important;
+  background-color: #c12227 !important;
+}
+
+.at input[type="checkbox"]:checked+span:before {
+  background-color: #c12227 !important;
+  border-color: #c12227 !important;
 }
 
 form small.error {
@@ -703,6 +795,16 @@ form small.error {
 .content.thankYou {
   color: white;
   margin-top: 1em;
+}
+
+.at-row.FirstName.LastName {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.at-row.FirstName.LastName > label.at-text {
+  min-width: auto;
 }
 
 /*
