@@ -7,6 +7,7 @@ import {
   Logo,
   LogoText,
   ItemsContainer,
+  ToggleItemsContainer,
   SocialBlock,
   SocialIcon,
   DonateButton,
@@ -32,13 +33,13 @@ import { ModalManager } from 'react-dynamic-modal';
 
 let Social = (
   <SocialBlock>
-    <a href={data.social.facebookURL} target="_blank">
+    <a href={data.socialBlock.facebookURL} target="_blank">
       <SocialIcon src={facebookIcon} />
     </a>
-    <a href={data.social.instagramURL} target="_blank">
+    <a href={data.socialBlock.instagramURL} target="_blank">
       <SocialIcon src={instagramIcon} />
     </a>
-    <a href={data.social.twitterURL} target="_blank">
+    <a href={data.socialBlock.twitterURL} target="_blank">
       <SocialIcon src={twitterIcon} />
     </a>
   </SocialBlock>
@@ -64,7 +65,12 @@ let Navbar = (
       })}
       <br />
       <FlexCenter>
-        <DonateButton>Donate</DonateButton>
+        <a
+          href="https://secure.everyaction.com/nS49jYz1PkOkiYKha88UbQ2?sourceid=1026088"
+          target="_blank"
+        >
+          <DonateButton>Donate</DonateButton>
+        </a>
       </FlexCenter>
       <br />
       <FlexCenter>{Social}</FlexCenter>
@@ -81,8 +87,15 @@ const Header = () => (
       </Link>
     </LogoContainer>
     <ItemsContainer>
-      {Social}
-      <DonateButton href="#">Donate</DonateButton>
+      <ToggleItemsContainer>
+        {Social}
+        <a
+          href="https://secure.everyaction.com/nS49jYz1PkOkiYKha88UbQ2?sourceid=1026088"
+          target="_blank"
+        >
+          <DonateButton>Donate</DonateButton>
+        </a>
+      </ToggleItemsContainer>
       <ModalTrigger
         modalTransition="fade"
         triggerItem={<Menu src={menuIcon} />}

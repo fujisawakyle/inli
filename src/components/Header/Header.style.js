@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import media from '../../layouts/media';
+import { RedButton } from '../../components/Buttons/Buttons.style';
 
 export const FlexCenter = styled.div`
   display: flex;
@@ -66,15 +67,22 @@ export const ItemsContainer = styled.div`
   `};
 `;
 
-export const SocialBlock = styled.div`
+export const ToggleItemsContainer = styled.div`
   display: none;
 
   ${media.md`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95px;
+    width: 265px;
   `};
+`;
+
+export const SocialBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95px;
 `;
 
 export const SocialIcon = styled.img`
@@ -83,27 +91,9 @@ export const SocialIcon = styled.img`
   vertical-align: middle;
 `;
 
-export const DonateButton = styled.div`
-  font-family: Raleway;
-  display: none;
-  cursor: pointer;
-
-  &:hover {
-    background: linear-gradient(#bf2026, #ef4446);
-  }
-
-  ${media.md`
-    display: inline-block;
-    width: 127px;
-    border-radius: 1em;
-    background: rgba(193, 33, 38, 1);
-    color: white;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    padding: 0.2em 0.9em;
-    border: none;
-    font-weight: bold;
-  `};
+export const DonateButton = styled(RedButton)`
+  width: 127px;
+  padding: 0.2em 0.9em;
 `;
 
 export const Menu = styled.img`
