@@ -48,6 +48,7 @@ import warehouses from '../../assets/svg/mcnugget/warehouses.svg';
 import slaughter from '../../assets/svg/mcnugget/slaughter.svg';
 import companies from '../../assets/svg/mcnugget/companies.svg';
 import infographicFile from '../../assets/downloads/truth-behind-mcnuggets-infographic.pdf';
+import backgroundFile from '../../assets/downloads/background-info.pdf';
 
 import { RedButton } from '../Buttons/Buttons.style';
 
@@ -74,7 +75,9 @@ export const SadTruthMarkup = (
       </ConditionsImage>
       <ConditionsImageBottomRight background1={img2Sm} background2={img2Lg}>
         <ContentContainer>
-          <Number><div>2</div></Number>
+          <Number>
+            <div>2</div>
+          </Number>
           <Content>
             <ImageTitle>{data.sadTruth.overlayText.image2.first}</ImageTitle>
             <Description>{data.sadTruth.overlayText.image2.second}</Description>
@@ -85,7 +88,9 @@ export const SadTruthMarkup = (
 
       <ConditionsImageCenter background1={img3Sm} background2={img3Md}>
         <ContentContainer>
-          <Number className="number--three"><div>3</div></Number>
+          <Number className="number--three">
+            <div>3</div>
+          </Number>
           <Content>
             <ImageTitle>{data.sadTruth.overlayText.image3.first}</ImageTitle>
             <Description>{data.sadTruth.overlayText.image3.second}</Description>
@@ -105,7 +110,9 @@ export const SadTruthMarkup = (
 export const McNuggetMarkup = (
   <FlexCenter>
     <Container className="container--how">
-      <TitleNoMarginBottom>{data.mcNugget.overlayText.title}</TitleNoMarginBottom>
+      <TitleNoMarginBottom>
+        {data.mcNugget.overlayText.title}
+      </TitleNoMarginBottom>
       <Subtitle>{data.mcNugget.overlayText.subtitle}</Subtitle>
       <FlexColumnToRow>
         <Order1>
@@ -118,7 +125,7 @@ export const McNuggetMarkup = (
       <FlexColumnToRowFixedHeight>
         <FlexColumn>
           <MobileMarginBottom className="how__graphic how__graphic--symptoms">
-            <SVG  src={symptoms} />
+            <SVG src={symptoms} />
           </MobileMarginBottom>
           <MobileMarginBottom className="how__graphic">
             <SVG src={warehouses} />
@@ -145,9 +152,18 @@ export const RonaldMarkup = (
       <Title>{data.ronald.overlayText.title}</Title>
       <ShortHR />
       <RespVideo>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/pW8Re3YHfgs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/pW8Re3YHfgs?rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        />
       </RespVideo>
-      <p style={{textAlign: 'center', width: ' 100%', marginTop: '1em'}}>{data.ronald.overlayText.first}</p>
+      <p style={{ textAlign: 'center', width: ' 100%', marginTop: '1em' }}>
+        {data.ronald.overlayText.first}
+      </p>
     </Container>
   </FlexCenter>
 );
@@ -164,7 +180,9 @@ export const MediaMarkup = (
         <RedButton>{data.media.overlayText.button2}</RedButton>
       </a>
       <br />
-      <RedButton>{data.media.overlayText.button3}</RedButton>
+      <a href={backgroundFile} target="_blank">
+        <RedButton>{data.media.overlayText.button3}</RedButton>
+      </a>
       <br />
       <DescriptionCenter>
         {data.media.overlayText.second}
