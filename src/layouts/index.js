@@ -16,7 +16,16 @@ const TemplateWrapper = ({ children }) => (
         {
           property: 'og:image',
           content:
-            'https://s3.amazonaws.com/the-humane-league-homepage/THL17-comms-share-image.jpg'
+            'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/toolkit/McD%20ToolKit%20cover.jpg'
+        },
+        { name: 'twitter:card', content: 'photo' },
+        { name: 'twitter:url', content: 'https://www.imnotlovinit.com' },
+        { name: 'twitter:title', content: "I'm Not Lovin' It" },
+        { name: 'twitter:description', content: "McDonald's campaign website" },
+        {
+          name: 'twitter:image',
+          content:
+            'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/toolkit/McD%20ToolKit%20cover.jpg'
         }
       ]}
     />
