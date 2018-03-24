@@ -333,7 +333,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -709,7 +709,7 @@ form small.error {
 McNugget Overlay
 */
 
-.isvg svg{
+.isvg svg {
   width: 100%;
 }
 
@@ -723,8 +723,3 @@ Modal/Overlay
   //position: fixed;
   width: 100%;
 }
-
-/*
-SocialSection
-*/
-
