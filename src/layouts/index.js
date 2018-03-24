@@ -10,11 +10,11 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
-        { name: 'og:title', content: "I'm Not Lovin' It" },
-        { name: 'og:type', content: 'website' },
-        { name: 'og:url', content: 'https://imnotlovinit.com' },
+        { property: 'og:title', content: "I'm Not Lovin' It" },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://imnotlovinit.com' },
         {
-          name: 'og:image',
+          property: 'og:image',
           content:
             'https://s3.amazonaws.com/the-humane-league-homepage/THL17-comms-share-image.jpg'
         }
