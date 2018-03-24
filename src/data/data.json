@@ -45,13 +45,14 @@
       "Consumers deserve to know where McDonald's chicken really comes from.",
     "overlayText": {
       "title": "The Sad Truth",
-      "first":
-        "There is a growing national boycott against McDonald's for allowing extreme animal cruelty in it's chicken supply chain. While nearly 100 companies, including competitors such as Burger King and Subway, have produced policies that take meaninful and measurable steps to address these animal cruelty issues, McDonald's has instead released a policy that fails to address several important welfare issues.",
+      "first": "There is a growing national boycott against McDonald's for allowing extreme animal cruelty in it's chicken supply chain.",
       "second":
-        "Under current conditions, chickens in McDonald's supply chain suffer from:",
+        "While nearly 100 companies, including competitors such as Burger King and Subway, have produced policies that take meaninful and measurable steps to address these animal cruelty issues, McDonald's has instead released a policy that fails to address several important welfare issues.",
       "third":
-        "As one of the world's largest most influential companies, McDonald's has the power to impact the entire food industry as well as the lives of millions of chickens.",
+        "Under current conditions, chickens in McDonald's supply chain suffer from:",
       "fourth":
+        "As one of the world's largest most influential companies, McDonald's has the power to impact the entire food industry as well as the lives of millions of chickens.",
+      "fifth":
         "Instead, McDonald's has chosen to mislead consumers with hollow promises that lack meaningful change.",
       "image1": {
         "first": "Unnatural growth",
@@ -65,7 +66,7 @@
       },
       "image3": {
         "first": "Debilitating injuries",
-        "second": "from being crippled by the weight of",
+        "second": "from being crippled by the weight of their own oversized bodies",
         "third": "their own oversized bodies"
       }
     }
@@ -95,23 +96,24 @@
 
   "ronald": {
     "buttonText": "watch videos",
-    "first": "Where's Ronald?",
-    "second": "See what Ronald McDonald has been up to...",
+    "first": "The Real Ronald",
+    "second": "See what Ronald's hiding...",
     "overlayText": {
-      "title": "Where's Ronald?"
+      "title": "Who's the Real Ronald?",
+      "first": "Check back soon to learn more about Ronald!"
     }
   },
   "social": {
     "first": "follow the campaign"
   },
   "media": {
-    "buttonText": "more info",
+    "buttonText": "Press Kit",
     "first": "Media Resources",
     "overlayText": {
       "title": "Media Resources",
       "first": "Download a variety of resources below:",
       "second": "for further information or to schedule an interview,",
-      "third": "contact Jessie Lingenfelter, jlingenfelter@thehumaneleague.org",
+      "third": "contact Jessie Lingenfelter at jlingenfelter@thehumaneleague.org",
       "button1": "press release",
       "button2": "infographic",
       "button3": "background info"
@@ -141,7 +143,7 @@
     "action4": {
       "title": "Share on Facebook",
       "post": "@thehumaneleague Here's some fb sample text #thl",
-      "button": "Go to Facebook"
+      "button": "Share Now"
     }
   }
 }

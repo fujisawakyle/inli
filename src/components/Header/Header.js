@@ -15,7 +15,8 @@ import {
   NavContainer,
   NavList,
   NavLink,
-  NavLinkUpper
+  NavLinkUpper,
+  NavSeparator
 } from './Header.style';
 import _ from 'lodash';
 import data from '../../data/data.json';
@@ -60,6 +61,7 @@ let Navbar = (
             href={`#${link.anchor}`}
           >
             <NavLink key={link.anchor}>{link.title}</NavLink>
+            <NavSeparator />
           </a>
         );
       })}

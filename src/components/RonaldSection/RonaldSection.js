@@ -6,7 +6,7 @@ import {
   ImageContainer,
   Image,
   Title,
-  Subtitle
+  Subtitle,
 } from './RonaldSection.style';
 
 import ronaldImgSm from '../../assets/images/campaigns-mcdonalds-website-ronald-small.png';

@@ -63,7 +63,7 @@ export default class Action extends Component {
         );
         break;
       case '4':
-        window.open('https://facebook.com/thehumaneleague');
+        window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A//imnotlovinit.com');
     }
   };
   render() {
@@ -135,23 +135,6 @@ export default class Action extends Component {
       case '4':
         html = (
           <ActionFields>
-            <FacebookPost
-              type="text"
-              value={this.state.facebookValue}
-              onChange={e => this.handleChange(e, 'facebookValue')}
-            />
-            <br />
-            <CopyToClipboard
-              onCopy={this.onCopy.bind(this, 'confirmFB')}
-              text={this.state.facebookValue}
-            >
-              <CopyButton>Copy</CopyButton>
-            </CopyToClipboard>
-            {this.state.copied ? (
-              <div id="confirmFB" className="copyConfirm copyConfirm--FB">
-                Copied.
-              </div>
-            ) : null}
             <br />
           </ActionFields>
         );

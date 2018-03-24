@@ -113,6 +113,8 @@ export const NavList = styled.ul`
   max-width: 300px;
   width: 50%;
   height: 75%;
+  position: relative;
+  top: -2rem;
 `;
 
 export const NavLink = styled.li`
@@ -120,11 +122,23 @@ export const NavLink = styled.li`
   width: 100%;
   text-align: center;
   font-size: 1.3rem;
-  border-bottom: 1px solid #f8f8f8;
+  /* border-bottom: 1px solid #f8f8f8; */
   list-style: none;
   padding: 1em 0;
+
+  &:hover,
+  &:active {
+    color: rgba(255,255,255,.7);
+  }
 `;
 
 export const NavLinkUpper = styled(NavLink)`
   text-transform: uppercase;
+`;
+
+export const NavSeparator = styled.div`
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  width: 95%;
+  margin: 0 auto;
+  max-width: 8em;
 `;
