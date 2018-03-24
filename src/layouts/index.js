@@ -10,14 +10,6 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
-        { property: 'og:title', content: "I'm Not Lovin' It" },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://imnotlovinit.com' },
-        {
-          property: 'og:image',
-          content:
-            'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/toolkit/McD%20ToolKit%20cover.jpg'
-        },
         { name: 'twitter:card', content: 'photo' },
         { name: 'twitter:url', content: 'https://www.imnotlovinit.com' },
         { name: 'twitter:title', content: "I'm Not Lovin' It" },
@@ -28,7 +20,16 @@ const TemplateWrapper = ({ children }) => (
             'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/toolkit/McD%20ToolKit%20cover.jpg'
         }
       ]}
-    />
+    >
+      <meta property="og:title" content="I'm Not Lovin' It" />
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content="McDonald's campaign website" />
+      <meta property="og:url" content="https://imnotlovinit.com" />
+      <meta
+        property="og:image"
+        content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/toolkit/McD%20ToolKit%20cover.jpg"
+      />
+    </Helmet>
     <div>{children()}</div>
   </div>
 );
