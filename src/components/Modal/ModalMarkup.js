@@ -118,26 +118,26 @@ export const McNuggetMarkup = (
         <Order1>
           <img src={chicks} />
         </Order1>
-        <DynamicWidth className="how__graphic">
+        <DynamicWidth className="how__graphic how__graphic--short">
           <SVG className="comparisonSVG" src={comparison} />
         </DynamicWidth>
       </FlexColumnToRow>
       <FlexColumnToRowFixedHeight>
         <FlexColumn>
-          <MobileMarginBottom className="how__graphic how__graphic--symptoms">
+          <MobileMarginBottom className="how__graphic how__graphic--symptoms how__graphic--short">
             <SVG src={symptoms} />
           </MobileMarginBottom>
-          <MobileMarginBottom className="how__graphic">
+          <MobileMarginBottom className="how__graphic how__graphic--tall">
             <SVG src={warehouses} />
           </MobileMarginBottom>
         </FlexColumn>
         <FlexColumn>
           <DynamicWidthOrder1>
-            <MobileMarginBottom className="how__graphic">
+            <MobileMarginBottom className="how__graphic how__graphic--tall">
               <SVG src={slaughter} />
             </MobileMarginBottom>
           </DynamicWidthOrder1>
-          <MobileMarginBottom className="how__graphic how__graphic--companies">
+          <MobileMarginBottom className="how__graphic how__graphic--companies how__graphic--tall">
             <SVG src={companies} />
           </MobileMarginBottom>
         </FlexColumn>

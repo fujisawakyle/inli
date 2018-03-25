@@ -839,8 +839,12 @@ McNugget Overlay
 }
 
 @media only screen and (max-width: 420px) {
-  .how__graphic {
-    max-height: 300px;
+  .how__graphic--short {
+    min-height: 50px;
+    height: 100%;
+  }
+  .how__graphic--tall {
+    min-height: 100px;
     height: 100%;
   }
 }
