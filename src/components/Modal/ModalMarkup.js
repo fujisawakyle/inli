@@ -51,6 +51,7 @@ import slaughter from '../../assets/svg/mcnugget/slaughter.svg';
 import companies from '../../assets/svg/mcnugget/companies.svg';
 import infographicFile from '../../assets/downloads/truth-behind-mcnuggets-infographic.pdf';
 import backgroundFile from '../../assets/downloads/background-info.pdf';
+import pressReleaseFile from '../../assets/downloads/release-mcdonalds-broilercampaign.pdf';
 
 import { RedButton } from '../Buttons/Buttons.style';
 
@@ -171,7 +172,9 @@ export const MediaMarkup = (
       <Title>{data.media.overlayText.title}</Title>
       <ShortHR />
       <Subtitle>{data.media.overlayText.first}</Subtitle>
-      <RedButton>{data.media.overlayText.button1}</RedButton>
+      <a href={pressReleaseFile} target="_blank">
+        <RedButton>{data.media.overlayText.button1}</RedButton>
+      </a>
       <br />
       <a href={infographicFile} target="_blank">
         <RedButton>{data.media.overlayText.button2}</RedButton>
