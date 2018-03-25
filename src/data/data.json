@@ -141,9 +141,9 @@
       "button": "Email"
     },
     "action4": {
-      "title": "Share on Facebook",
-      "post": "@thehumaneleague Here's some fb sample text #thl",
-      "button": "Share Now"
+      "title": "Comment on McDonald's Latest Post",
+      "post": "As one of the world’s largest & most influential companies, it's completely unacceptable that @McDonaldsUS won't adopt the same chicken welfare standards as its competitors, like Burger King and Subway. Animals and consumers deserve better! #BoycottMcDonalds #ImNotLovinit",
+      "button": "Comment Now"
     }
   }
 }

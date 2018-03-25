@@ -8,8 +8,8 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="I'm Not Lovin' It"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Consumers deserve to know where McDonald's chicken really comes from.' },
+        { name: 'keywords', content: 'McDonalds, chicken, animal welfare, welfare' },
         { name: 'twitter:card', content: 'photo' },
         { name: 'twitter:url', content: 'https://www.imnotlovinit.com' },
         { name: 'twitter:title', content: "I'm Not Lovin' It" },
@@ -23,11 +23,9 @@ const TemplateWrapper = ({ children }) => (
     >
       <meta property="og:title" content="I'm Not Lovin' It" />
       <meta property="og:type" content="website" />
-      <meta property="og:description" content="McDonald's campaign website" />
+      <meta property="og:description" content="Consumers deserve to know where McDonald's chicken really comes from." />
       <meta property="og:url" content="https://imnotlovinit.com" />
-      <meta
-        property="og:image"
-        content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png"
+      <meta property="og:image" content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png"
       />
     </Helmet>
     <div>{children()}</div>

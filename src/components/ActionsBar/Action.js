@@ -62,7 +62,7 @@ export default class Action extends Component {
         ;
         break;
       case '4':
-        window.open('https://facebook.com/thehumaneleague');
+        window.open('https://facebook.com/McDonaldsUS');
     }
   };
   render() {
