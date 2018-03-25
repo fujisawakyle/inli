@@ -672,6 +672,10 @@ Copy Button
 /*
 EA forms
 */
+.fastAction {
+  display: none !important;
+}
+
 header.at-markup,
 header.at-title,
 legend.at-legend {
