@@ -34,11 +34,11 @@ export default class Action extends Component {
 
   onCopy = () => {
     this.setState({ copied: true });
-    if (document.getElementById('copyButton')) {
-      document.getElementById('copyButton').style.display = 'inline-block';
+    if (document.getElementById('copyConfirm')) {
+      document.getElementById('copyConfirm').style.display = 'inline-block';
     }
     setTimeout(() => {
-      document.getElementById('copyButton').style.display = 'none';
+      document.getElementById('copyConfirm').style.display = 'none';
     }, 1000);
   };
 
@@ -55,7 +55,7 @@ export default class Action extends Component {
         break;
       case '3':
         let body = encodeURIComponent(decodeURIComponent(this.state.emailBodyValue));
-        window.location.href = 
+        window.location.href =
           `mailto:${this.state.emailRecipientValue}?subject=${
             this.state.emailSubjectValue
           }&body=${body}`
@@ -117,7 +117,17 @@ export default class Action extends Component {
               value={decodeURIComponent(this.state.emailBodyValue)}
               onChange={e => this.handleChange(e, 'emailBodyValue')}
             />
-            <br />
+            <CopyToClipboard
+              onCopy={this.onCopy}
+              text={this.state.facebookValue}
+            >
+              <CopyButton className="copy-btn--email copy-btn--emailBody">Copy</CopyButton>
+            </CopyToClipboard>
+            {this.state.copied ? (
+              <span id="copyConfirm" className="copyConfirm copyConfirm--emailBody">
+                Copied.
+              </span>
+            ) : null}
           </ActionFields>
         );
         break;
@@ -137,7 +147,7 @@ export default class Action extends Component {
               <CopyButton>Copy</CopyButton>
             </CopyToClipboard>
             {this.state.copied ? (
-              <span id="copyButton" style={{ color: 'white' }}>
+              <span id="copyConfirm" className="copyConfirm copyConfirm--FB">
                 Copied.
               </span>
             ) : null}

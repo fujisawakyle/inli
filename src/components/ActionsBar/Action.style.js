@@ -126,6 +126,7 @@ export const Button = styled.div`
   margin: 0 auto;
   width: auto;
   display: inline-block;
+  max-width: 15rem;
   cursor: pointer;
   &:hover,
   &:active {

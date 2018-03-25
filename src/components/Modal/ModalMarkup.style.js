@@ -1,6 +1,25 @@
 import styled from 'styled-components';
 import media from '../../layouts/media';
 
+export const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 100%;
+`;
+
+export const FlexChild = styled.div`
+  margin: 4em auto;
+  width: 100%;
+
+  &.how__graphic {
+
+    &--chicks {
+      margin-bottom: -2em;
+    }
+  }
+`;
+
 export const FlexCenter = styled.div`
   display: flex;
   align-items: center;

@@ -8,6 +8,8 @@ import {
   FlexColumnToRow,
   FlexColumnToRowFixedHeight,
   FlexColumn,
+  FlexContainer,
+  FlexChild,
   DynamicWidth,
   Order1,
   DynamicWidthOrder1,
@@ -114,34 +116,29 @@ export const McNuggetMarkup = (
         {data.mcNugget.overlayText.title}
       </TitleNoMarginBottom>
       <Subtitle>{data.mcNugget.overlayText.subtitle}</Subtitle>
-      <FlexColumnToRow>
-        <Order1>
+
+      <FlexContainer className="flex__container">
+        <FlexChild className="flex__child how__graphic--chicks">
           <img src={chicks} />
-        </Order1>
-        <DynamicWidth className="how__graphic how__graphic--short">
+        </FlexChild>
+        <FlexChild className="flex__child how__graphic--comparision">
           <SVG className="comparisonSVG" src={comparison} />
-        </DynamicWidth>
-      </FlexColumnToRow>
-      <FlexColumnToRowFixedHeight>
-        <FlexColumn>
-          <MobileMarginBottom className="how__graphic how__graphic--symptoms how__graphic--short">
-            <SVG src={symptoms} />
-          </MobileMarginBottom>
-          <MobileMarginBottom className="how__graphic how__graphic--tall">
-            <SVG src={warehouses} />
-          </MobileMarginBottom>
-        </FlexColumn>
-        <FlexColumn>
-          <DynamicWidthOrder1>
-            <MobileMarginBottom className="how__graphic how__graphic--tall">
-              <SVG src={slaughter} />
-            </MobileMarginBottom>
-          </DynamicWidthOrder1>
-          <MobileMarginBottom className="how__graphic how__graphic--companies how__graphic--tall">
-            <SVG src={companies} />
-          </MobileMarginBottom>
-        </FlexColumn>
-      </FlexColumnToRowFixedHeight>
+        </FlexChild>
+
+        <FlexChild className="flex__child how__graphic--symptoms">
+          <SVG src={symptoms} />
+        </FlexChild>
+        <FlexChild className="flex__child how__graphic--warehouses">
+          <SVG src={warehouses} />
+        </FlexChild>
+
+        <FlexChild className="flex__child how__graphic--slaughter">
+          <SVG src={slaughter} />
+        </FlexChild>
+        <FlexChild className="flex__child how__graphic--companies">
+          <SVG src={companies} />
+        </FlexChild>
+      </FlexContainer>
     </Container>
   </FlexCenter>
 );
