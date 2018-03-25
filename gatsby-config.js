@@ -1,8 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'I\'m Not Lovin\' It',
-    description: 'Consumers deserve to know where McDonald\'s chicken really comes from.'
-  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -10,6 +6,8 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src/`
       },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
@@ -17,13 +15,15 @@ module.exports = {
           `source sans pro\:300,400` // you can also specify font weights and styles
         ]
       },
+    },
+    {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: "GTM-5GL7V2N",
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
         includeInDevelopment: false,
       },
+    },
+    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/favicon.png",
