@@ -21,7 +21,8 @@ export const FlexColumnToRow = styled.div`
   `};
 `;
 
-export const FlexColumnToRowFixedHeight = styled(FlexColumnToRow)``;
+export const FlexColumnToRowFixedHeight = styled(FlexColumnToRow)`
+`;
 
 export const FlexColumn = styled.div`
   display: flex;
@@ -60,6 +61,7 @@ export const MobileMarginBottom = styled.div`
   width: 100%;
 
   &.how__graphic {
+
     &--symptoms {
       margin-bottom: 2em;
     }
@@ -69,20 +71,6 @@ export const MobileMarginBottom = styled.div`
     }
   }
 `;
-
-export const ShowDesktop = styled.div`
-  display: none;
-  ${media.xs`
-    display: flex;
-  `}
-`
-
-export const ShowMobile = styled.div`
-  display: flex;
-  ${media.xs`
-    display:none;
-    `}
-`
 
 export const Container = styled.div`
   width: 90%;
@@ -119,17 +107,17 @@ export const Title = styled.h1`
 
 export const TitleNoMarginBottom = styled(Title)`
   margin-bottom: 0;
-`;
+`
 
 export const Subtitle = styled.h2`
   text-align: center;
 `;
 
 export const ShortHR = styled.hr`
-  background: none;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-  width: 95%;
-  max-width: 10em;
+    background: none;
+    border-bottom: 2px solid rgba(255,255,255,0.6);
+    width: 95%;
+    max-width: 10em;
 `;
 
 export const Intro = styled.h4`
@@ -139,7 +127,10 @@ export const Intro = styled.h4`
 `;
 
 export const ConditionsImage = styled.div`
-  background: linear-gradient(rgba(0, 0, 0, 0.8) 12%, transparent 54%),
+  background: linear-gradient(
+    rgba(0,0,0,.8) 12%,
+    transparent 54%
+    ),
     url(${props => props.background1});
   margin: 0 auto;
   width: 100%;
@@ -200,9 +191,10 @@ export const Number = styled.div`
   height: 1.5em;
 
   &.number--three {
+
     & > div {
       position: relative;
-      bottom: 0.07em;
+      bottom: .07em;
     }
   }
 `;

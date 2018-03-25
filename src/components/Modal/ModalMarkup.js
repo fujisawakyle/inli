@@ -12,8 +12,6 @@ import {
   Order1,
   DynamicWidthOrder1,
   MobileMarginBottom,
-  ShowDesktop,
-  ShowMobile,
   Container,
   Title,
   TitleNoMarginBottom,
@@ -121,51 +119,26 @@ export const McNuggetMarkup = (
           <img src={chicks} />
         </Order1>
         <DynamicWidth className="how__graphic how__graphic--short">
-          <ShowDesktop>
-            <SVG style={{width: '100%'}} className="comparisonSVG" src={comparison} />
-          </ShowDesktop>
-          <ShowMobile>
-            <img src={comparison} />
-          </ShowMobile>  
+          <SVG className="comparisonSVG" src={comparison} />
         </DynamicWidth>
       </FlexColumnToRow>
       <FlexColumnToRowFixedHeight>
         <FlexColumn>
           <MobileMarginBottom className="how__graphic how__graphic--symptoms how__graphic--short">
-            <ShowDesktop>
-              <SVG style={{width: '100%'}} src={symptoms} />
-            </ShowDesktop>
-            <ShowMobile>
-              <img src={symptoms} />
-           </ShowMobile>
+            <SVG src={symptoms} />
           </MobileMarginBottom>
           <MobileMarginBottom className="how__graphic how__graphic--tall">
-          <ShowDesktop>
-            <SVG style={{width: '100%'}} src={warehouses} />
-            </ShowDesktop>
-            <ShowMobile>
-              <img src={warehouses} />
-            </ShowMobile>
+            <SVG src={warehouses} />
           </MobileMarginBottom>
         </FlexColumn>
         <FlexColumn>
           <DynamicWidthOrder1>
             <MobileMarginBottom className="how__graphic how__graphic--tall">
-            <ShowDesktop>
-              <SVG style={{width: '100%'}} src={slaughter} />
-            </ShowDesktop>
-            <ShowMobile>
-              <img src={slaughter} />
-            </ShowMobile>
+              <SVG src={slaughter} />
             </MobileMarginBottom>
           </DynamicWidthOrder1>
           <MobileMarginBottom className="how__graphic how__graphic--companies how__graphic--tall">
-            <ShowDesktop>
-              <SVG style={{width: '100%'}} src={companies} />
-            </ShowDesktop>
-            <ShowMobile>
-              <img src={companies} />
-            </ShowMobile>
+            <SVG src={companies} />
           </MobileMarginBottom>
         </FlexColumn>
       </FlexColumnToRowFixedHeight>
