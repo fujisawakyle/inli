@@ -70,6 +70,20 @@ export const MobileMarginBottom = styled.div`
   }
 `;
 
+export const ShowDesktop = styled.div`
+  display: none;
+  ${media.xs`
+    display: flex;
+  `}
+`
+
+export const ShowMobile = styled.div`
+  display: flex;
+  ${media.xs`
+    display:none;
+    `}
+`
+
 export const Container = styled.div`
   width: 90%;
   max-width: 40rem;
