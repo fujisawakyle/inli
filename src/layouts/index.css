@@ -230,8 +230,8 @@ h1 {
   padding-top: 0;
   margin-bottom: 0;
   color: inherit;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -247,8 +247,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -264,8 +264,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,8 +281,8 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -298,8 +298,8 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -315,8 +315,8 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -644,7 +644,7 @@ Copy Button
 .copyConfirm {
   color: #b9b9b9 !important;
   position: absolute;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .copyConfirm--FB {
@@ -653,20 +653,20 @@ Copy Button
 }
 
 .copyConfirm--emailBody {
-  bottom: -.3rem !important;
+  bottom: -0.3rem !important;
   right: 5.5rem;
 }
 
 .copyConfirm--emailRecip {
   top: 5.1rem;
   right: 5rem;
-  bottom: auto !important
+  bottom: auto !important;
 }
 
 .copyConfirm--emailSubj {
   bottom: 5.1rem;
   right: 5rem;
-  bottom: auto !important
+  bottom: auto !important;
 }
 
 /*
@@ -703,7 +703,7 @@ form label.error,
 }
 
 .at .error small.error {
-  font-size: .65rem;
+  font-size: 0.65rem;
 }
 
 .ngp-form section.at-inner {
@@ -728,10 +728,10 @@ form input.at-submit.btn-at.btn-at-primary {
   font-weight: 600;
   text-transform: uppercase;
   margin: 0;
-  transition: box-shadow .2s ease;
+  transition: box-shadow 0.2s ease;
   background: #fff;
   color: #ef4446;
-  box-shadow: 0 4px 5px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.1);
 }
 
 form input.at-submit.btn-at.btn-at-primary:hover,
@@ -739,74 +739,73 @@ form input.at-submit.btn-at.btn-at-primary:active {
   background: #eaeaea;
   border-color: #eaeaea;
   color: #ef4446;
-  box-shadow: 0 6px 5px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 5px 3px rgba(0, 0, 0, 0.1);
 }
 
 form input.at-submit.btn-at.btn-at-primary:active {
   background: #ef4446;
   border-color: #fff;
   color: #fff;
-  box-shadow: inset 0 4px 5px 3px rgba(0,0,0,0.1);
+  box-shadow: inset 0 4px 5px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Text Inputs */
-.at input[type="text"]:focus,
-.at input[type="password"]:focus,
-.at input[type="date"]:focus,
-.at input[type="datetime"]:focus,
-.at input[type="datetime-local"]:focus,
-.at input[type="month"]:focus,
-.at input[type="week"]:focus,
-.at input[type="email"]:focus,
-.at input[type="number"]:focus,
-.at input[type="search"]:focus,
-.at input[type="tel"]:focus,
-.at input[type="time"]:focus,
-.at input[type="url"]:focus,
-.at input[type="color"]:focus,
+.at input[type='text']:focus,
+.at input[type='password']:focus,
+.at input[type='date']:focus,
+.at input[type='datetime']:focus,
+.at input[type='datetime-local']:focus,
+.at input[type='month']:focus,
+.at input[type='week']:focus,
+.at input[type='email']:focus,
+.at input[type='number']:focus,
+.at input[type='search']:focus,
+.at input[type='tel']:focus,
+.at input[type='time']:focus,
+.at input[type='url']:focus,
+.at input[type='color']:focus,
 .at textarea:focus {
   border-color: #a91e22 !important;
 }
 
-.at input[type="text"]:focus,
-.at input[type="password"]:focus,
-.at input[type="date"]:focus,
-.at input[type="datetime"]:focus,
-.at input[type="datetime-local"]:focus,
-.at input[type="month"]:focus,
-.at input[type="week"]:focus,
-.at input[type="email"]:focus,
-.at input[type="number"]:focus,
-.at input[type="search"]:focus,
-.at input[type="tel"]:focus,
-.at input[type="time"]:focus,
-.at input[type="url"]:focus,
-.at input[type="color"]:focus,
+.at input[type='text']:focus,
+.at input[type='password']:focus,
+.at input[type='date']:focus,
+.at input[type='datetime']:focus,
+.at input[type='datetime-local']:focus,
+.at input[type='month']:focus,
+.at input[type='week']:focus,
+.at input[type='email']:focus,
+.at input[type='number']:focus,
+.at input[type='search']:focus,
+.at input[type='tel']:focus,
+.at input[type='time']:focus,
+.at input[type='url']:focus,
+.at input[type='color']:focus,
 .at textarea:focus {
-  box-shadow: 0 0 5px rgba(0,0,0,0.2) !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) !important;
 }
-
 
 /* Checkboxes */
 form .at.at-check input + span {
   margin-bottom: 0;
 }
 
-.at input[type="checkbox"]:hover+span:before {
+.at input[type='checkbox']:hover + span:before {
   border-color: #a91e22 !important;
 }
 
-.at input[type="checkbox"]:focus+span:before {
+.at input[type='checkbox']:focus + span:before {
   box-shadow: 0 0 4px 0 #c12227 !important;
   border-color: #c12227 !important;
 }
 
-.at input[type="checkbox"]:active+span:before {
+.at input[type='checkbox']:active + span:before {
   border-color: #a91e22 !important;
   background-color: #c12227 !important;
 }
 
-.at input[type="checkbox"]:checked+span:before {
+.at input[type='checkbox']:checked + span:before {
   background-color: #c12227 !important;
   border-color: #c12227 !important;
 }
@@ -837,6 +836,13 @@ McNugget Overlay
 
 .isvg svg {
   width: 100%;
+}
+
+@media only screen and (max-width: 420px) {
+  .how__graphic {
+    max-height: 300px;
+    height: 100%;
+  }
 }
 
 /*
