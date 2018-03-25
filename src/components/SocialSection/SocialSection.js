@@ -28,7 +28,7 @@ export default class WhySection extends Component {
             data-dnt="true"
             data-theme="dark"
             data-link-color="#bf2026"
-            href="https://twitter.com/plshelpchickens"
+            href="https://twitter.com/ImNotLovinMcD"
           />
         </TwitterContainer>
       </Container>
