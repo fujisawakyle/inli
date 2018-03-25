@@ -635,7 +635,14 @@ Nuka Carousel
 }
 
 .slider-list {
-  height: 38rem !important;
+  height: 40rem !important;
+}
+
+@media screen and (min-width: 790px) {
+
+  .slider-list {
+    height: 38rem !important;
+  }
 }
 
 /*

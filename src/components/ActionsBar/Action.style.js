@@ -13,8 +13,12 @@ export const Container = styled.div`
 `;
 
 export const ActionIcon = styled.img`
-  height: 60px;
+  height: 40px;
   margin-bottom: 1em;
+
+  ${media.sm`
+    height: 55px;
+  `};
 `;
 
 export const ActionTitle = styled.h2`

@@ -3,18 +3,18 @@ import media from '../../layouts/media';
 
 export const Container = styled.div`
   padding: 1rem 0;
-  color: white;
+  color: #fff;
   background: #ef4446;
   z-index: 1;
   padding: 3rem 0;
 
   ${media.md`
-    
+
   `};
 `;
 
 export const Title = styled.h1`
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
@@ -26,16 +26,17 @@ export const Title = styled.h1`
 `};
 `;
 export const Subtitle = styled.h4`
-  color: white;
+  color: #fff;
   text-align: center;
   line-height: 1.5;
   width: 60%;
   font-weight: 500;
   margin: 0 auto;
   z-index: 1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 
   ${media.md`
     width: 340px;
+    margin-bottom: 1.5rem;
   `};
 `;
