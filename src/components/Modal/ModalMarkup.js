@@ -119,24 +119,24 @@ export const McNuggetMarkup = (
       <Subtitle>{data.mcNugget.overlayText.subtitle}</Subtitle>
 
       <FlexContainer className="flex__container">
-        <FlexChild className="flex__child how__graphic--chicks">
+        <FlexChild className="flex__child how__graphic how__graphic--chicks">
           <img src={chicks} />
         </FlexChild>
-        <FlexChild className="flex__child how__graphic--comparision">
+        <FlexChild className="flex__child how__graphic how__graphic--comparision">
           <SVG className="comparisonSVG" src={comparison} />
         </FlexChild>
 
-        <FlexChild className="flex__child how__graphic--symptoms">
+        <FlexChild className="flex__child how__graphic how__graphic--symptoms">
           <SVG src={symptoms} />
         </FlexChild>
-        <FlexChild className="flex__child how__graphic--warehouses">
+        <FlexChild className="flex__child how__graphic how__graphic--warehouses">
           <SVG src={warehouses} />
         </FlexChild>
 
-        <FlexChild className="flex__child how__graphic--slaughter">
+        <FlexChild className="flex__child how__graphic how__graphic--slaughter">
           <SVG src={slaughter} />
         </FlexChild>
-        <FlexChild className="flex__child how__graphic--companies">
+        <FlexChild className="flex__child how__graphic how__graphic--companies">
           <SVG src={companies} />
         </FlexChild>
       </FlexContainer>

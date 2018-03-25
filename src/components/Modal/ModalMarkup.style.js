@@ -4,8 +4,12 @@ import media from '../../layouts/media';
 export const FlexContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 0;
   width: 100%;
+
+  ${media.md`
+    padding: 1em;
+  `};
 `;
 
 export const FlexChild = styled.div`
@@ -19,7 +23,13 @@ export const FlexChild = styled.div`
   &.how__graphic {
 
     &--chicks {
-      margin-bottom: -2em;
+      margin-bottom: -2em !important;
+    }
+
+    tspan,
+    text {
+      font-family: 'Raleway';
+      font-weight: 500;
     }
   }
 `;
