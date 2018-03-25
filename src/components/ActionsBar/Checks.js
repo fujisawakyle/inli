@@ -7,7 +7,7 @@ export const Check1 = (
       position: 'absolute',
       left: '50%',
       bottom: '32',
-      transform: 'translateX(-95px)'
+      transform: 'translateX(-87px)'
     }}
     src={checkIcon}
   />
@@ -18,7 +18,7 @@ export const Check2 = (
       position: 'absolute',
       left: '50%',
       bottom: '32',
-      transform: 'translateX(-39px)'
+      transform: 'translateX(-37px)'
     }}
     src={checkIcon}
   />
@@ -30,7 +30,7 @@ export const Check3 = (
       position: 'absolute',
       left: '50%',
       bottom: '32',
-      transform: 'translateX(17px)'
+      transform: 'translateX(16px)'
     }}
     src={checkIcon}
   />
@@ -41,7 +41,7 @@ export const Check4 = (
       position: 'absolute',
       left: '50%',
       bottom: '32',
-      transform: 'translateX(72px)'
+      transform: 'translateX(68px)'
     }}
     src={checkIcon}
   />

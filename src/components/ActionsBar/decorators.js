@@ -106,7 +106,7 @@ export default [
         background: active ? 'white' : 'transparent',
         color: active ? 'rgba(255,255,255, 0.9)' : 'rgba(255,255,255,0)',
         cursor: 'pointer',
-        padding: 3,
+        padding: 1,
         margin: '0 10px',
         outline: 0,
         fontSize: 70,
