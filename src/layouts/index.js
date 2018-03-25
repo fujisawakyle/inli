@@ -17,7 +17,7 @@ const TemplateWrapper = ({ children }) => (
         {
           name: 'twitter:image',
           content:
-            'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/toolkit/McD%20ToolKit%20cover.jpg'
+            'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png'
         }
       ]}
     >
@@ -27,7 +27,7 @@ const TemplateWrapper = ({ children }) => (
       <meta property="og:url" content="https://imnotlovinit.com" />
       <meta
         property="og:image"
-        content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/toolkit/McD%20ToolKit%20cover.jpg"
+        content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png"
       />
     </Helmet>
     <div>{children()}</div>
