@@ -9,8 +9,12 @@ export const FlexContainer = styled.div`
 `;
 
 export const FlexChild = styled.div`
-  margin: 4em auto;
+  margin: 2rem auto;
   width: 100%;
+
+  ${media.sm`
+    margin: 4rem auto;
+  `};
 
   &.how__graphic {
 

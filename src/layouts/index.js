@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import './index.css';
 
+
+
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -21,11 +23,12 @@ const TemplateWrapper = ({ children }) => (
         }
       ]}
     >
+
       <meta property="og:title" content="I'm Not Lovin' It" />
       <meta property="og:type" content="website" />
       <meta property="og:description" content="Consumers deserve to know where McDonald's chicken really comes from." />
       <meta property="og:url" content="https://imnotlovinit.com" />
-      <meta property="og:image" content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png"
+      <meta property="og:image" content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png" />
       />
     </Helmet>
     <div>{children()}</div>
