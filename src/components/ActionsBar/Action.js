@@ -55,11 +55,11 @@ export default class Action extends Component {
         break;
       case '3':
         let body = encodeURIComponent(decodeURIComponent(this.state.emailBodyValue));
-        window.open(
+        window.location.href = 
           `mailto:${this.state.emailRecipientValue}?subject=${
             this.state.emailSubjectValue
           }&body=${body}`
-        );
+        ;
         break;
       case '4':
         window.open('https://facebook.com/thehumaneleague');
