@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Test site for McD',
-    description: 'This is the test site description'
+    title: 'I\'m Not Lovin\' It',
+    description: 'Consumers deserve to know where McDonald\'s chicken really comes from.'
   },
   plugins: [
     {
