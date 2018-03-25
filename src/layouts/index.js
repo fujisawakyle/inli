@@ -29,6 +29,7 @@ const TemplateWrapper = ({ children }) => (
       <meta property="og:description" content="Consumers deserve to know where McDonald's chicken really comes from." />
       <meta property="og:url" content="https://imnotlovinit.com" />
       <meta property="og:image" content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png" />
+      <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Source+Sans+Pro:300,400" rel="stylesheet" />
       />
     </Helmet>
     <div>{children()}</div>
