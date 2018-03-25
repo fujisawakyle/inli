@@ -8,7 +8,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="I'm Not Lovin' It"
       meta={[
-        { name: 'description', content: 'Consumers deserve to know where McDonald's chicken really comes from.' },
+        { name: 'description', content: 'Consumers deserve to know where McDonald\'s chicken really comes from.' },
         { name: 'keywords', content: 'McDonalds, chicken, animal welfare, welfare' },
         { name: 'twitter:card', content: 'photo' },
         { name: 'twitter:url', content: 'https://www.imnotlovinit.com' },
