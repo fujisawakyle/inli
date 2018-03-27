@@ -23,6 +23,6 @@ export const RespVideo = styled.div`
     top: -2px;
     left: -2px;
     width: 101%;
-    height: 102%;
+    height: 101%;
   }
 `;
