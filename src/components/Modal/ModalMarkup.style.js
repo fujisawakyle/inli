@@ -252,3 +252,17 @@ export const Description = styled.p`
 export const DescriptionCenter = styled(Description)`
   text-align: center;
 `;
+
+export const VideoList = styled.ul`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+`;
+
+export const VideoListItem = styled.li`
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  padding: 1em;
+`;

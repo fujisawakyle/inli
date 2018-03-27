@@ -28,7 +28,9 @@ import {
   Content,
   ImageTitle,
   Description,
-  DescriptionCenter
+  DescriptionCenter,
+  VideoList,
+  VideoListItem
 } from './ModalMarkup.style';
 
 import { RespVideo } from '../HeroVideo/HeroVideo.style';
@@ -149,16 +151,32 @@ export const RonaldMarkup = (
     <Container className="container--ronald">
       <Title>{data.ronald.overlayText.title}</Title>
       <ShortHR />
-      <RespVideo>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/pW8Re3YHfgs?rel=0"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-        />
-      </RespVideo>
+      <VideoList>
+        <VideoListItem>
+          <RespVideo>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/pW8Re3YHfgs?rel=0"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            />
+          </RespVideo>
+        </VideoListItem>
+        <VideoListItem>
+          <RespVideo>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/up4lcLcXw2c?rel=0"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen>
+            </iframe>
+          </RespVideo>
+        </VideoListItem>
+      </VideoList>
       <p style={{ textAlign: 'center', width: ' 100%', marginTop: '1em' }}>
         {data.ronald.overlayText.first}
       </p>
