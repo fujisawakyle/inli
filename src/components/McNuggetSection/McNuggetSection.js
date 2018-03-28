@@ -16,10 +16,12 @@ export default class McNuggetSection extends Component {
 
   render() {
     let markup;
-    if (document.documentElement.clientWidth < 420) {
-      markup = this.props.markupToDisplay;
-    } else {
-      markup = this.props.markupToDisplay2;
+    if (typeof window !== 'undefined') {
+      if (document.documentElement.clientWidth < 420) {
+        markup = this.props.markupToDisplay;
+      } else {
+        markup = this.props.markupToDisplay2;
+      }
     }
     return (
       <Container>
