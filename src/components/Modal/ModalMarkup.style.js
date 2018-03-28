@@ -4,12 +4,98 @@ import media from '../../layouts/media';
 export const FlexContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   width: 100%;
+  height: 100%;
 
   ${media.md`
     padding: 1em;
   `};
+
+  &.how__graphic {
+    width: 90%;
+    margin: 0 auto;
+    h1 {
+      font-size: 1.2rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    h3 {
+      font-size: 0.75rem;
+    }
+    p {
+      font-size: 0.5rem;
+      line-height: 1;
+    }
+
+    ${media.sm`
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 0.9rem; 
+      }
+    `};
+
+    ${media.md`
+      h1 {
+        font-size: 2.1rem;
+      }
+    `};
+  }
+
+  &.how__graphic--chicks {
+    max-width: 800px;
+  }
+
+  &.how__graphic--comparision {
+    width: 85%;
+  }
+
+  &.how__graphic--symptoms {
+    svg {
+      width: 20px;
+      height: 20px;
+      ${media.xs`
+        width:40px;
+        height:40px;
+      `};
+      ${media.md`
+        width: 50px;
+        height: 50px;
+      `};
+    }
+  }
+
+  &.how__graphic--warehouses {
+    svg {
+      height: 30%;
+    }
+    &.how__graphic--bullet {
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+  }
+  &.how__graphic--slaughter {
+    width: 80%;
+  }
+  &.how__graphic--companies {
+    width: 80%;
+    p {
+      margin-bottom: 1em;
+    }
+  }
 `;
 
 export const FlexChild = styled.div`
@@ -21,7 +107,7 @@ export const FlexChild = styled.div`
   `};
 
   &.how__graphic {
-
+    height: 100% !important;
     &--chicks {
       margin-bottom: -2em !important;
     }
@@ -31,6 +117,30 @@ export const FlexChild = styled.div`
       font-family: 'Raleway';
       font-weight: 500;
     }
+  }
+  &.how__graphic--warehouses {
+    margin: 0 auto;
+    width: 90%;
+  }
+`;
+
+export const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &.how__graphic--comparision {
+    justify-content: space-between;
+  }
+
+  &.how__graphic--symptoms {
+    flex-direction: column;
+    height: 100%;
+
+    ${media.sm`
+      flex-direction: row;
+    `};
   }
 `;
 
@@ -54,8 +164,7 @@ export const FlexColumnToRow = styled.div`
   `};
 `;
 
-export const FlexColumnToRowFixedHeight = styled(FlexColumnToRow)`
-`;
+export const FlexColumnToRowFixedHeight = styled(FlexColumnToRow)``;
 
 export const FlexColumn = styled.div`
   display: flex;
@@ -64,9 +173,10 @@ export const FlexColumn = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  ${media.md`
-   width: 50%;
-  `};
+
+  &.how__graphic--symptoms {
+    justify-content: center;
+  }
 `;
 
 export const DynamicWidth = styled.div`
@@ -94,7 +204,6 @@ export const MobileMarginBottom = styled.div`
   width: 100%;
 
   &.how__graphic {
-
     &--symptoms {
       margin-bottom: 2em;
     }
@@ -121,10 +230,6 @@ export const Container = styled.div`
     max-width: 60rem;
   }
 
-  .how__graphic {
-    margin-bottom: 2rem;
-  }
-
   p {
     width: 100%;
     font-weight: 500;
@@ -140,17 +245,18 @@ export const Title = styled.h1`
 
 export const TitleNoMarginBottom = styled(Title)`
   margin-bottom: 0;
-`
+`;
 
 export const Subtitle = styled.h2`
   text-align: center;
+  margin-bottom: 0;
 `;
 
 export const ShortHR = styled.hr`
-    background: none;
-    border-bottom: 2px solid rgba(255,255,255,0.6);
-    width: 95%;
-    max-width: 10em;
+  background: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  width: 95%;
+  max-width: 10em;
 `;
 
 export const Intro = styled.h4`
@@ -160,10 +266,7 @@ export const Intro = styled.h4`
 `;
 
 export const ConditionsImage = styled.div`
-  background: linear-gradient(
-    rgba(0,0,0,.8) 12%,
-    transparent 54%
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 12%, transparent 54%),
     url(${props => props.background1});
   margin: 0 auto;
   width: 100%;
@@ -224,10 +327,9 @@ export const Number = styled.div`
   height: 1.5em;
 
   &.number--three {
-
     & > div {
       position: relative;
-      bottom: .07em;
+      bottom: 0.07em;
     }
   }
 `;
@@ -251,4 +353,85 @@ export const Description = styled.p`
 
 export const DescriptionCenter = styled(Description)`
   text-align: center;
+`;
+
+export const WhiteBoldText = styled.h2`
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 0;
+
+  &.left {
+    text-align: left;
+  }
+`;
+
+export const WhiteSmallText = styled.p`
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+
+  &.left {
+    text-align: left;
+  }
+`;
+
+export const YellowBoldText = styled.h1`
+  text-align: center;
+  color: #ffc629;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 5.5vw;
+
+  &.left {
+    text-align: left;
+  }
+`;
+
+export const YellowSmallBoldText = styled.h3`
+  color: #ffc629;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 0;
+  font-size: 2vw;
+`;
+
+export const TriColumn = styled.div`
+  width: 33.3%;
+
+  &.how__graphic--symptoms {
+    padding: 0.2em 0;
+    width: 80%;
+
+    ${media.md`
+      width:33.3%;
+      padding: 0 0.5em;
+    `};
+  }
+`;
+
+export const BiColumn = styled.div`
+  width: 48%;
+`;
+
+export const BulletContainer = styled.div`
+  display: flex;
+  margin-bottom: 1em;
+  align-items: center;
+`;
+
+export const Bullet = styled.div`
+  width: 20px;
+  margin: 2px;
+  ${media.lg`
+    width: 32px;
+    margin: 15px;
+  `};
+`;
+
+export const SymptomIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 60%;
 `;

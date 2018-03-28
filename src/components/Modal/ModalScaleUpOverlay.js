@@ -39,7 +39,7 @@ export default class ModalScaleUpOverlay extends Component {
         effect={Effect.ScaleUp}
       >
         <OverlayExitButton onClick={this.closeModal}>X</OverlayExitButton>
-        <div className="yes">{markupToDisplay}</div>
+        {markupToDisplay}
       </Modal>
     );
   }
