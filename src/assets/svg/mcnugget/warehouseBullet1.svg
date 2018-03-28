@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="38px" viewBox="0 0 37 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="warehouses" transform="translate(0.000000, -303.000000)" fill-rule="nonzero">
+            <path d="M18.5,340.17 C28.6620394,340.17 36.9,331.932039 36.9,321.77 C36.9,318.30407 35.9417086,315.06196 34.275629,312.294175 C31.0567959,306.946869 25.1961092,303.37 18.5,303.37 C8.3379606,303.37 0.1,311.607961 0.1,321.77 C0.1,331.932039 8.3379606,340.17 18.5,340.17 Z" id="Oval" fill="#FFFFFF"></path>
+            <path d="M26.5,321.58 L22.7,321.58 L22.2,323.58 L25.2,323.58 L25.2,326.88 L21.4,326.88 L20.5,330.88 L16.9,330.88 L17.9,326.88 L16.6,326.88 L15.7,330.88 L12.1,330.88 L13.1,326.88 L10.5,326.88 L10.5,323.58 L13.9,323.58 L14.4,321.58 L11.6,321.58 L11.6,318.48 L15,318.48 L16,314.18 L19.6,314.18 L18.5,318.48 L20,318.48 L21,314.18 L24.6,314.18 L23.5,318.48 L26.5,318.48 L26.5,321.58 Z M18.8,323.68 L19.3,321.68 L17.9,321.68 L17.4,323.68 L18.8,323.68 Z" id="Shape" fill="#FFC629"></path>
+        </g>
+        <g id="Artboard"></g>
+    </g>
+</svg>

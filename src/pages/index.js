@@ -21,7 +21,8 @@ import mcNuggetImgSm from '../assets/images/campaigns-mcdonalds-website-chicken-
 
 import {
   SadTruthMarkup,
-  McNuggetMarkup,
+  McNuggetMarkupMobile,
+  McNuggetMarkupDesktop,
   RonaldMarkup,
   MediaMarkup
 } from '../components/Modal/ModalMarkup';
@@ -46,7 +47,8 @@ export default () => {
       <a name="mcNugget" />
       <McNuggetSection
         triggerItem={<RedButton>{data.mcNugget.buttonText}</RedButton>}
-        markupToDisplay={McNuggetMarkup}
+        markupToDisplay={McNuggetMarkupMobile}
+        markupToDisplay2={McNuggetMarkupDesktop}
         imgSm={mcNuggetImgSm}
         first={data.mcNugget.first}
         second={data.mcNugget.second}

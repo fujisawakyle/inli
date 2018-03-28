@@ -1,7 +1,10 @@
 import React from 'react';
 import data from '../../data/data.json';
 import SVG from 'react-inlinesvg';
+import Carousel from 'nuka-carousel';
 import { ModalManager } from 'react-dynamic-modal';
+import decorators from '../ActionsBar/decorators';
+import decoratorsVertical from '../ActionsBar/decoratorsVertical';
 
 import {
   FlexCenter,
@@ -10,6 +13,7 @@ import {
   FlexColumn,
   FlexContainer,
   FlexChild,
+  FlexRow,
   DynamicWidth,
   Order1,
   DynamicWidthOrder1,
@@ -30,7 +34,16 @@ import {
   Description,
   DescriptionCenter,
   VideoList,
-  VideoListItem
+  VideoListItem,
+  WhiteBoldText,
+  YellowBoldText,
+  YellowSmallBoldText,
+  WhiteSmallText,
+  TriColumn,
+  BiColumn,
+  BulletContainer,
+  Bullet,
+  SymptomIcon
 } from './ModalMarkup.style';
 
 import { RespVideo } from '../HeroVideo/HeroVideo.style';
@@ -47,8 +60,14 @@ import img3Lg from '../../assets/images/campaigns-mcdonalds-website-learnmore-la
 
 import chicks from '../../assets/png/mcnugget/grouping-of-chicks-shadow.png';
 import comparison from '../../assets/svg/mcnugget/comparison.svg';
-import symptoms from '../../assets/svg/mcnugget/symptoms.svg';
+import symptom1 from '../../assets/svg/mcnugget/symptom-1.svg';
+import symptom2 from '../../assets/svg/mcnugget/symptom-2.svg';
+import symptom3 from '../../assets/svg/mcnugget/symptom-3.svg';
 import warehouses from '../../assets/svg/mcnugget/warehouses.svg';
+import warehousesBullet1 from '../../assets/svg/mcnugget/warehouseBullet1.svg';
+import warehousesBullet2 from '../../assets/svg/mcnugget/warehouseBullet2.svg';
+import warehousesBullet3 from '../../assets/svg/mcnugget/warehouseBullet3.svg';
+import warehousesBullet4 from '../../assets/svg/mcnugget/warehouseBullet4.svg';
 import slaughter from '../../assets/svg/mcnugget/slaughter.svg';
 import companies from '../../assets/svg/mcnugget/companies.svg';
 import infographicFile from '../../assets/downloads/truth-behind-mcnuggets-infographic.pdf';
@@ -112,36 +131,192 @@ export const SadTruthMarkup = (
   </FlexCenter>
 );
 
-export const McNuggetMarkup = (
+const Slide1 = (
+  <FlexContainer className="flex__child how__graphic how__graphic--chicks">
+    <img src={chicks} />
+  </FlexContainer>
+);
+const Slide2 = (
+  <FlexContainer className="how__graphic how__graphic--comparision">
+    <FlexRow className="how__graphic--comparision">
+      <BiColumn>
+        <SVG className="comparisonSVG" src={comparison} />
+      </BiColumn>
+      <BiColumn>
+        <WhiteSmallText className="left">
+          McDonald’s suppliers breed chickens that grow so fast, you eat them
+          when
+        </WhiteSmallText>
+        <YellowBoldText className="left">They're still babies.</YellowBoldText>
+        <WhiteBoldText className="left">
+          They're slaughtered at just 7 weeks old.
+        </WhiteBoldText>
+      </BiColumn>
+    </FlexRow>
+  </FlexContainer>
+);
+
+const Slide3 = (
+  <FlexContainer className="how__graphic how__graphic--symptoms">
+    <FlexColumnToRow className="how__graphic--symptoms">
+      <TriColumn className="how__graphic--symptoms">
+        <FlexColumn>
+          <SymptomIcon>
+            <SVG src={symptom1} />
+          </SymptomIcon>
+          <YellowSmallBoldText className=" left">
+            Chemical burns
+          </YellowSmallBoldText>
+          <WhiteSmallText className="left">
+            Chickens often have to stand in their own waste, which contains
+            concentrated levels of ammonia. This chemical leaves pain-ful burns
+            on their skin.
+          </WhiteSmallText>
+        </FlexColumn>
+      </TriColumn>
+      <TriColumn className="how__graphic--symptoms">
+        <FlexColumn>
+          <SymptomIcon>
+            <SVG src={symptom2} />
+          </SymptomIcon>
+          <YellowSmallBoldText className=" left">
+            Leg injuries
+          </YellowSmallBoldText>
+          <WhiteSmallText className="left">
+            Chickens raised for McDonald's grow so large so fast that many
+            endure debili-tating injuries includ-ing broken legs, which buckle
+            under the enormous weight.
+          </WhiteSmallText>
+        </FlexColumn>
+      </TriColumn>
+      <TriColumn className="how__graphic--symptoms">
+        <FlexColumn>
+          <SymptomIcon>
+            <SVG src={symptom3} />
+          </SymptomIcon>
+          <YellowSmallBoldText className=" left">
+            Heart attacks
+          </YellowSmallBoldText>
+          <WhiteSmallText className="left">
+            These unnaturally large birds have such high blood pressure that
+            many die slow painful deaths from heart disease or arrhythmias.
+          </WhiteSmallText>
+        </FlexColumn>
+      </TriColumn>
+    </FlexColumnToRow>
+  </FlexContainer>
+);
+const Slide4 = (
+  <FlexContainer className="how__graphic how__graphic--warehouses">
+    <WhiteBoldText>
+      Chickens raised for McDonald's are confined in
+    </WhiteBoldText>
+    <YellowBoldText>Cramped, barren warehouses</YellowBoldText>
+
+    <SVG src={warehouses} />
+    <FlexRow>
+      <BiColumn>
+        <BulletContainer>
+          <Bullet className="how__graphic--bullet">
+            <SVG src={warehousesBullet1} />
+          </Bullet>
+          <WhiteSmallText className="left">
+            On factory farms that supply McDonald’s, tens of thousands of birds
+            live in one single barn.
+          </WhiteSmallText>
+        </BulletContainer>
+        <BulletContainer>
+          <Bullet className="how__graphic--bullet">
+            <SVG src={warehousesBullet2} />
+          </Bullet>
+          <WhiteSmallText className="left">
+            The sheds are kept dark, often with no natural light, which
+            discourages birds from moving.
+          </WhiteSmallText>
+        </BulletContainer>
+      </BiColumn>
+      <BiColumn>
+        <BulletContainer>
+          <Bullet className="how__graphic--bullet">
+            <SVG src={warehousesBullet3} />
+          </Bullet>
+          <WhiteSmallText className="left">
+            The air is full of ammonia from their waste. These fumes can burn
+            their throats as they breathe them in.
+          </WhiteSmallText>
+        </BulletContainer>
+        <BulletContainer>
+          <Bullet className="how__graphic--bullet">
+            <SVG src={warehousesBullet4} />
+          </Bullet>
+          <WhiteSmallText className="left">
+            Birds are tightly packed together and can struggle to even reach
+            food and water.
+          </WhiteSmallText>
+        </BulletContainer>
+      </BiColumn>
+    </FlexRow>
+  </FlexContainer>
+);
+const Slide5 = (
+  <FlexContainer className="how__graphic how__graphic--slaughter">
+    <WhiteBoldText>After 7 weeks of suffering</WhiteBoldText>
+    <WhiteSmallText>chickens are loaded on a truck and driven</WhiteSmallText>
+    <YellowBoldText>Off to slaughter.</YellowBoldText>
+    <WhiteSmallText>
+      These chickens are ground up and turned into nuggets and patties for
+      McDonald's
+    </WhiteSmallText>
+    <SVG src={slaughter} />
+  </FlexContainer>
+);
+const Slide6 = (
+  <FlexContainer className="how__graphic how__graphic--companies">
+    <WhiteBoldText>These companies have stronger</WhiteBoldText>
+    <YellowBoldText>Chicken welfare policies</YellowBoldText>
+    <WhiteSmallText>than McDonald's.</WhiteSmallText>
+    <SVG src={companies} />
+  </FlexContainer>
+);
+const McNuggetTitle = (
+  <div>
+    <TitleNoMarginBottom>{data.mcNugget.overlayText.title}</TitleNoMarginBottom>
+    <Subtitle>{data.mcNugget.overlayText.subtitle}</Subtitle>
+  </div>
+);
+
+export const McNuggetMarkupMobile = (
   <FlexCenter>
     <Container className="container--how">
-      <TitleNoMarginBottom>
-        {data.mcNugget.overlayText.title}
-      </TitleNoMarginBottom>
-      <Subtitle>{data.mcNugget.overlayText.subtitle}</Subtitle>
+      {McNuggetTitle}
+      <Carousel dragging={false} decorators={decorators}>
+        {Slide1}
+        {Slide2}
+        {Slide3}
+        {Slide4}
+        {Slide5}
+        {Slide6}
+      </Carousel>
+    </Container>
+  </FlexCenter>
+);
 
-      <FlexContainer className="flex__container">
-        <FlexChild className="flex__child how__graphic how__graphic--chicks">
-          <img src={chicks} />
-        </FlexChild>
-        <FlexChild className="flex__child how__graphic how__graphic--comparision">
-          <SVG className="comparisonSVG" src={comparison} />
-        </FlexChild>
-
-        <FlexChild className="flex__child how__graphic how__graphic--symptoms">
-          <SVG src={symptoms} />
-        </FlexChild>
-        <FlexChild className="flex__child how__graphic how__graphic--warehouses">
-          <SVG src={warehouses} />
-        </FlexChild>
-
-        <FlexChild className="flex__child how__graphic how__graphic--slaughter">
-          <SVG src={slaughter} />
-        </FlexChild>
-        <FlexChild className="flex__child how__graphic how__graphic--companies">
-          <SVG src={companies} />
-        </FlexChild>
-      </FlexContainer>
+export const McNuggetMarkupDesktop = (
+  <FlexCenter>
+    <Container className="container--how">
+      {McNuggetTitle}
+      <Carousel
+        vertical={true}
+        dragging={false}
+        decorators={decoratorsVertical}
+      >
+        {Slide1}
+        {Slide2}
+        {Slide3}
+        {Slide4}
+        {Slide5}
+        {Slide6}
+      </Carousel>
     </Container>
   </FlexCenter>
 );
@@ -172,8 +347,8 @@ export const RonaldMarkup = (
               src="https://www.youtube.com/embed/up4lcLcXw2c?rel=0"
               frameborder="0"
               allow="autoplay; encrypted-media"
-              allowfullscreen>
-            </iframe>
+              allowfullscreen
+            />
           </RespVideo>
         </VideoListItem>
       </VideoList>
