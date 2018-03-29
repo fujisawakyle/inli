@@ -59,6 +59,7 @@ import img3Md from '../../assets/images/campaigns-mcdonalds-website-learnmore-me
 import img3Lg from '../../assets/images/campaigns-mcdonalds-website-learnmore-large-3.jpg';
 
 import chicks from '../../assets/png/mcnugget/grouping-of-chicks-shadow.png';
+import chicksSm from '../../assets/png/mcnugget/grouping-of-chicks-shadow-sm.png';
 import comparison from '../../assets/svg/mcnugget/comparison.svg';
 import symptom1 from '../../assets/svg/mcnugget/symptom-1.svg';
 import symptom2 from '../../assets/svg/mcnugget/symptom-2.svg';
@@ -132,8 +133,17 @@ export const SadTruthMarkup = (
 );
 
 const Slide1 = (
-  <FlexContainer className="flex__child how__graphic how__graphic--chicks">
-    <img src={chicks} />
+  <FlexContainer className="how__graphic how__graphic--chicks">
+    <picture>
+      <source srcSet={chicks} media="(min-width: 420px)" />
+      <img src={chicksSm} />
+    </picture>
+
+    {/* <img
+      src={img2Sm}
+      srcSet={img3Md + ' 1200w'}
+      sizes="(min-width:420px) 400px, 50%"
+    /> */}
   </FlexContainer>
 );
 const Slide2 = (

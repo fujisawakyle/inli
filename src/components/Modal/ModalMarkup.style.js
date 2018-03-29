@@ -15,7 +15,11 @@ export const FlexContainer = styled.div`
   `};
 
   &.how__graphic {
-    width: 90%;
+    width: 100%;
+
+    ${media.xs`
+      width: 90%;
+    `};
 
     ${media.lg`
       width: 100%;
@@ -78,7 +82,10 @@ export const FlexContainer = styled.div`
   }
 
   &.how__graphic--comparision {
-    width: 85%;
+    width: 98%;
+    ${media.xs`
+      width: 85%;
+    `};
   }
 
   &.how__graphic--symptoms {
@@ -101,6 +108,11 @@ export const FlexContainer = styled.div`
   }
 
   &.how__graphic--warehouses {
+    width: 90%;
+
+    ${media.lg`
+      width: 100%;
+    `};
     svg {
       height: 30%;
     }
@@ -112,10 +124,15 @@ export const FlexContainer = styled.div`
     }
   }
   &.how__graphic--slaughter {
-    width: 100%;
+    width: 90%;
+
+    ${media.lg`
+      width: 100%;
+    `};
   }
   &.how__graphic--companies {
-    width: 80%;
+    width: 100%;
+
     p {
       margin-bottom: 1em;
     }
@@ -239,7 +256,10 @@ export const MobileMarginBottom = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 90%;
+  width: 100%;
+  ${media.xs`
+    width: 90%;
+  `};
   max-width: 40rem;
   height: 100%;
   padding: 3em 0;
@@ -440,9 +460,11 @@ export const TriColumn = styled.div`
 
   &.how__graphic--symptoms {
     padding: 0.2em 0;
-    width: 80%;
+    width: 90%;
 
-    ${media.md`
+    ${media.xs`
+      width: 80%;
+    `} ${media.md`
       width:33.3%;
       padding: 0 0.5em;
     `};
