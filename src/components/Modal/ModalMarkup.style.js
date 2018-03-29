@@ -16,6 +16,11 @@ export const FlexContainer = styled.div`
 
   &.how__graphic {
     width: 90%;
+
+    ${media.lg`
+      width: 100%;
+    `};
+
     margin: 0 auto;
     h1 {
       font-size: 1.2rem;
@@ -51,10 +56,25 @@ export const FlexContainer = styled.div`
         font-size: 2.1rem;
       }
     `};
+
+    ${media.lg`
+      h1 {
+        font-size: 2.9rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      h3 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    `};
   }
 
   &.how__graphic--chicks {
-    max-width: 800px;
+    max-width: 1046px;
   }
 
   &.how__graphic--comparision {
@@ -73,6 +93,10 @@ export const FlexContainer = styled.div`
         width: 50px;
         height: 50px;
       `};
+      ${media.lg`
+        width: 80px;
+        height: 80px;
+      `};
     }
   }
 
@@ -88,7 +112,7 @@ export const FlexContainer = styled.div`
     }
   }
   &.how__graphic--slaughter {
-    width: 80%;
+    width: 100%;
   }
   &.how__graphic--companies {
     width: 80%;
@@ -437,10 +461,15 @@ export const BulletContainer = styled.div`
 
 export const Bullet = styled.div`
   width: 20px;
-  margin: 2px;
+  margin: 0 2px;
+
+  ${media.sm`
+    width:40px;
+    margin: 0 9px;
+  `};
   ${media.lg`
-    width: 32px;
-    margin: 15px;
+    width: 64px;
+    margin: 0 15px;
   `};
 `;
 

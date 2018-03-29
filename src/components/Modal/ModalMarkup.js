@@ -169,7 +169,7 @@ const Slide3 = (
           </YellowSmallBoldText>
           <WhiteSmallText className="left">
             Chickens often have to stand in their own waste, which contains
-            concentrated levels of ammonia. This chemical leaves pain-ful burns
+            concentrated levels of ammonia. This chemical leaves painful burns
             on their skin.
           </WhiteSmallText>
         </FlexColumn>
@@ -184,7 +184,7 @@ const Slide3 = (
           </YellowSmallBoldText>
           <WhiteSmallText className="left">
             Chickens raised for McDonald's grow so large so fast that many
-            endure debili-tating injuries includ-ing broken legs, which buckle
+            endure debilitating injuries including broken legs, which buckle
             under the enormous weight.
           </WhiteSmallText>
         </FlexColumn>
@@ -206,14 +206,16 @@ const Slide3 = (
     </FlexColumnToRow>
   </FlexContainer>
 );
+
 const Slide4 = (
   <FlexContainer className="how__graphic how__graphic--warehouses">
     <WhiteBoldText>
       Chickens raised for McDonald's are confined in
     </WhiteBoldText>
     <YellowBoldText>Cramped, barren warehouses</YellowBoldText>
-
-    <SVG src={warehouses} />
+    <div className="how__svg--medium">
+      <SVG src={warehouses} />
+    </div>
     <FlexRow>
       <BiColumn>
         <BulletContainer>
@@ -267,7 +269,10 @@ const Slide5 = (
       These chickens are ground up and turned into nuggets and patties for
       McDonald's
     </WhiteSmallText>
-    <SVG src={slaughter} />
+
+    <div className="how__svg--large">
+      <SVG src={slaughter} />
+    </div>
   </FlexContainer>
 );
 const Slide6 = (
@@ -275,11 +280,13 @@ const Slide6 = (
     <WhiteBoldText>These companies have stronger</WhiteBoldText>
     <YellowBoldText>Chicken welfare policies</YellowBoldText>
     <WhiteSmallText>than McDonald's.</WhiteSmallText>
-    <SVG src={companies} />
+    <div className="how__svg--large">
+      <SVG src={companies} />
+    </div>
   </FlexContainer>
 );
 const McNuggetTitle = (
-  <div>
+  <div className="how__title">
     <TitleNoMarginBottom>{data.mcNugget.overlayText.title}</TitleNoMarginBottom>
     <Subtitle>{data.mcNugget.overlayText.subtitle}</Subtitle>
   </div>
