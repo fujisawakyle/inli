@@ -58,8 +58,8 @@ import img3Sm from '../../assets/images/campaigns-mcdonalds-website-learnmore-sm
 import img3Md from '../../assets/images/campaigns-mcdonalds-website-learnmore-medium-3.jpg';
 import img3Lg from '../../assets/images/campaigns-mcdonalds-website-learnmore-large-3.jpg';
 
-import chicks from '../../assets/png/mcnugget/grouping-of-chicks-shadow.png';
-import chicksSm from '../../assets/png/mcnugget/grouping-of-chicks-shadow-sm.png';
+import chicks from '../../assets/png/mcnugget/chicks_2x.png';
+import chicksSm from '../../assets/png/mcnugget/chicks_1x.png';
 import comparison from '../../assets/svg/mcnugget/comparison.svg';
 import symptom1 from '../../assets/svg/mcnugget/symptom-1.svg';
 import symptom2 from '../../assets/svg/mcnugget/symptom-2.svg';
