@@ -670,6 +670,7 @@ Nuka Carousel
 @media screen and (min-width: 420px) {
   .container--how .slider-list {
     height: 65vh !important;
+    min-height: 400px !important;
   }
 
   .container--how .slider-decorator-0 {
@@ -691,6 +692,9 @@ Nuka Carousel
 @media screen and (min-width: 790px) {
   .slider-list {
     height: 38rem !important;
+  }
+  .container--how .slider-list {
+    min-height: 550px !important;
   }
   .how__svg--medium {
     width: 90%;
