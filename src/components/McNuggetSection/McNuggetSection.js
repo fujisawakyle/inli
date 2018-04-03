@@ -15,6 +15,14 @@ export default class McNuggetSection extends Component {
   state = {};
 
   render() {
+    let markup;
+    if (typeof window !== 'undefined') {
+      if (document.documentElement.clientWidth < 420) {
+        markup = this.props.markupToDisplay;
+      } else {
+        markup = this.props.markupToDisplay2;
+      }
+    }
     return (
       <Container>
         <ContentContainer>
@@ -24,7 +32,7 @@ export default class McNuggetSection extends Component {
             bgColor="rgba(255,44,60,0.9)"
             modalTransition="scaleUp"
             triggerItem={this.props.triggerItem}
-            markupToDisplay={this.props.markupToDisplay}
+            markupToDisplay={markup}
           />
         </ContentContainer>
         <ImageContainer imgSm={this.props.imgSm}>

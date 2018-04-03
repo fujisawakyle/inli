@@ -638,11 +638,81 @@ Nuka Carousel
   height: 40rem !important;
 }
 
-@media screen and (min-width: 790px) {
+.container--how .slider-list {
+  height: 21rem !important;
+}
 
+.container--how .slider-slide {
+  height: 100% !important;
+}
+
+.container--how .slider-decorator-2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: -50px !important;
+}
+
+.container--how .slider-decorator-2 ul li button {
+  padding: 0 !important;
+  margin: 5px !important;
+}
+
+@media screen and (max-width: 420px) {
+  .container--how .slider-decorator-0 {
+    display: none;
+  }
+  .container--how .slider-decorator-1 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .container--how .slider-list {
+    height: 65vh !important;
+    min-height: 400px !important;
+  }
+
+  .container--how .slider-decorator-0 {
+    bottom: -50px !important;
+    transform: translateY(40%) translateX(-72%) !important;
+  }
+  .container--how .slider-decorator-1 {
+    transform: translateY(159%) translateX(-50%) !important;
+  }
+  .container--how .slider-decorator-2 {
+    bottom: 50% !important;
+    top: 50% !important;
+    right: 0px;
+    left: 50%;
+    transform: rotateZ(90deg) !important;
+  }
+}
+
+@media screen and (min-width: 790px) {
   .slider-list {
     height: 38rem !important;
   }
+  .container--how .slider-list {
+    min-height: 550px !important;
+  }
+  .how__svg--medium {
+    width: 90%;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .how__title h1 {
+    font-size: 4rem;
+  }
+  .how__title h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.how__svg--large {
+  width: 90%;
+  max-width: 800px;
 }
 
 /*
