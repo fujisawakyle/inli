@@ -31,9 +31,11 @@
   ],
 
   "socialBlock": {
-    "facebookURL": "https://www.facebook.com/sharer/sharer.php?u=https%3A//imnotlovinit.com",
+    "facebookURL":
+      "https://www.facebook.com/sharer/sharer.php?u=https%3A//imnotlovinit.com",
     "instagramURL": "https://www.instagram.com/imnotlovinmcd/",
-    "twitterURL": "https://twitter.com/home?status=Consumers%20deserve%20to%20know%20where%20McDonald's%20chicken%20really%20comes%20from.%20https%3A//imnotlovinit.com%20%23imnotlovinit"
+    "twitterURL":
+      "https://twitter.com/home?status=Consumers%20deserve%20to%20know%20where%20McDonald's%20chicken%20really%20comes%20from.%20https%3A//imnotlovinit.com%20%23imnotlovinit"
   },
 
   "videoURL": "https://www.youtube.com/embed/pW8Re3YHfgs?rel=0&amp;showinfo=0",
@@ -45,7 +47,8 @@
       "Consumers deserve to know where McDonald's chicken really comes from.",
     "overlayText": {
       "title": "The Sad Truth",
-      "first": "There is a growing national boycott against McDonald's for allowing extreme animal cruelty in it's chicken supply chain.",
+      "first":
+        "There is a growing national boycott against McDonald's for allowing extreme animal cruelty in its chicken supply chain.",
       "second":
         "While nearly 100 companies, including competitors such as Burger King and Subway, have produced policies that take meaningful and measurable steps to address these animal cruelty issues, McDonald's has instead released a policy that fails to address several important welfare issues.",
       "third":
@@ -66,7 +69,8 @@
       },
       "image3": {
         "first": "Debilitating injuries",
-        "second": "from being crippled by the weight of their own oversized bodies",
+        "second":
+          "from being crippled by the weight of their own oversized bodies",
         "third": "their own oversized bodies"
       }
     }
@@ -113,7 +117,8 @@
       "title": "Media Resources",
       "first": "Download a variety of resources below:",
       "second": "for further information or to schedule an interview,",
-      "third": "contact Jessie Lingenfelter at jlingenfelter@thehumaneleague.org",
+      "third":
+        "contact Jessie Lingenfelter at jlingenfelter@thehumaneleague.org",
       "button1": "press release",
       "button2": "infographic",
       "button3": "background info",
@@ -130,12 +135,14 @@
     },
     "action2": {
       "title": "Share on Twitter",
-      "tweet": "It's time for @Mcdonalds to stop misleading consumers with hollow promises and commit to an animal welfare policy with meaningful changes to address the animal cruelty in its chicken supply chain! Imnotlovinit.com #BoycottMcDonalds #ImNotLovinit",
+      "tweet":
+        "It's time for @Mcdonalds to stop misleading consumers with hollow promises and commit to an animal welfare policy with meaningful changes to address the animal cruelty in its chicken supply chain! Imnotlovinit.com #BoycottMcDonalds #ImNotLovinit",
       "button": "Tweet"
     },
     "action3": {
       "title": "Email McDonald's leadership",
-      "recipient": "francesca.debiase@us.mcd.com, diana.dram@us.mcd.com, keith.kenny@eu.mcd.com, townsend.bailey@us.mcd.com",
+      "recipient":
+        "francesca.debiase@us.mcd.com, diana.dram@us.mcd.com, keith.kenny@eu.mcd.com, townsend.bailey@us.mcd.com",
       "subject": "Supply Chain Inquiry",
       "body":
         "Dear Ms. DeBiase,%0A%0AAs one of the world's largest and most influential companies, McDonald's has the opportunity to impact the lives of millions of chickens. Unfortunately, McDonald's has chosen instead to produce a misleading and subpar animal welfare policy that fails completely to address several important welfare issues including the cruel and unnatural growth of the chickens and the deplorable living conditions the chickens are forced to live in. This is unacceptable.%0A%0AIt's time for McDonald's to do better.%0A%0ASincerely,%0A",
@@ -143,7 +150,8 @@
     },
     "action4": {
       "title": "Comment on a McDonald's Post",
-      "post": "As one of the world’s largest & most influential companies, it's completely unacceptable that @McDonaldsUS won't adopt the same chicken welfare standards as its competitors, like Burger King and Subway. Animals and consumers deserve better! #BoycottMcDonalds #ImNotLovinit",
+      "post":
+        "As one of the world’s largest & most influential companies, it's completely unacceptable that @McDonaldsUS won't adopt the same chicken welfare standards as its competitors, like Burger King and Subway. Animals and consumers deserve better! #BoycottMcDonalds #ImNotLovinit",
       "button": "Go To Facebook"
     }
   }
