@@ -293,7 +293,7 @@ export const TitleNoMarginBottom = styled(Title)`
 
 export const Subtitle = styled.h2`
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
 `;
 
 export const ShortHR = styled.hr`
