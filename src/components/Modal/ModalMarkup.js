@@ -43,7 +43,8 @@ import {
   BiColumn,
   BulletContainer,
   Bullet,
-  SymptomIcon
+  SymptomIcon,
+  Logo
 } from './ModalMarkup.style';
 
 import { RespVideo } from '../HeroVideo/HeroVideo.style';
@@ -74,6 +75,7 @@ import companies from '../../assets/svg/mcnugget/companies.svg';
 import infographicFile from '../../assets/downloads/truth-behind-mcnuggets-infographic.pdf';
 import backgroundFile from '../../assets/downloads/background-info.pdf';
 import pressReleaseFile from '../../assets/downloads/release-mcdonalds-broilercampaign.pdf';
+import thlLogo from '../../assets/svg/thlLogo.svg';
 
 import { RedButton } from '../Buttons/Buttons.style';
 
@@ -394,7 +396,10 @@ export const MediaMarkup = (
         <RedButton>{data.media.overlayText.button3}</RedButton>
       </a>
       <br />
-      <a href="https://drive.google.com/drive/folders/1gXDwZHwwsoYgiEHV_wQTxPKJJGwPaV-P?usp=sharing" target="_blank">
+      <a
+        href="https://drive.google.com/drive/folders/1gXDwZHwwsoYgiEHV_wQTxPKJJGwPaV-P?usp=sharing"
+        target="_blank"
+      >
         <RedButton>{data.media.overlayText.button4}</RedButton>
       </a>
       <br />
@@ -403,6 +408,43 @@ export const MediaMarkup = (
         <br />
         {data.media.overlayText.third}
       </DescriptionCenter>
+    </Container>
+  </FlexCenter>
+);
+
+export const AboutTHLMarkup = (
+  <FlexCenter>
+    <Container className="container--aboutTHL">
+      <Logo src={thlLogo} />
+      <ShortHR />
+      <Intro>
+        The Humane League’s mission is to reduce the suffering of as many
+        animals as possible, as effectively as possible.
+      </Intro>
+      <p>
+        We work to reform the way farm animals are treated while also inspiring
+        people to make more compassionate food choices. Our strategy includes
+        hard-hitting corporate campaigns and wide-ranging outreach and education
+        programs, supported by an extensive network of organizations, activists
+        and supporters around the world.
+      </p>
+      <p>
+        In the US, we have on-the-ground organizers in major cities across the
+        country. These grassroots staff build and strengthen local communities
+        of changemakers that support our work and spread our message, amplifying
+        our ability to create meaningful change for farm animals.
+      </p>
+      <p>
+        Internationally, we have offices in Mexico, the UK and Japan, where we
+        are engaged in region-specific initiatives that are creating positive
+        results. Our reach extends globally with the Open Wing Alliance.
+      </p>
+      <Intro>
+        Animals don’t have to suffer. Get involved to create the change.
+      </Intro>
+      <a target="_blank" href="https://thehumaneleague.org/get-involved">
+        <RedButton>Create change</RedButton>
+      </a>
     </Container>
   </FlexCenter>
 );

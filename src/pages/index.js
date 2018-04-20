@@ -24,7 +24,8 @@ import {
   McNuggetMarkupMobile,
   McNuggetMarkupDesktop,
   RonaldMarkup,
-  MediaMarkup
+  MediaMarkup,
+  AboutTHLMarkup
 } from '../components/Modal/ModalMarkup';
 
 export default () => {
@@ -77,7 +78,20 @@ export default () => {
         markupToDisplay={MediaMarkup}
         first={data.media.first}
       />
-      <FooterSection />
+      <FooterSection
+        triggerItem={
+          <a
+            style={{
+              textDecoration: 'underline',
+              color: '#fff',
+              textTransform: 'uppercase'
+            }}
+          >
+            About The Humane League
+          </a>
+        }
+        markupToDisplay={AboutTHLMarkup}
+      />
     </div>
   );
 };
