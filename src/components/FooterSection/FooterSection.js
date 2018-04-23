@@ -4,8 +4,6 @@ import thlLogo from '../../assets/svg/thlLogo.svg';
 import data from '../../data/data.json';
 import ModalTrigger from '../Modal/ModalTrigger';
 
-import ModalTrigger from '../Modal/ModalTrigger';
-
 export default class WhySection extends Component {
   state = {};
 
