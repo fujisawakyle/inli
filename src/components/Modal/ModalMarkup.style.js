@@ -257,7 +257,6 @@ export const MobileMarginBottom = styled.div`
 
 export const Container = styled.div`
   width: 90%;
-
   max-width: 40rem;
   height: 100%;
   padding: 3em 0;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Logo, Disclaimer } from './FooterSection.style';
 import thlLogo from '../../assets/svg/thlLogo.svg';
 import data from '../../data/data.json';
+import ModalTrigger from '../Modal/ModalTrigger';
 
 import ModalTrigger from '../Modal/ModalTrigger';
 
