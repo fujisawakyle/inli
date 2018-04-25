@@ -396,10 +396,7 @@ export const MediaMarkup = (
         <RedButton>{data.media.overlayText.button3}</RedButton>
       </a>
       <br />
-      <a
-        href="https://drive.google.com/drive/folders/1gXDwZHwwsoYgiEHV_wQTxPKJJGwPaV-P?usp=sharing"
-        target="_blank"
-      >
+      <a href="https://drive.google.com/drive/folders/1gXDwZHwwsoYgiEHV_wQTxPKJJGwPaV-P?usp=sharing" target="_blank">
         <RedButton>{data.media.overlayText.button4}</RedButton>
       </a>
       <br />
