@@ -256,10 +256,7 @@ export const MobileMarginBottom = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100%;
-  ${media.xs`
-    width: 90%;
-  `};
+  width: 90%;
   max-width: 40rem;
   height: 100%;
   padding: 3em 0;
@@ -272,6 +269,10 @@ export const Container = styled.div`
 
   &.container--how {
     max-width: 60rem;
+    width: 100%;
+    ${media.xs`
+      width: 90%;
+    `};
   }
 
   p {
@@ -499,4 +500,9 @@ export const SymptomIcon = styled.div`
   display: flex;
   justify-content: center;
   width: 60%;
+`;
+
+export const Logo = styled.img`
+  width: 75%;
+  max-width: 450px;
 `;

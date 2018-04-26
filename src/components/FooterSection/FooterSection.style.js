@@ -23,7 +23,7 @@ export const Logo = styled.img`
 export const Disclaimer = styled.p`
   text-align: center;
   font-size: 0.6rem;
-  color: #888;
+  color: #fff;
   margin-bottom: 0;
 
   ${media.sm`
