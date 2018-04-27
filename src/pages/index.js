@@ -78,6 +78,7 @@ export default () => {
         markupToDisplay={MediaMarkup}
         first={data.media.first}
       />
+      <a name="franchisee" />
       <FranchiseeSection />
       <FooterSection />
     </div>
