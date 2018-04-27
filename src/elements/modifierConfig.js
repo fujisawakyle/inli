@@ -76,6 +76,8 @@ const modifierConfig = {
   narrower: () => `
     max-width: 500px;
   `,
+
+  //Franchising section
   unhappyContainer: () => `
     @media (min-width: ${md}) {
       align-items: flex-start;
@@ -86,7 +88,6 @@ const modifierConfig = {
       width: 60%;
     }
   `,
-
   unhappyImg: () => `
     order: 0;
     width: 80%;

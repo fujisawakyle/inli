@@ -15,6 +15,7 @@ const Title = styled(H1)`
   z-index: 1;
   margin-bottom: 1.5rem;
   padding: 0 0.3em;
+  line-height: 1.3;
 
   ${media.md`
     font-size: 3.1rem;

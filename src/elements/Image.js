@@ -7,6 +7,7 @@ import modifierConfig from './modifierConfig';
 
 const Image = styled.img`
   margin-bottom: 1.5em;
+  width: 100%;
 
   ${applyStyleModifiers(modifierConfig)};
 `;
