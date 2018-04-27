@@ -1,38 +1,40 @@
 {
-  "navLinkTitles": [
-    {
-      "title": "The Sad Truth",
-      "anchor": "sadTruth"
-    },
-    {
-      "title": "Take Action",
-      "anchor": "takeAction"
-    },
-    {
-      "title": "How a McNugget is Made",
-      "anchor": "mcNugget"
-    },
-    {
-      "title": "Why Won't McDonald's?",
-      "anchor": "why"
-    },
-    {
-      "title": "Where's Ronald?",
-      "anchor": "ronald"
-    },
-    {
-      "title": "Follow the Campaign",
-      "anchor": "social"
-    },
-    {
-      "title": "Media Resources",
-      "anchor": "media"
-    },
-    {
-      "title": "Are You A Franchisee?",
-      "anchor": "franchisee"
-    }
-  ],
+  "root": {
+    "navLinkTitles": [
+      {
+        "title": "The Sad Truth",
+        "anchor": "sadTruth"
+      },
+      {
+        "title": "Take Action",
+        "anchor": "takeAction"
+      },
+      {
+        "title": "How a McNugget is Made",
+        "anchor": "mcNugget"
+      },
+      {
+        "title": "Why Won't McDonald's?",
+        "anchor": "why"
+      },
+      {
+        "title": "Where's Ronald?",
+        "anchor": "ronald"
+      },
+      {
+        "title": "Follow the Campaign",
+        "anchor": "social"
+      },
+      {
+        "title": "Media Resources",
+        "anchor": "media"
+      },
+      {
+        "title": "Are You A Franchisee?",
+        "anchor": "franchisee"
+      }
+    ]
+  },
 
   "socialBlock": {
     "facebookURL":
@@ -160,6 +162,28 @@
     }
   },
   "franchise": {
+    "navLinkTitles": [
+      {
+        "title": "Franchising",
+        "anchor": "franchising"
+      },
+      {
+        "title": "National Boycott",
+        "anchor": "boycott"
+      },
+      {
+        "title": "Competitors",
+        "anchor": "behind"
+      },
+      {
+        "title": "Misleading Consumers",
+        "anchor": "misleading"
+      },
+      {
+        "title": "More Information",
+        "anchor": "info"
+      }
+    ],
     "interested": {
       "title":
         "<span style={{textTransform: 'none'}}>Interested in</span> franchising <span style={{textTransform: 'none'}}>with</span> McDonald’s?",
@@ -196,9 +220,7 @@
       "subtitle":
         "Despite the financial impact on individual franchisees, McDonald’s leadership refuses to listen to its customers and employees and produce a policy that meaningfully addresses the problems in its supply chain.",
       "description1":
-        "Rather than enact meaningful improvements for the millions of chickens in its supply chain,",
-      "description2":
-        "McDonald’s has focused on actively misleading consumers.",
+        "Rather than enact meaningful improvements for the millions of chickens in its supply chain, McDonald’s has focused on actively misleading consumers.",
       "button": "Learn more"
     },
     "info": {
