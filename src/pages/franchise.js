@@ -12,6 +12,7 @@ import DarkFilter from '../elements/DarkFilter';
 
 import Header from '../components/Header/Header';
 import FooterSection from '../components/FooterSection/FooterSection';
+import { AboutTHLMarkup } from '../components/Modal/ModalMarkup';
 
 import { md } from '../layouts/media';
 import data from '../data/data.json';
@@ -159,8 +160,20 @@ export default () => {
           <FlexContainer modifiers={['column']} />
         </Container>
       </Section>
-
-      <FooterSection />
+      <FooterSection
+        triggerItem={
+          <a
+            style={{
+              textDecoration: 'underline',
+              color: '#fff',
+              textTransform: 'uppercase'
+            }}
+          >
+            About The Humane League
+          </a>
+        }
+        markupToDisplay={AboutTHLMarkup}
+      />
     </div>
   );
 };
