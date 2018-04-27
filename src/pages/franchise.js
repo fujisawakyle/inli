@@ -25,8 +25,8 @@ import infoImg2Sm from '../assets/images/franchise/campaigns-mcdonald-prospectiv
 export default () => {
   return (
     <div>
-      <Header />
-
+      <Header header="franchise" />
+      <a name="franchising" />
       <Section name="interested" modifiers={['redBg', 'headerPadding']}>
         <Container modifiers={['column', 'unhappyContainer']}>
           <FlexContainer modifiers={['column', 'unhappyText']}>
@@ -64,6 +64,7 @@ export default () => {
         </Container>
       </Section>
 
+      <a name="boycott" />
       <Section name="boycott" modifiers={['boycottBg', 'darkFilter']}>
         <DarkFilter />
         <Container modifiers={['column']}>
@@ -81,6 +82,7 @@ export default () => {
         </Container>
       </Section>
 
+      <a name="behind" />
       <Section name="behind">
         <Container modifiers={['column']}>
           <Section.Title modifiers={['lightRedFont']}>
@@ -96,6 +98,7 @@ export default () => {
         </Container>
       </Section>
 
+      <a name="misleading" />
       <Section name="misleading" modifiers={['misleadingBg']}>
         <DarkFilter />
         <Container modifiers={['column']}>
@@ -106,9 +109,12 @@ export default () => {
           <Section.Description modifiers={['narrow']}>
             {data.franchise.misleading.description1}
             <br />
-            {data.franchise.misleading.description2}
-            <br />
-            Under McDonald’s current policy, Chickens raised and killed for McDonald’s food are <strong>still</strong> forcefully bred to grow so large, so fast that they literally become paralyzed under their own enormous bodies. They are still forced to live in overcrowded, dark, disgusting barns, causing painful conditions including horrible ammonia burns on their chest and legs.
+            Under McDonald’s current policy, Chickens raised and killed for
+            McDonald’s food are <strong>still</strong> forcefully bred to grow
+            so large, so fast that they literally become paralyzed under their
+            own enormous bodies. They are still forced to live in overcrowded,
+            dark, disgusting barns, causing painful conditions including
+            horrible ammonia burns on their chest and legs.
           </Section.Description>
           <Link to="/">
             <Button>{data.franchise.misleading.button}</Button>
@@ -116,6 +122,7 @@ export default () => {
         </Container>
       </Section>
 
+      <a name="info" />
       <Section name="info" modifiers={['column']}>
         <Section.Title modifiers={['darkFont']}>
           {data.franchise.info.title}

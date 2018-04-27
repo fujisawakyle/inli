@@ -32,7 +32,7 @@ import {
 export default () => {
   return (
     <div>
-      <Header />
+      <Header header="root" />
       <HeroVideo videoURL={data.videoURL} />
       <a name="sadTruth" />
       <SadTruthSection
