@@ -58,6 +58,10 @@ export default class ModalTrigger extends Component {
         onRequestClose={() => true}
       />
     );
+    window.dataLayer.push({
+      event: 'sadTruthModal',
+      modalType: 'sadTruth'
+    });
   };
   render() {
     return (

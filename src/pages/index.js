@@ -30,6 +30,7 @@ import {
 } from '../components/Modal/ModalMarkup';
 
 export default () => {
+  window.dataLayer = window.dataLayer || [];
   return (
     <div>
       <Header header="root" />
