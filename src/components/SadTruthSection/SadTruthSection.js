@@ -8,6 +8,9 @@ import {
 } from './SadTruthSection.style';
 
 export default class SadTruthSection extends Component {
+  componentDidMount() {
+    window.dataLayer = window.dataLayer || [];
+  }
   state = {};
 
   render() {
