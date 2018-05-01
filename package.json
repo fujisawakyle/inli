@@ -18,7 +18,8 @@
     "react-dynamic-modal": "https://github.com/fujisawakyle/react-dynamic-modal/tarball/master",
     "react-helmet": "^5.2.0",
     "react-inlinesvg": "^0.8.0",
-    "styled-components": "^3.1.6"
+    "styled-components": "^3.1.6",
+    "styled-components-modifiers": "^1.0.1"
   },
   "keywords": [
     "gatsby"

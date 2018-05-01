@@ -10,7 +10,8 @@ import McNuggetSection from '../components/McNuggetSection/McNuggetSection';
 import WhySection from '../components/WhySection/WhySection';
 import RonaldSection from '../components/RonaldSection/RonaldSection';
 import SocialSection from '../components/SocialSection/SocialSection';
-import MediaSection from '../components/MediaSection/MediaSection.js';
+import MediaSection from '../components/MediaSection/MediaSection';
+import FranchiseeSection from '../components/FranchiseeSection/FranchiseeSection';
 import FooterSection from '../components/FooterSection/FooterSection';
 import { RedButton } from '../components/Buttons/Buttons.style';
 import sadTruthBgSm from '../assets/images/campaigns-mcdonalds-website-sad-truth-small.jpg';
@@ -31,7 +32,7 @@ import {
 export default () => {
   return (
     <div>
-      <Header />
+      <Header header="root" />
       <HeroVideo videoURL={data.videoURL} />
       <a name="sadTruth" />
       <SadTruthSection
@@ -78,6 +79,8 @@ export default () => {
         markupToDisplay={MediaMarkup}
         first={data.media.first}
       />
+      <a name="franchisee" />
+      <FranchiseeSection />
       <FooterSection
         triggerItem={
           <a

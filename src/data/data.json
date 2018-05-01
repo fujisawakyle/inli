@@ -1,34 +1,40 @@
 {
-  "navLinkTitles": [
-    {
-      "title": "The Sad Truth",
-      "anchor": "sadTruth"
-    },
-    {
-      "title": "Take Action",
-      "anchor": "takeAction"
-    },
-    {
-      "title": "How a McNugget is Made",
-      "anchor": "mcNugget"
-    },
-    {
-      "title": "Why Won't McDonald's?",
-      "anchor": "why"
-    },
-    {
-      "title": "Where's Ronald?",
-      "anchor": "ronald"
-    },
-    {
-      "title": "Follow the Campaign",
-      "anchor": "social"
-    },
-    {
-      "title": "Media Resources",
-      "anchor": "media"
-    }
-  ],
+  "root": {
+    "navLinkTitles": [
+      {
+        "title": "The Sad Truth",
+        "anchor": "sadTruth"
+      },
+      {
+        "title": "Take Action",
+        "anchor": "takeAction"
+      },
+      {
+        "title": "How a McNugget is Made",
+        "anchor": "mcNugget"
+      },
+      {
+        "title": "Why Won't McDonald's?",
+        "anchor": "why"
+      },
+      {
+        "title": "Where's Ronald?",
+        "anchor": "ronald"
+      },
+      {
+        "title": "Follow the Campaign",
+        "anchor": "social"
+      },
+      {
+        "title": "Media Resources",
+        "anchor": "media"
+      },
+      {
+        "title": "Are You A Franchisee?",
+        "anchor": "franchisee"
+      }
+    ]
+  },
 
   "socialBlock": {
     "facebookURL":
@@ -153,6 +159,82 @@
       "post":
         "As one of the world’s largest & most influential companies, it's completely unacceptable that @McDonaldsUS won't adopt the same chicken welfare standards as its competitors, like Burger King and Subway. Animals and consumers deserve better! #BoycottMcDonalds #ImNotLovinit",
       "button": "Go To Facebook"
+    }
+  },
+  "franchise": {
+    "navLinkTitles": [
+      {
+        "title": "Franchising",
+        "anchor": "franchising"
+      },
+      {
+        "title": "National Boycott",
+        "anchor": "boycott"
+      },
+      {
+        "title": "Competitors",
+        "anchor": "behind"
+      },
+      {
+        "title": "Misleading Consumers",
+        "anchor": "misleading"
+      },
+      {
+        "title": "More Information",
+        "anchor": "info"
+      }
+    ],
+    "interested": {
+      "title":
+        "<span style={{textTransform: 'none'}}>Interested in</span> franchising <span style={{textTransform: 'none'}}>with</span> McDonald’s?",
+      "subtitle": "Don’t Buy into McDonald’s Animal Cruelty.",
+      "description":
+        "Owning a McDonald's restaurant means buying into a company that is falling dramatically behind on social responsibility issues including animal welfare. Despite public outrage, McDonald's leadership has refused to meaningfully address the concerns of neglect and mistreatment in its chicken supply chain. Buying into McDonald's means buying into animal cruelty."
+    },
+    "operator": {
+      "subtitle": "Already a franchise operator?",
+      "description":
+        "McDonald’s refusal to commit to a meaningful animal welfare policy could seriously impact your business.",
+      "href":
+        "mailto:imnotlovinit@thlcampaigns.org?subject=Interested%20in%20learning%20more&body=Hi%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20how%20McDonald%27s%20refusal%20to%20meaningfully%20address%20the%20animal%20abuse%20in%20its%20chicken%20supply%20chain%20could%20impact%20my%20business.%0A%0AThank%20you%2C",
+      "button": "Find out how"
+    },
+    "boycott": {
+      "title": "National Boycott",
+      "subtitle":
+        "There is a growing national boycott and aggressive campaign against McDonald’s for supporting animal cruelty in its chicken supply chain.",
+      "description":
+        "Alongside The Humane League, consumers have launched a national boycott against McDonald’s. In addition to the 125,000 people that have signed an online petition, thousands of volunteers are mobilizing across  the country, urging McDonald’s to improve its animal welfare policies.",
+      "statement":
+        "The bottom line: investing in animal cruelty is bad for business.",
+      "href": "https://imnotlovinit.com",
+      "button": "Learn more"
+    },
+    "behind": {
+      "title": "Falling Behind",
+      "subtitle":
+        "Despite comprehensive commitments from several of McDonald’s competitors, including Burger King, Subway, and Starbucks, McDonald’s refuses to take this issue seriously. When other major companies have already committed to sweeping welfare reforms, what’s McDonald’s excuse?"
+    },
+    "misleading": {
+      "title": "Misleading Consumers",
+      "subtitle":
+        "Despite the financial impact on individual franchisees, McDonald’s leadership refuses to listen to its customers and employees and produce a policy that meaningfully addresses the problems in its supply chain.",
+      "description1":
+        "Rather than enact meaningful improvements for the millions of chickens in its supply chain, McDonald’s has focused on actively misleading consumers.",
+      "button": "Learn more"
+    },
+    "info": {
+      "title": "Get more information",
+      "subtitle1": "Current Franchise Operators",
+      "description1":
+        "McDonald’s refusal to commit to a meaningful animal welfare policy could seriously impact your business.",
+      "button1": "Find out how",
+      "subtitle2": "Prospective Franchise Operators",
+      "description2":
+        "Email McDonald’s leadership to express your disappointment in their inaction.",
+      "href2":
+        "mailto:marion.gross@us.mcd.com?subject=Missed%20Opportunity&body=Dear%20Ms.%20Gross%2C%0A%0AI%20was%20looking%20into%20buying%20a%20McDonald%E2%80%99s%20franchise%2C%20and%20wanted%20to%20let%20you%20know%20that%20I%20have%20decided%20against%20it.%20I%20recently%20learned%20that%20McDonald%E2%80%99s%20is%20far%20behind%20its%20competitors%20on%20animal%20welfare%20issues.%20Despite%20the%20major%20shift%20in%20consumer%20preference%20towards%20better%20conditions%20for%20animals%2C%20McDonald%E2%80%99s%20has%20yet%20to%20enact%20a%20meaningful%20policy%20to%20protect%20the%20millions%20of%20chickens%20destined%20to%20be%20used%20in%20its%20supply%20chain.%20%0A%0AI%20have%20serious%20concerns%20that%20McDonald%E2%80%99s%20inadequate%20animal%20welfare%20policies%20and%20lack%20of%20action%20on%20this%20issue%20will%20jeopardize%20my%20investment%20in%20a%20franchise.%20As%20such%2C%20I%20will%20be%20exploring%20franchise%20opportunities%20with%20restaurant%20chains%20that%20place%20more%20value%20on%20animal%20welfare%2C%20transparency%2C%20and%20franchisee%20support.%0A%0ASincerely%2C",
+      "button2": "Send an email"
     }
   }
 }
