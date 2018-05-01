@@ -67,6 +67,7 @@ export default () => {
       />
       <a name="ronald" />
       <RonaldSection
+        eventName="ronald"
         triggerItem={<RedButton>{data.ronald.buttonText}</RedButton>}
         markupToDisplay={RonaldMarkup}
         first={data.ronald.first}
@@ -77,6 +78,7 @@ export default () => {
       <SocialSection first={data.social.first} />
       <a name="media" />
       <MediaSection
+        eventName="media"
         triggerItem={<RedButton>{data.media.buttonText}</RedButton>}
         markupToDisplay={MediaMarkup}
         first={data.media.first}
