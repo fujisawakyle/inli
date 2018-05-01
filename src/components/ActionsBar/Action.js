@@ -52,17 +52,29 @@ export default class Action extends Component {
             this.state.twitterValue
           )}`
         );
+        window.dataLayer.push({
+          event: 'twitterAction',
+          actionType: 'twitter'
+        });
         break;
       case '3':
-        let body = encodeURIComponent(decodeURIComponent(this.state.emailBodyValue));
-        window.location.href =
-          `mailto:${this.state.emailRecipientValue}?subject=${
-            this.state.emailSubjectValue
-          }&body=${body}`
-        ;
+        let body = encodeURIComponent(
+          decodeURIComponent(this.state.emailBodyValue)
+        );
+        window.location.href = `mailto:${
+          this.state.emailRecipientValue
+        }?subject=${this.state.emailSubjectValue}&body=${body}`;
+        window.dataLayer.push({
+          event: 'emailAction',
+          actionType: 'email'
+        });
         break;
       case '4':
         window.open('https://facebook.com/McDonaldsUS');
+        window.dataLayer.push({
+          event: 'facebookAction',
+          actionType: 'facebook'
+        });
     }
   };
   render() {
@@ -121,10 +133,15 @@ export default class Action extends Component {
               onCopy={this.onCopy}
               text={this.state.facebookValue}
             >
-              <CopyButton className="copy-btn--email copy-btn--emailBody">Copy</CopyButton>
+              <CopyButton className="copy-btn--email copy-btn--emailBody">
+                Copy
+              </CopyButton>
             </CopyToClipboard>
             {this.state.copied ? (
-              <span id="copyConfirm" className="copyConfirm copyConfirm--emailBody">
+              <span
+                id="copyConfirm"
+                className="copyConfirm copyConfirm--emailBody"
+              >
                 Copied.
               </span>
             ) : null}

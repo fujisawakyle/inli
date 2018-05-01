@@ -38,6 +38,10 @@ export default class ActionSlider extends Component {
       () => {
         setTimeout(() => {
           this.handleActionTaken('1');
+          window.dataLayer.push({
+            event: 'petitionAction',
+            actionType: 'petition'
+          });
         }, 1000);
       },
       600000
