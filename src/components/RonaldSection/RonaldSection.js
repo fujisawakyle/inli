@@ -6,7 +6,7 @@ import {
   ImageContainer,
   Image,
   Title,
-  Subtitle,
+  Subtitle
 } from './RonaldSection.style';
 
 import ronaldImgSm from '../../assets/images/campaigns-mcdonalds-website-ronald-small.png';
@@ -21,6 +21,7 @@ export default class RonaldSection extends Component {
           <Title>{this.props.first}</Title>
           <Subtitle>{this.props.second}</Subtitle>
           <ModalTrigger
+            eventName={this.props.eventName}
             modalTransition="scaleUp"
             triggerItem={this.props.triggerItem}
             markupToDisplay={this.props.markupToDisplay}

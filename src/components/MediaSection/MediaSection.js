@@ -10,6 +10,7 @@ export default class MediaSection extends Component {
       <Container>
         <Title>{this.props.first}</Title>
         <ModalTrigger
+          eventName={this.props.eventName}
           modalTransition="scaleUp"
           triggerItem={this.props.triggerItem}
           markupToDisplay={this.props.markupToDisplay}
