@@ -1,6 +1,6 @@
 import { red, lightRed, white, black } from '../assets/styles/colors';
 
-import media, { md } from '../layouts/media';
+import media, { sizes } from '../layouts/media';
 
 import boycottBgImg from '../assets/images/franchise/campaigns-mcdonald-national-boycott-large.jpg';
 import misleadingBgImg from '../assets/images/franchise/campaigns-mcdonald-misleading-consumers-large.jpg';
@@ -29,12 +29,12 @@ const modifierConfig = {
   headerPadding: () => `
     padding-top: 5.5em;
 
-    @media (min-width: ${md}) {
+    @media (min-width: ${sizes.md}px) {
       padding-top: 6.5em;
     }
   `,
   smallPadding: () => `
-    @media (min-width: ${md}) {
+    @media (min-width: ${sizes.md}px) {
       padding: 2rem 0;
     }
   `,
@@ -51,22 +51,22 @@ const modifierConfig = {
 
   //Container
   column: () => `
-    @media (min-width: ${md}) {
+    @media (min-width: ${sizes.md}px) {
       flex-direction: column;
     }
   `,
   dipytch: () => `
-    @media (min-width: ${md}) {
+    @media (min-width: ${sizes.md}px) {
       width: 50%;
     }
   `,
   alignLeft: () => `
-    @media (min-width: ${md}) {
+    @media (min-width: ${sizes.md}px) {
       align-items: flex-start;
     }
   `,
   padding: () => `
-    @media (min-width: ${md}) {
+    @media (min-width: ${sizes.md}px) {
       padding: .5em;
     }
   `,
@@ -79,20 +79,25 @@ const modifierConfig = {
 
   //Franchising section
   unhappyContainer: () => `
-    @media (min-width: ${md}) {
+    @media (min-width: ${sizes.md}px) {
       align-items: flex-start;
     }
   `,
   unhappyText: () => `
-    @media (min-width: ${md}) {
+    @media (min-width: ${sizes.md}px) {
       width: 60%;
+    }
+  `,
+  unhappyTextWide: () => `
+    @media (min-width: ${sizes.lg}px) {
+      width: 65%;
     }
   `,
   unhappyImg: () => `
     order: 0;
     width: 80%;
     max-width: 15em;
-  @media (min-width: ${md}) {
+  @media (min-width: ${sizes.md}px) {
     width: 50%;
     max-width: 20em;
     order: 3;

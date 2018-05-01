@@ -14,7 +14,7 @@ import Header from '../components/Header/Header';
 import FooterSection from '../components/FooterSection/FooterSection';
 import { AboutTHLMarkup } from '../components/Modal/ModalMarkup';
 
-import { md } from '../layouts/media';
+import { sizes } from '../layouts/media';
 import data from '../data/data.json';
 
 import interestedImg1Sm from '../assets/images/franchise/campaigns-mcdonald-marketing-happy-meal-box-only-small.png';
@@ -43,7 +43,7 @@ export default () => {
 
           <Image modifiers={['unhappyImg']} src={interestedImg1Sm} />
 
-          <FlexContainer modifiers={['unhappyText']}>
+          <FlexContainer modifiers={['unhappyText', 'unhappyTextWide']}>
             <Section.Description>
               {data.franchise.interested.description}
             </Section.Description>
@@ -93,7 +93,10 @@ export default () => {
             {data.franchise.behind.subtitle}
           </Section.Subtitle>
           <Picture>
-            <source srcSet={behindImgLg} media={'(min-width: ' + md + ')'} />
+            <source
+              srcSet={behindImgLg}
+              media={'(min-width: ' + sizes.md + 'px)'}
+            />
             <Image modifiers={['narrow']} src={behindImgSm} />
           </Picture>
         </Container>
@@ -108,18 +111,20 @@ export default () => {
             {data.franchise.misleading.subtitle}
           </Section.Subtitle>
           <Section.Description modifiers={['narrow']}>
-            {data.franchise.misleading.description1}
-            <br />
-            Under McDonald’s current policy, Chickens raised and killed for
-            McDonald’s food are <strong>still</strong> forcefully bred to grow
-            so large, so fast that they literally become paralyzed under their
-            own enormous bodies. They are still forced to live in overcrowded,
-            dark, disgusting barns, causing painful conditions including
-            horrible ammonia burns on their chest and legs.
+            {data.franchise.misleading.description1} Under McDonald’s current
+            policy, Chickens raised and killed for McDonald’s food are{' '}
+            <strong>still</strong> forcefully bred to grow so large, so fast
+            that they literally become paralyzed under their own enormous
+            bodies. They are still forced to live in overcrowded, dark,
+            disgusting barns, causing painful conditions including horrible
+            ammonia burns on their chest and legs.
           </Section.Description>
-          <Link to="/">
+          <a
+            target="_blank"
+            href="https://www.alternet.org/animal-rights/mcdonalds-happy-meals-are-anything-happy"
+          >
             <Button>{data.franchise.misleading.button}</Button>
-          </Link>
+          </a>
         </Container>
       </Section>
 

@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const sizes = {
+export const sizes = {
   xl: 1200,
   lg: 992,
   md: 790,
@@ -19,7 +19,5 @@ const media = Object.keys(sizes).reduce((accumulator, label) => {
   `;
   return accumulator;
 }, {});
-
-export const md = '49.375em';
 
 export default media;
