@@ -25,6 +25,7 @@ export default class SadTruthSection extends Component {
 
         <ModalTrigger
           modalTransition="scaleUp"
+          eventName={this.props.eventName}
           triggerItem={this.props.triggerItem}
           markupToDisplay={this.props.markupToDisplay}
         />
