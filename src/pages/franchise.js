@@ -24,6 +24,13 @@ import infoImg1Sm from '../assets/images/franchise/campaigns-mcdonald-current-fr
 import infoImg2Sm from '../assets/images/franchise/campaigns-mcdonald-prospective-franchisee-small.jpg';
 
 export default () => {
+  function clickTrack(eventName, eventTypeKey, eventType) {
+    window.dataLayer.push({
+      event: eventName,
+      [eventTypeKey]: eventType
+    });
+  }
+
   return (
     <div>
       <Header header="franchise" />
@@ -59,7 +66,10 @@ export default () => {
           <Section.Description modifiers={['darkFont']}>
             {data.franchise.operator.description}
           </Section.Description>
-          <a href={data.franchise.operator.href}>
+          <a
+            onClick={() => clickTrack('operatorEmail', 'anchorType', 'email')}
+            href={data.franchise.operator.href}
+          >
             <Button>{data.franchise.operator.button}</Button>
           </a>
         </Container>
