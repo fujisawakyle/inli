@@ -5,13 +5,15 @@ import Link from 'gatsby-link';
 
 export default class FranchiseeSection extends Component {
   state = {};
+
+  trackClick = () => {
+    window.dataLayer.push({
+      event: 'franchiseeReroute',
+      anchorType: 'reroute'
+    });
+  };
+
   render() {
-    trackClick = () => {
-      window.dataLayer.push({
-        event: 'franchiseeReroute',
-        anchorType: 'reroute'
-      });
-    };
     return (
       <Container>
         <Title> Are you a franchisee? </Title>
