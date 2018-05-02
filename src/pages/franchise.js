@@ -24,7 +24,7 @@ import infoImg1Sm from '../assets/images/franchise/campaigns-mcdonald-current-fr
 import infoImg2Sm from '../assets/images/franchise/campaigns-mcdonald-prospective-franchisee-small.jpg';
 
 export default () => {
-  function clickTrack(eventName, eventTypeKey, eventType) {
+  function trackClick(eventName, eventTypeKey, eventType) {
     window.dataLayer.push({
       event: eventName,
       [eventTypeKey]: eventType
@@ -67,7 +67,7 @@ export default () => {
             {data.franchise.operator.description}
           </Section.Description>
           <a
-            onClick={() => clickTrack('operatorEmail', 'anchorType', 'email')}
+            onClick={() => trackClick('operatorEmail', 'anchorType', 'email')}
             href={data.franchise.operator.href}
           >
             <Button>{data.franchise.operator.button}</Button>
@@ -87,7 +87,12 @@ export default () => {
           <Section.Subtitle modifiers={['uppercase']}>
             {data.franchise.boycott.statement}
           </Section.Subtitle>
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={() =>
+              trackClick('boycottReroute', 'anchorType', 'reroute')
+            }
+          >
             <Button>{data.franchise.boycott.button}</Button>
           </Link>
         </Container>
@@ -130,6 +135,9 @@ export default () => {
             ammonia burns on their chest and legs.
           </Section.Description>
           <a
+            onClick={() =>
+              trackClick('misleadingReroute', 'anchorType', 'reroute')
+            }
             target="_blank"
             href="https://www.alternet.org/animal-rights/mcdonalds-happy-meals-are-anything-happy"
           >
@@ -154,7 +162,10 @@ export default () => {
             <Section.Description modifiers={['darkFont', 'textLeft']}>
               {data.franchise.info.description1}
             </Section.Description>
-            <a href={data.franchise.operator.href}>
+            <a
+              onClick={() => trackClick('currentEmail', 'anchorType', 'email')}
+              href={data.franchise.operator.href}
+            >
               <Button>{data.franchise.info.button1}</Button>
             </a>
           </FlexContainer>
@@ -168,7 +179,12 @@ export default () => {
             <Section.Description modifiers={['darkFont', 'textLeft']}>
               {data.franchise.info.description2}
             </Section.Description>
-            <a href={data.franchise.info.href2}>
+            <a
+              onClick={() =>
+                trackClick('prospectiveEmail', 'anchorType', 'email')
+              }
+              href={data.franchise.info.href2}
+            >
               <Button>{data.franchise.info.button2}</Button>
             </a>
           </FlexContainer>

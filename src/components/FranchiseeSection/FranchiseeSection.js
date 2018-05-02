@@ -6,6 +6,12 @@ import Link from 'gatsby-link';
 export default class FranchiseeSection extends Component {
   state = {};
   render() {
+    trackClick = () => {
+      window.dataLayer.push({
+        event: 'franchiseeReroute',
+        anchorType: 'reroute'
+      });
+    };
     return (
       <Container>
         <Title> Are you a franchisee? </Title>
@@ -14,7 +20,7 @@ export default class FranchiseeSection extends Component {
           Learn how McDonald's refusal to commit to a meaningful policy could
           impact your business.
         </Subtitle>
-        <Link to="/franchise">
+        <Link onClick={this.trackClick} to="/franchise">
           <RedButton>Learn more</RedButton>
         </Link>
       </Container>
