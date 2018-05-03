@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { Helmet } from 'react-helmet';
 
 import Section from '../blocks/Section';
 
@@ -33,6 +34,45 @@ export default () => {
 
   return (
     <div>
+      <Helmet
+        title="McDonald's Franchising"
+        meta={[
+          {
+            name: 'description',
+            content: "Don't buy into McDonald's animal cruelty."
+          },
+          {
+            name: 'keywords',
+            content:
+              'McDonalds franchise, McDonalds, franchise, chicken, animal welfare, welfare'
+          },
+          { name: 'twitter:card', content: 'photo' },
+          { name: 'twitter:url', content: 'https://mcdfranchising.com' },
+          { name: 'twitter:title', content: "McDonald's Franchising" },
+          {
+            name: 'twitter:description',
+            content: "Don't buy into McDonald's animal cruelty."
+          },
+          {
+            name: 'twitter:image',
+            content:
+              'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png'
+          }
+        ]}
+      >
+        <meta property="og:title" content="McDonald's Franchising" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="Consumers deserve to know where McDonald's chicken really comes from."
+        />
+        <meta property="og:url" content="https://imnotlovinit.com" />
+        <meta
+          property="og:image"
+          content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-OG-share-image.png"
+        />
+      </Helmet>
+
       <Header header="franchise" />
       <a name="franchising" />
       <Section name="interested" modifiers={['redBg', 'headerPadding']}>
