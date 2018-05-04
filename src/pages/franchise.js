@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { Helmet } from 'react-helmet';
 
 import Section from '../blocks/Section';
 
@@ -26,6 +27,45 @@ import infoImg2Sm from '../assets/images/franchise/campaigns-mcdonald-prospectiv
 export default () => {
   return (
     <div>
+      <Helmet
+        title="McDonald's Franchising"
+        meta={[
+          {
+            name: 'description',
+            content: "Don't buy into McDonald's animal cruelty."
+          },
+          {
+            name: 'keywords',
+            content:
+              'McDonalds franchise, McDonalds, franchise, chicken, animal welfare, welfare'
+          },
+          { name: 'twitter:card', content: 'photo' },
+          { name: 'twitter:url', content: 'https://mcdsfranchising.com' },
+          { name: 'twitter:title', content: "McDonald's Franchising" },
+          {
+            name: 'twitter:description',
+            content: "Don't buy into McDonald's animal cruelty."
+          },
+          {
+            name: 'twitter:image',
+            content:
+              'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-franchise-OG-share-image.png'
+          }
+        ]}
+      >
+        <meta property="og:title" content="McDonald's Franchising" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="Don't buy into McDonald's animal cruelty."
+        />
+        <meta property="og:url" content="https://mcdsfranchising.com" />
+        <meta
+          property="og:image"
+          content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-franchise-OG-share-image.png"
+        />
+      </Helmet>
+
       <Header header="franchise" />
       <a name="franchising" />
       <Section name="interested" modifiers={['redBg', 'headerPadding']}>
