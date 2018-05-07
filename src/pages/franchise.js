@@ -50,21 +50,30 @@ export default () => {
             name: 'twitter:image',
             content:
               'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-franchise-OG-share-image.png'
+          },
+          {
+            property: 'og:title',
+            content: "McDonald's Franchising"
+          },
+          {
+            property: 'og:type',
+            content: 'website'
+          },
+          {
+            property: 'og:description',
+            content: "Don't buy into McDonald's animal cruelty."
+          },
+          {
+            property: 'og:url',
+            content: 'https://mcdsfranchising.com'
+          },
+          {
+            property: 'og:image',
+            content:
+              'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-franchise-OG-share-image.png'
           }
         ]}
-      >
-        <meta property="og:title" content="McDonald's Franchising" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:description"
-          content="Don't buy into McDonald's animal cruelty."
-        />
-        <meta property="og:url" content="https://mcdsfranchising.com" />
-        <meta
-          property="og:image"
-          content="https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-franchise-OG-share-image.png"
-        />
-      </Helmet>
+      />
 
       <Header header="franchise" />
       <a name="franchising" />
