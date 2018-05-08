@@ -36,6 +36,7 @@ export default () => {
       <HeroVideo videoURL={data.videoURL} />
       <a name="sadTruth" />
       <SadTruthSection
+        eventName="sadTruth"
         triggerItem={<RedButton>{data.sadTruth.buttonText}</RedButton>}
         markupToDisplay={SadTruthMarkup}
         first={data.sadTruth.first}
@@ -48,6 +49,7 @@ export default () => {
       <ActionsBar />
       <a name="mcNugget" />
       <McNuggetSection
+        eventName="mcNugget"
         triggerItem={<RedButton>{data.mcNugget.buttonText}</RedButton>}
         markupToDisplay={McNuggetMarkupMobile}
         markupToDisplay2={McNuggetMarkupDesktop}
@@ -65,6 +67,7 @@ export default () => {
       />
       <a name="ronald" />
       <RonaldSection
+        eventName="ronald"
         triggerItem={<RedButton>{data.ronald.buttonText}</RedButton>}
         markupToDisplay={RonaldMarkup}
         first={data.ronald.first}
@@ -75,6 +78,7 @@ export default () => {
       <SocialSection first={data.social.first} />
       <a name="media" />
       <MediaSection
+        eventName="media"
         triggerItem={<RedButton>{data.media.buttonText}</RedButton>}
         markupToDisplay={MediaMarkup}
         first={data.media.first}

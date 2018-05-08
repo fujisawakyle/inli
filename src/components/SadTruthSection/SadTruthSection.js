@@ -8,6 +8,9 @@ import {
 } from './SadTruthSection.style';
 
 export default class SadTruthSection extends Component {
+  componentDidMount() {
+    window.dataLayer = window.dataLayer || [];
+  }
   state = {};
 
   render() {
@@ -22,6 +25,7 @@ export default class SadTruthSection extends Component {
 
         <ModalTrigger
           modalTransition="scaleUp"
+          eventName={this.props.eventName}
           triggerItem={this.props.triggerItem}
           markupToDisplay={this.props.markupToDisplay}
         />

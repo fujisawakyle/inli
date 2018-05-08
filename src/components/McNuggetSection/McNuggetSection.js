@@ -29,6 +29,7 @@ export default class McNuggetSection extends Component {
           <Title>{this.props.first}</Title>
           <Subtitle>{this.props.second}</Subtitle>
           <ModalTrigger
+            eventName={this.props.eventName}
             bgColor="rgba(255,44,60,0.9)"
             modalTransition="scaleUp"
             triggerItem={this.props.triggerItem}
