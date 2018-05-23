@@ -103,7 +103,19 @@ export default class Header extends Component {
         </NavContainer>
       );
     } else if (this.props.header == 'franchise') {
-      Social = <div />;
+      Social = (
+        <SocialBlock>
+          <a href={data.socialBlock.franchise.facebookURL} target="_blank">
+            <SocialIcon src={facebookIcon} />
+          </a>
+          <a href={data.socialBlock.franchise.instagramURL} target="_blank">
+            <SocialIcon src={instagramIcon} />
+          </a>
+          <a href={data.socialBlock.franchise.twitterURL} target="_blank">
+            <SocialIcon src={twitterIcon} />
+          </a>
+        </SocialBlock>
+      );
       Donate = <div />;
       HeaderLogo = (
         <Link to="/franchise">
