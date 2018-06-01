@@ -63,7 +63,6 @@ export const ItemsContainer = styled.div`
 
   ${media.md`
     width: 350px;
-    justify-content: space-between;
   `};
 `;
 
@@ -72,9 +71,9 @@ export const ToggleItemsContainer = styled.div`
 
   ${media.md`
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    width: 265px;
+    width: 315px;
   `};
 `;
 
@@ -83,6 +82,7 @@ export const SocialBlock = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 95px;
+  margin: 0 1em;
 `;
 
 export const SocialIcon = styled.img`
@@ -91,14 +91,16 @@ export const SocialIcon = styled.img`
   vertical-align: middle;
 `;
 
-export const DonateButton = styled(RedButton)`
+export const DonateButton = styled(RedButton) `
   width: 130px;
   padding: 0.2em 0.9em;
+  margin: 0 1em;
 `;
 
 export const Menu = styled.img`
   width: 35px;
   vertical-align: middle;
+  margin-left: 1em;
 `;
 
 export const NavContainer = styled.div`
