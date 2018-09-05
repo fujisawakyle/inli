@@ -29,6 +29,7 @@ import menuIcon from '../../assets/svg/menuIcon.svg';
 import facebookIcon from '../../assets/svg/facebookIcon.svg';
 import instagramIcon from '../../assets/svg/instagramIcon.svg';
 import twitterIcon from '../../assets/svg/twitterIcon.svg';
+import BurgerMenu from '../BurgerMenu';
 
 import { ModalManager } from 'react-dynamic-modal';
 
@@ -37,7 +38,7 @@ export default class Header extends Component {
   state = {};
 
   createNav = route => {
-    return data[route].navLinkTitles.map(function(link) {
+    return data[route].navLinkTitles.map(function (link) {
       return (
         <a
           onClick={() => {
@@ -137,11 +138,7 @@ export default class Header extends Component {
             {Social}
             {Donate}
           </ToggleItemsContainer>
-          <ModalTrigger
-            modalTransition="fade"
-            triggerItem={<Menu src={menuIcon} />}
-            markupToDisplay={Navbar}
-          />
+          <BurgerMenu />
         </ItemsContainer>
       </Container>
     );

@@ -1,4 +1,74 @@
 {
+  "rootNavLink": {
+    "linkText": "Home",
+    "path": "/",
+    "nestedState": "showRootNested"
+  },
+  "rootNestedLinks": [
+    {
+      "linkText": "The Sad Truth",
+      "path": "/#sadTruth"
+    },
+    {
+      "linkText": "Take Action",
+      "path": "/#takeAction"
+    },
+    {
+      "linkText": "How a McNugget is Made",
+      "path": "/#mcNugget"
+    },
+    {
+      "linkText": "Why Won't McDonald's?",
+      "path": "/#why"
+    },
+    {
+      "linkText": "Where's Ronald",
+      "path": "/#ronald"
+    },
+    {
+      "linkText": "Follow the Campaign",
+      "path": "/#social"
+    },
+    {
+      "linkText": "Media Resources",
+      "path": "/#media"
+    },
+    {
+      "linkText": "Are You a Franchisee?",
+      "path": "/#franchisee"
+    }
+  ],
+  "franchiseNavLink": {
+    "linkText": "Franchise",
+    "path": "/franchise",
+    "nestedState": "showFranchiseNested"
+  },
+  "franchiseNestedLinks": [
+    {
+      "linkText": "Franchising",
+      "path": "/franchise#franchising"
+    },
+    {
+      "linkText": "National Boycott",
+      "path": "/franchise#boycott"
+    },
+    {
+      "linkText": "Competitors",
+      "path": "/franchise#behind"
+    },
+    {
+      "linkText": "Misleading Consumers",
+      "path": "/franchise#misleading"
+    },
+    {
+      "linkText": "More Information",
+      "path": "/franchise#info"
+    }
+  ],
+  "studentsNavLink": {
+    "linkText": "Students Against",
+    "path": "/studentsagainst"
+  },
   "root": {
     "navLinkTitles": [
       {

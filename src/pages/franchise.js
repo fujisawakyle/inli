@@ -10,6 +10,7 @@ import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Picture from '../elements/Picture';
 import DarkFilter from '../elements/DarkFilter';
+import { NAVANCHOR } from '../styles/styledComponents/elements';
 
 import Header from '../components/Header/Header';
 import FooterSection from '../components/FooterSection/FooterSection';
@@ -83,7 +84,7 @@ export default () => {
       />
 
       <Header header="franchise" />
-      <a name="franchising" />
+      <NAVANCHOR name="franchising" />
       <Section name="interested" modifiers={['redBg', 'headerPadding']}>
         <Container modifiers={['column', 'unhappyContainer']}>
           <FlexContainer modifiers={['column', 'unhappyText']}>
@@ -124,7 +125,7 @@ export default () => {
         </Container>
       </Section>
 
-      <a name="boycott" />
+      <NAVANCHOR name="boycott" />
       <Section name="boycott" modifiers={['boycottBg', 'darkFilter']}>
         <DarkFilter />
         <Container modifiers={['column']}>
@@ -147,7 +148,7 @@ export default () => {
         </Container>
       </Section>
 
-      <a name="behind" />
+      <NAVANCHOR name="behind" />
       <Section name="behind">
         <Container modifiers={['column']}>
           <Section.Title modifiers={['lightRedFont']}>
@@ -166,7 +167,7 @@ export default () => {
         </Container>
       </Section>
 
-      <a name="misleading" />
+      <NAVANCHOR name="misleading" />
       <Section name="misleading" modifiers={['misleadingBg']}>
         <DarkFilter />
         <Container modifiers={['column']}>
@@ -195,7 +196,7 @@ export default () => {
         </Container>
       </Section>
 
-      <a name="info" />
+      <NAVANCHOR name="info" />
       <Section name="info" modifiers={['column']}>
         <Section.Title modifiers={['darkFont']}>
           {data.franchise.info.title}

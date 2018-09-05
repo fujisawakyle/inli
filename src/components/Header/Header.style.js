@@ -74,6 +74,7 @@ export const ToggleItemsContainer = styled.div`
     justify-content: flex-end;
     align-items: center;
     width: 315px;
+    margin-right: 2.5em;
   `};
 `;
 
@@ -91,7 +92,7 @@ export const SocialIcon = styled.img`
   vertical-align: middle;
 `;
 
-export const DonateButton = styled(RedButton) `
+export const DonateButton = styled(RedButton)`
   width: 130px;
   padding: 0.2em 0.9em;
   margin: 0 1em;
