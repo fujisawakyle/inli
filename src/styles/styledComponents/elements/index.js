@@ -4,10 +4,13 @@ import { fromThemeProps } from "../../../helpers/utilities";
 import media from "../../../helpers/media";
 
 export const H1 = styled.h1`
+  margin-bottom: 1.5rem;
   color: ${fromThemeProps("h1Color")};
   font-family: ${fromThemeProps("h1Font")};
   font-size: ${fromThemeProps("h1FontSizeMobile")};
   font-weight: ${fromThemeProps("h1Weight")};
+  text-align: center;
+  text-transform: uppercase;
 
   ${media.xs`
     font-size: ${fromThemeProps("h1FontSizeDesktop")};
@@ -19,6 +22,8 @@ export const H2 = styled.h2`
   font-family: ${fromThemeProps("h2Font")};
   font-size: ${fromThemeProps("h2FontSizeMobile")};
   font-weight: ${fromThemeProps("h2Weight")};
+  text-align: center;
+  text-transform: uppercase;
 
   ${media.xs`
     font-size: ${fromThemeProps("h2FontSizeDesktop")};
@@ -30,6 +35,7 @@ export const H3 = styled.h3`
   font-family: ${fromThemeProps("h3Font")};
   font-size: ${fromThemeProps("h3FontSizeMobile")};
   font-weight: ${fromThemeProps("h3Weight")};
+  text-align: center;
 
   ${media.xs`
     font-size: ${fromThemeProps("h3FontSizeDesktop")};
@@ -41,6 +47,7 @@ export const H4 = styled.h4`
   font-family: ${fromThemeProps("h4Font")};
   font-size: ${fromThemeProps("h4FontSizeMobile")};
   font-weight: ${fromThemeProps("h4Weight")};
+  text-align: center;
 
   ${media.xs`
     font-size: ${fromThemeProps("h4FontSizeDesktop")};
@@ -58,14 +65,20 @@ export const H5 = styled.h5`
 `;
 
 export const P = styled.p`
-  color: ${fromThemeProps("h5Color")};
+  margin-bottom: ${props => props.marginBottom || "1.5rem"};
+  margin-top: ${props => props.marginTop || "0"};
+  color: ${fromThemeProps("pColor")};
   font-family: ${fromThemeProps("pFont")};
   font-size: ${fromThemeProps("pFontSizeMobile")};
-  font-weight: ${fromThemeProps("pWeight")};
+  font-weight: ${props => props.weight || fromThemeProps("pWeight")};
 
   ${media.xs`
     font-size: ${fromThemeProps("pFontSizeDesktop")};
   `}
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 `;
 
 export const A = styled.a`
@@ -82,13 +95,16 @@ export const A = styled.a`
 
 export const Button = styled(A)`
   background: ${fromThemeProps("buttonBackground")};
-  padding: 0.5em 1em;
+  border-radius: 1em;
+  padding: 0.4em 0.9em;
+  margin-bottom: 2rem;
 
   color: ${fromThemeProps("buttonForeground")};
   font-family: ${fromThemeProps("buttonFont")};
   font-size: ${fromThemeProps("buttonFontSizeMobile")};
   font-weight: ${fromThemeProps("buttonWeight")};
   text-decoration: none;
+  text-transform: uppercase;
 
   ${media.xs`
     font-size: ${fromThemeProps("buttonFontSizeDesktop")};
@@ -106,7 +122,7 @@ export const Strong = styled.strong``;
 export const NAVANCHOR = styled.a`
     display: block;
     position: relative;
-    top: -3em;
+    top: -2.9em;
     visibility: hidden;
 `
 

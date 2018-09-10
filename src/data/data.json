@@ -275,5 +275,25 @@
       "href2": "mailto:marion.gross@us.mcd.com?subject=Missed%20Opportunity&body=Dear%20Ms.%20Gross%2C%0A%0AI%20was%20looking%20into%20buying%20a%20McDonald%E2%80%99s%20franchise%2C%20and%20wanted%20to%20let%20you%20know%20that%20I%20have%20decided%20against%20it.%20I%20recently%20learned%20that%20McDonald%E2%80%99s%20is%20far%20behind%20its%20competitors%20on%20animal%20welfare%20issues.%20Despite%20the%20major%20shift%20in%20consumer%20preference%20towards%20better%20conditions%20for%20animals%2C%20McDonald%E2%80%99s%20has%20yet%20to%20enact%20a%20meaningful%20policy%20to%20protect%20the%20millions%20of%20chickens%20destined%20to%20be%20used%20in%20its%20supply%20chain.%20%0A%0AI%20have%20serious%20concerns%20that%20McDonald%E2%80%99s%20inadequate%20animal%20welfare%20policies%20and%20lack%20of%20action%20on%20this%20issue%20will%20jeopardize%20my%20investment%20in%20a%20franchise.%20As%20such%2C%20I%20will%20be%20exploring%20franchise%20opportunities%20with%20restaurant%20chains%20that%20place%20more%20value%20on%20animal%20welfare%2C%20transparency%2C%20and%20franchisee%20support.%0A%0ASincerely%2C",
       "button2": "Send an email"
     }
+  },
+  "students": {
+    "hero": {
+      "title": "Join thousands of students against McDonald's",
+      "subtitle": "Students all across the country are taking a stand against McDonald’s for supporting some of the cruelest factory farms practices in today’s foodservice industry.",
+      "buttonText": "Join the movement"
+    },
+    "bodyText": [
+      "McDonald’s has the power to change the fate of these chickens but has unfortunately chosen instead to mislead its customers with hollow promises that lack meaningful and measurable changes.",
+      "And that’s where you come in!",
+      "With your help we can show McDonald’s that students see through its empty policy and are willing to raise their voice and take action to create a more compassionate world for the millions of chickens suffering for McDonald’s."
+    ],
+    "action": {
+      "title": "Join the movement",
+      "subtitle": "Connect with a local campaigner",
+      "buttonText": "email",
+      "emailRecipient": "emailRecipient",
+      "emailSubject": "emailSubject",
+      "emailBody": "emailBody"
+    }
   }
 }

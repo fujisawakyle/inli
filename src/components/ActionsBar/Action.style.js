@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import media from '../../layouts/media';
 
 export const Container = styled.div`
-  background: #ef4446;
+  background: ${props => props.background || "#ef4446"};
   text-align: center;
   height: 580px;
   background: #ef4446;
