@@ -7,7 +7,7 @@ StyledMasonry.Container = styled.div`
   display: flex;
   flex-flow: column wrap;
   max-height: 700px;
-  margin-left: -8px; /* Adjustment for the gutter */
+  margin-left: -4px; /* Adjustment for the gutter */
   width: 100%;
 
   ${media.xs`

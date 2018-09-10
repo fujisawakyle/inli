@@ -4,8 +4,8 @@ import media from '../../layouts/media';
 export const Container = styled.div`
   background: ${props => props.background || "#ef4446"};
   text-align: center;
-  height: 580px;
-  background: #ef4446;
+  height: ${props => props.height || "580px"};
+  padding: ${props => props.padding};
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const ActionIcon = styled.img`
   height: 40px;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 
   ${media.sm`
     height: 55px;

@@ -11,18 +11,18 @@ import heroBgSm from '../assets/images/students/campaigns-mcdonalds-imnotlovinit
 import heroBgLg from '../assets/images/students/campaigns-mcdonalds-imnotlovinit-students-hero-lg.jpg';
 import { H1, H2, H3, P, Button } from '../styles/styledComponents/elements';
 import data from '../data/data.json';
+import emailIcon from '../assets/svg/emailIcon.svg';
 
 import {
   Container,
   ActionIcon,
-  ActionTitle,
   ActionHR,
   ActionFields,
-  ActionInputLabel,
   EmailRecipient,
   EmailSubject,
   EmailBody,
-  CopyButton
+  CopyButton,
+  Button as AltButton
 } from '../components/ActionsBar/Action.style';
 
 import "../styles/styles.css";
@@ -30,61 +30,57 @@ import { fromThemeProps } from '../helpers/utilities';
 
 const bricks = [
   {
-    src: "501x501",
-    type: "portrait"
+    src: "501/501"
   },
   {
-    src: "502x502",
-    type: "square"
+    src: "502/502"
   },
   {
-    src: "503x503",
-    type: "square"
+    src: "503/503"
   },
   {
-    src: "504x504",
-    type: "square"
+    src: "504/504"
   },
   {
-    src: "505x505",
-    type: "square"
+    src: "505/505"
   },
   {
-    src: "506x506",
-    type: "square"
+    src: "506/506"
   },
   {
-    src: "507x507",
-    type: "square"
+    src: "507/507"
   },
   {
-    src: "508x508",
-    type: "portrait"
+    src: "508/508"
   },
   {
-    src: "509x509",
-    type: "square"
+    src: "509/509"
   },
   {
-    src: "510x510",
-    type: "portrait"
+    src: "510/510"
   },
   {
-    src: "511x511",
-    type: "square"
+    src: "511/511"
   },
   {
-    src: "512x512",
-    type: "square"
+    src: "512/512"
   },
   {
-    src: "513x513"
+    src: "513/513"
   },
   {
-    src: "514x514"
+    src: "514/514"
   }
 
 ];
+
+const brickOrder = [
+  "portrait", "square", "square", "square", "square", "square", "square", "portrait", "square", "portrait", "square", "square"
+]
+
+bricks.map((brick, index) => {
+  brick.type = brickOrder[index];
+})
 
 export default class StudentsAgainst extends Component {
   state = {
@@ -94,7 +90,6 @@ export default class StudentsAgainst extends Component {
     copied: false
   }
   render() {
-
     return (
       <div style={{ background: '#fff' }}>
         <Header header="root" />
@@ -102,7 +97,7 @@ export default class StudentsAgainst extends Component {
           <StyledSection shaded backgroundImage={heroBgLg} padding="0.5em" paddingTop="6em" paddingBottom="0">
             <H1>{data.students.hero.title}</H1>
             <H3>{data.students.hero.subtitle}</H3>
-            <Button>{data.students.hero.buttonText}</Button>
+            <Button href="#join">{data.students.hero.buttonText}</Button>
           </StyledSection>
         </Themed>
         <Themed>
@@ -131,10 +126,12 @@ export default class StudentsAgainst extends Component {
           </Media>
         </div>
 
-
+        <a name="join" />
         <Themed dark >
-          <Container background={fromThemeProps("red")}>
+
+          <Container height="max-content" padding="2em 1em" background={fromThemeProps("red")}>
             <H1>{data.students.action.title}</H1>
+            <ActionIcon src={emailIcon} />
             <H2>
               {data.students.action.subtitle}
               <ActionHR />
@@ -162,7 +159,7 @@ export default class StudentsAgainst extends Component {
               />
               <CopyToClipboard
                 onCopy={this.onCopy}
-                text={this.state.facebookValue}
+                text={this.state.emailBodyValue}
               >
                 <CopyButton className="copy-btn--email copy-btn--emailBody">
                   Copy
@@ -177,12 +174,28 @@ export default class StudentsAgainst extends Component {
               </span>
               ) : null}
             </ActionFields>
-
+            <AltButton>{data.students.action.buttonText}</AltButton>
           </Container>
         </Themed>
         <Footer />
       </div >
     )
   }
+
+  //Helpers//
+
+  handleChange = (e, type) => {
+    this.setState({ [type]: e.target.value });
+  };
+
+  onCopy = () => {
+    this.setState({ copied: true });
+    if (document.getElementById('copyConfirm')) {
+      document.getElementById('copyConfirm').style.display = 'inline-block';
+    }
+    setTimeout(() => {
+      document.getElementById('copyConfirm').style.display = 'none';
+    }, 1000);
+  };
 }
 

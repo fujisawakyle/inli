@@ -17,13 +17,13 @@ class MasonryMobile extends Component {
         if (brick.type === "portrait") {
           return (
             <StyledMasonry.PortraitBrick>
-              <StyledMasonry.Image src={`https://placehold.it/${brick.src}`} />
+              <StyledMasonry.Image src={`https://picsum.photos/${brick.src}`} />
             </StyledMasonry.PortraitBrick>
           )
         } else if (brick.type === "square") {
           return (
             <StyledMasonry.SquareBrick>
-              <StyledMasonry.Image src={`https://placehold.it/${brick.src}`} />
+              <StyledMasonry.Image src={`https://picsum.photos/${brick.src}`} />
             </StyledMasonry.SquareBrick>
           )
         }
@@ -58,14 +58,14 @@ class MasonryMobile extends Component {
     if (number == 0) {
       const removed = this.state.masonryBricks.splice(number, 1, (
         <StyledMasonry.PortraitBrick>
-          <StyledMasonry.Image src={`http://placehold.it/${this.props.bricks[nextBrick].src}`} />
+          <StyledMasonry.Image src={`http://picsum.photos/${this.props.bricks[nextBrick].src}`} />
         </StyledMasonry.PortraitBrick>
       ));
     }
     else {
       const removed = this.state.masonryBricks.splice(number, 1, (
         <StyledMasonry.SquareBrick>
-          <StyledMasonry.Image src={`http://placehold.it/${this.props.bricks[nextBrick].src}`} />
+          <StyledMasonry.Image src={`http://picsum.photos/${this.props.bricks[nextBrick].src}`} />
         </StyledMasonry.SquareBrick>
       ));
     }
