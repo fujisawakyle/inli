@@ -95,19 +95,18 @@ export default class StudentsAgainst extends Component {
   }
   render() {
 
-
     return (
       <div style={{ background: '#fff' }}>
         <Header header="root" />
         <Themed dark>
-          <StyledSection shaded backgroundImage={heroBgLg} paddingTop="6em">
+          <StyledSection shaded backgroundImage={heroBgLg} padding="0.5em" paddingTop="6em" paddingBottom="0">
             <H1>{data.students.hero.title}</H1>
             <H3>{data.students.hero.subtitle}</H3>
             <Button>{data.students.hero.buttonText}</Button>
           </StyledSection>
         </Themed>
         <Themed>
-          <StyledSection paddingTop="2em" paddingBottom="2em">
+          <StyledSection padding="1em" paddingTop="2em" paddingBottom="2em">
             <P>
               {data.students.bodyText[0]}
             </P>

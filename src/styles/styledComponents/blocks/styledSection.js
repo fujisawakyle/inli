@@ -23,6 +23,7 @@ const ContentContainer = styled.div`
   margin: auto;
   justify-content: ${props => props.jc || "center"};
   align-items: ${props => props.ai || "center"};
+  padding: ${props => props.padding};
   padding-top: ${props => props.paddingTop || "0"};
   padding-bottom: ${props => props.paddingBottom || "0"};
   width: ${props => props.width ||
@@ -47,12 +48,12 @@ const Shade = styled.div`
 `;
 
 const StyledSection = (props) => {
-  const { backgroundImage, children, shaded, width, paddingTop, paddingBottom } = props;
+  const { backgroundImage, children, shaded, width, padding, paddingTop, paddingBottom } = props;
   const shade = shaded && <Shade />;
   return (
     <SectionContainer backgroundImage={backgroundImage}>
       {shade}
-      <ContentContainer paddingTop={paddingTop} paddingBottom={paddingBottom} width={width}>
+      <ContentContainer padding={padding} paddingTop={paddingTop} paddingBottom={paddingBottom} width={width}>
         {children}
       </ContentContainer>
     </SectionContainer>
