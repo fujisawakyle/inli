@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "aws-sdk": "^2.311.0",
     "gatsby": "^1.9.207",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-favicon": "^2.1.1",

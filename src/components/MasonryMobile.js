@@ -10,6 +10,7 @@ class MasonryMobile extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props.bricks);
     const numBricks = 5;
     this.setState({
       masonryBricks: this.props.bricks.slice(0, numBricks).map(brick => {
@@ -17,13 +18,13 @@ class MasonryMobile extends Component {
         if (brick.type === "portrait") {
           return (
             <StyledMasonry.PortraitBrick>
-              <StyledMasonry.Image src={`https://picsum.photos/${brick.src}`} />
+              <StyledMasonry.Image src={brick.src} />
             </StyledMasonry.PortraitBrick>
           )
         } else if (brick.type === "square") {
           return (
             <StyledMasonry.SquareBrick>
-              <StyledMasonry.Image src={`https://picsum.photos/${brick.src}`} />
+              <StyledMasonry.Image src={brick.src} />
             </StyledMasonry.SquareBrick>
           )
         }
@@ -58,14 +59,14 @@ class MasonryMobile extends Component {
     if (number == 0) {
       const removed = this.state.masonryBricks.splice(number, 1, (
         <StyledMasonry.PortraitBrick>
-          <StyledMasonry.Image src={`http://picsum.photos/${this.props.bricks[nextBrick].src}`} />
+          <StyledMasonry.Image src={this.props.bricks[nextBrick].src} />
         </StyledMasonry.PortraitBrick>
       ));
     }
     else {
       const removed = this.state.masonryBricks.splice(number, 1, (
         <StyledMasonry.SquareBrick>
-          <StyledMasonry.Image src={`http://picsum.photos/${this.props.bricks[nextBrick].src}`} />
+          <StyledMasonry.Image src={this.props.bricks[nextBrick].src} />
         </StyledMasonry.SquareBrick>
       ));
     }

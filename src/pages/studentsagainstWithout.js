@@ -13,8 +13,6 @@ import { H1, H2, H3, P, Button } from '../styles/styledComponents/elements';
 import data from '../data/data.json';
 import emailIcon from '../assets/svg/emailIcon.svg';
 
-import withPictures from '../components/withPictures/withPictures';
-
 import {
   Container,
   ActionIcon,
@@ -30,29 +28,39 @@ import {
 import "../styles/styles.css";
 import { fromThemeProps } from '../helpers/utilities';
 
+let bricks = [
+  { src: "https://s3.amazonaws.com/test-bucket-thl/carlsjrboycott.jpg" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/hardeesboycott.jpg" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/hardeesboycott2.jpg" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlblack.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlblue.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlgreen.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlgold.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thllime.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlmauve.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlpeach.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlrobinsegg.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlsalmon.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlwhite.png" },
+  { src: "https://s3.amazonaws.com/test-bucket-thl/thlviolet.png" },
+]
+
+const brickOrder = [
+  "portrait", "square", "square", "square", "square", "square", "square", "portrait", "square", "portrait", "square", "square"
+]
+
+bricks.map((brick, index) => {
+  brick.type = brickOrder[index];
+})
+
 class StudentsAgainst extends Component {
   state = {
     emailRecipientValue: data.students.action.emailRecipient,
     emailSubjectValue: data.students.action.emailSubject,
     emailBodyValue: data.students.action.emailBody,
-    copied: false,
-    bricks: null
+    copied: false
   }
 
-  componentDidUpdate() {
-
-    const brickOrder = [
-      "portrait", "square", "square", "square", "square", "square", "square", "portrait", "square", "portrait", "square", "square"
-    ]
-
-    let bricks = this.props.pictures;
-
-    bricks.map((brick, index) => {
-      brick.type = brickOrder[index];
-    })
-
-    this.setState({ bricks: bricks })
-  }
   render() {
 
     return (
@@ -79,18 +87,17 @@ class StudentsAgainst extends Component {
           </StyledSection>
         </Themed>
         <div style={{ paddingTop: '0em', paddingBottom: '2em', margin: '0 auto', width: '95%', maxWidth: '915px' }}>
-          {this.state.bricks ?
-            <Media query="(max-width: 575px)">
-              {matches =>
-                matches ? (
-                  <MasonryMobile bricks={this.state.bricks} />
-                ) : (
-                    <MasonryDesktop bricks={this.state.bricks} />
-                  )
-              }
-            </Media>
-            : <div>loading</div>
-          }
+
+          <Media query="(max-width: 575px)">
+            {matches =>
+              matches ? (
+                <MasonryMobile bricks={bricks} />
+              ) : (
+                  <MasonryDesktop bricks={bricks} />
+                )
+            }
+          </Media>
+
         </div>
 
         <a name="join" />
@@ -166,4 +173,4 @@ class StudentsAgainst extends Component {
   };
 }
 
-export default withPictures(StudentsAgainst);
+export default StudentsAgainst;
