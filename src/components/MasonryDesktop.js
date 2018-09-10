@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-
 import { StyledMasonry } from '../styles/styledComponents/blocks';
 
 class Masonry extends Component {
   state = {
     masonryBricks: null,
-    width: window.innerWidth,
     totalBricks: this.props.bricks.length - 1,
     currentBrick: null
   }
