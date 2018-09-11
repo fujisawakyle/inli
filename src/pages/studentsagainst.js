@@ -12,6 +12,7 @@ import heroBgLg from '../assets/images/students/campaigns-mcdonalds-imnotlovinit
 import { H1, H2, H3, H4, P, Button } from '../styles/styledComponents/elements';
 import data from '../data/data.json';
 import emailIcon from '../assets/svg/emailIcon.svg';
+import { AboutTHLMarkup } from '../components/Modal/ModalMarkup';
 
 import withPictures from '../components/withPictures/withPictures';
 
@@ -38,6 +39,7 @@ class StudentsAgainst extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    window.dataLayer = window.dataLayer || [];
     const brickOrder = [
       "portrait", "square", "square", "square", "square", "square", "square", "portrait", "square", "portrait", "square", "square"
     ]
@@ -62,7 +64,20 @@ class StudentsAgainst extends Component {
         {this.renderMasonry()}
         <a name="join" />
         {this.renderAction()}
-        <Footer />
+        <Footer
+          triggerItem={
+            <a
+              style={{
+                textDecoration: 'underline',
+                color: '#fff',
+                textTransform: 'uppercase'
+              }}
+            >
+              About The Humane League
+            </a>
+          }
+          markupToDisplay={AboutTHLMarkup}
+        />
       </div >
     )
   }
