@@ -31,6 +31,7 @@ const ContentContainer = styled.div`
   * {
     z-index: 3;
   }
+  max-width: 950px;
 
   ${Media.md`
     width: ${props => props.width ||
