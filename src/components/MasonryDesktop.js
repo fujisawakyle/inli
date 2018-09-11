@@ -28,28 +28,31 @@ class Masonry extends Component {
       }),
       currentBrick: numBricks - 1
     })
+
+    //swaps a brick from of one the columns every second.
+    let iterator = 0;
+    let randInt = null;
     setInterval(() => {
-      let randInt = Math.floor(Math.random() * 4);
+      switch (iterator) {
+        case 0:
+          randInt = Math.floor(Math.random() * 4);
+          iterator += 1;
+          break;
+        case 1:
+          randInt = Math.floor(Math.random() * (8 - 4) + 4);
+          iterator += 1;
+          break;
+        case 2:
+          randInt = Math.floor(Math.random() * (12 - 8) + 8);
+          iterator = 0;
+          break;
+        default:
+          break;
+      }
       this.swapBrick(randInt);
-    }, 3000);
-    setTimeout(() => {
-      setInterval(() => {
-        let randInt = Math.floor(Math.random() * (8 - 4) + 4);
-        this.swapBrick(randInt);
-      }, 3000);
     }, 1000)
-    setTimeout(() => {
-      setInterval(() => {
-        let randInt = Math.floor(Math.random() * (12 - 8) + 8);
-        this.swapBrick(randInt);
-      }, 3000);
-    }, 2000)
   }
-
   render() {
-
-
-
     return (
       <StyledMasonry.Container>
         {[...this.state.masonryBricks]}
@@ -84,7 +87,6 @@ class Masonry extends Component {
         currentBrick: -1
       })
     }
-
   }
 
 }

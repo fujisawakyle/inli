@@ -10,11 +10,9 @@ class MasonryMobile extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.bricks);
     const numBricks = 5;
     this.setState({
       masonryBricks: this.props.bricks.slice(0, numBricks).map(brick => {
-
         if (brick.type === "portrait") {
           return (
             <StyledMasonry.PortraitBrick>
@@ -31,21 +29,27 @@ class MasonryMobile extends Component {
       }),
       currentBrick: numBricks - 1
     })
-
+    //swaps a brick from of one the columns every second.
+    let iterator = 0;
+    let randInt = null;
     setInterval(() => {
-      let randInt = Math.floor(Math.random() * 2);
+      switch (iterator) {
+        case 0:
+          randInt = Math.floor(Math.random() * 2);
+          iterator += 1;
+          break;
+        case 1:
+          randInt = Math.floor(Math.random() * (5 - 2) + 2);
+          iterator = 0;
+          break;
+        default:
+          break;
+      }
       this.swapBrick(randInt);
-    }, 2000);
-    setTimeout(() => {
-      setInterval(() => {
-        let randInt = Math.floor(Math.random() * (5 - 2) + 2);
-        this.swapBrick(randInt);
-      }, 2000);
     }, 1000)
   }
 
   render() {
-
     return (
       <StyledMasonry.Container>
         {[...this.state.masonryBricks]}
@@ -80,8 +84,6 @@ class MasonryMobile extends Component {
         currentBrick: -1
       })
     }
-
   }
-
 }
 export default MasonryMobile;

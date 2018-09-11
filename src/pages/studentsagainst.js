@@ -38,18 +38,16 @@ class StudentsAgainst extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-
     const brickOrder = [
       "portrait", "square", "square", "square", "square", "square", "square", "portrait", "square", "portrait", "square", "square"
     ]
-
+    //grabs pictures array of object pulled from S3
     let bricks = nextProps.pictures;
 
+    //adds the brick type to create the masonry
     bricks.map((brick, index) => {
       brick.type = brickOrder[index];
     })
-
-    console.log(bricks);
 
     this.setState({ bricks: bricks })
 
@@ -103,7 +101,6 @@ class StudentsAgainst extends Component {
 
   renderMasonry() {
     return (
-
       <div style={{ paddingTop: '0em', paddingBottom: '2em', margin: '0 auto', width: '95%', maxWidth: '915px' }}>
         {this.state.bricks ?
           <Media query="(max-width: 575px)">
