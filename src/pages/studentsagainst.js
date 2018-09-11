@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import MasonryMobile from '../components/MasonryMobile';
 import MasonryDesktop from '../components/MasonryDesktop';
@@ -58,6 +59,53 @@ class StudentsAgainst extends Component {
 
     return (
       <div style={{ background: '#fff' }}>
+        <Helmet
+          title="Students Against McDonald's"
+          meta={[
+            {
+              name: 'description',
+              content: "Join thousands of students against McDonald's"
+            },
+            {
+              name: 'keywords',
+              content:
+                'Students Against McDonalds, McDonalds, chicken, animal welfare, welfare'
+            },
+            { name: 'twitter:card', content: 'photo' },
+            { name: 'twitter:url', content: 'https://studentsagainstmcdonalds.com' },
+            { name: 'twitter:title', content: "Students Against McDonald's" },
+            {
+              name: 'twitter:description',
+              content: "Join thousands of students against McDonald's"
+            },
+            {
+              name: 'twitter:image',
+              content:
+                'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-imnotlovinit-website-students-share.jpg'
+            },
+            {
+              property: 'og:title',
+              content: "Students Against McDonald's"
+            },
+            {
+              property: 'og:type',
+              content: 'website'
+            },
+            {
+              property: 'og:description',
+              content: "Join thousands of students against McDonald's"
+            },
+            {
+              property: 'og:url',
+              content: 'https://studentsagainstmcdonalds.com'
+            },
+            {
+              property: 'og:image',
+              content:
+                'https://s3.amazonaws.com/the-humane-league-campaigns/mcdonalds/images/campaigns-mcdonalds-imnotlovinit-website-students-share.jpg'
+            }
+          ]}
+        />
         <Header header="root" />
         {this.renderHero()}
         {this.renderBlurb()}
