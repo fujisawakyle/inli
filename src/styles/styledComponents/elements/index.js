@@ -35,10 +35,13 @@ export const H3 = styled.h3`
   font-family: ${fromThemeProps("h3Font")};
   font-size: ${fromThemeProps("h3FontSizeMobile")};
   font-weight: ${fromThemeProps("h3Weight")};
+  line-height: 1.5;
   text-align: center;
+
 
   ${media.xs`
     font-size: ${fromThemeProps("h3FontSizeDesktop")};
+    font-weight: 500;
   `}
 `;
 
@@ -51,6 +54,7 @@ export const H4 = styled.h4`
 
   ${media.xs`
     font-size: ${fromThemeProps("h4FontSizeDesktop")};
+    font-weight: ${fromThemeProps("h4Weight")};
   `}
 `;
 export const H5 = styled.h5`
@@ -109,6 +113,10 @@ export const Button = styled(A)`
   ${media.xs`
     font-size: ${fromThemeProps("buttonFontSizeDesktop")};
   `}
+
+  &:hover {
+    background: rgb(158, 28, 32);
+  }
 `
 
 export const Ol = styled.ol``;

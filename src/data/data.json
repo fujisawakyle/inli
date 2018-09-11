@@ -291,9 +291,9 @@
       "title": "Join the movement",
       "subtitle": "Connect with a local campaigner",
       "buttonText": "email",
-      "emailRecipient": "emailRecipient",
-      "emailSubject": "emailSubject",
-      "emailBody": "emailBody"
+      "emailRecipient": "imnotlovinit@thlcampaigns.org",
+      "emailSubject": "I'd like to join the campaign!",
+      "emailBody": "I want to raise my voice and take action to create a more compassionate world for the millions of chickens suffering for McDonald’s.%0A%0ASincerely%2C%0A"
     }
   }
 }
