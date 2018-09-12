@@ -67,8 +67,19 @@
   ],
   "studentsNavLink": {
     "linkText": "Students Against",
-    "path": "/studentsagainst"
+    "path": "/studentsagainst",
+    "nestedState": "showStudentsNested"
   },
+  "studentsNestedLinks": [
+    {
+      "linkText": "Join the Movement",
+      "path": "/studentsagainst#join"
+    },
+    {
+      "linkText": "Students Speak Out",
+      "path": "/studentsagainst#video"
+    }
+  ],
   "root": {
     "navLinkTitles": [
       {
@@ -297,7 +308,7 @@
       "emailBody": "I want to raise my voice and take action to create a more compassionate world for the millions of chickens suffering for McDonald’s.%0A%0ASincerely%2C%0A"
     },
     "video": {
-      "id": "E604bA30_OY"
+      "id": "8eiLhqdwJTw"
     }
   }
 }

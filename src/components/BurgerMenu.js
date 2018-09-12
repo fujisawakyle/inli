@@ -11,7 +11,8 @@ class BurgerMenu extends Component {
   state = {
     isOpen: false,
     showRootNested: false,
-    showFranchiseNested: false
+    showFranchiseNested: false,
+    showStudentsNested: false
   };
 
   // REACT LIFECYCLE
@@ -24,7 +25,8 @@ class BurgerMenu extends Component {
           {this.renderNestedLinks('rootNestedLinks', headerData.rootNavLink.nestedState)}
           {this.renderLink(headerData.franchiseNavLink.linkText, headerData.franchiseNavLink.path, headerData.franchiseNavLink.nestedState, false)}
           {this.renderNestedLinks('franchiseNestedLinks', headerData.franchiseNavLink.nestedState)}
-          {this.renderLink(headerData.studentsNavLink.linkText, headerData.studentsNavLink.path, false, false)}
+          {this.renderLink(headerData.studentsNavLink.linkText, headerData.studentsNavLink.path, headerData.studentsNavLink.nestedState, false)}
+          {this.renderNestedLinks('studentsNestedLinks', headerData.studentsNavLink.nestedState)}
         </StyledNav>
       </Menu>
     )
@@ -44,7 +46,7 @@ class BurgerMenu extends Component {
     } else {
       renderLink = (
         <div>
-          {linkText} <span><StyledNav.Arrow nestedState={this.state[nestedState]} src={carrot} /></span >
+          {linkText}
         </div>
       )
     }
@@ -68,14 +70,11 @@ class BurgerMenu extends Component {
     }
     return (
       <StyledNav.LinkContainer>
+
         <StyledNav.Link
           nested={nested}
           key={path}
           to={path}
-          onMouseEnter={() => {
-            this.toggleState(nestedState);
-            this.setState({ isOpen: true });
-          }}
           nestedState={true}
           onClick={() => {
             this.closeMenu();
@@ -83,6 +82,15 @@ class BurgerMenu extends Component {
         >
           {renderLink}
         </StyledNav.Link>
+
+        <StyledNav.Arrow
+          nestedState={this.state[nestedState]}
+          src={carrot}
+          onClick={() => {
+            this.toggleState(nestedState);
+            this.setState({ isOpen: true });
+          }}
+        />
       </StyledNav.LinkContainer>
     );
   }

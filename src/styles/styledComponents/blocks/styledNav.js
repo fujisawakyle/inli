@@ -11,7 +11,7 @@ const StyledNav = styled.div`
 `
 
 StyledNav.LinkContainer = styled.div`
-    ${flex({ dir: "column", jc: "center", ai: "center" })}
+    ${flex({ dir: "row", jc: "center", ai: "center" })}
 `
 
 StyledNav.Link = styled(Link)`
@@ -22,6 +22,7 @@ StyledNav.Link = styled(Link)`
         return "none"
     }};
     margin-bottom: 0.5em;
+    margin-right: 0.4em;
     margin-left: 0;
 
     color: #f8f8f8;
@@ -61,12 +62,25 @@ StyledNav.NestedLink = styled(A)`
 StyledNav.Arrow = styled.img`
     
     width: 15px;
-    transform: ${(props) => {
-        if (props.nestedState) {
-            return "rotate(0)"
+    margin-bottom: 0.5em;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    transform: rotate(180deg);
+
+    &:hover {
+        border-bottom:none;
+        border-top: 2px solid #fff;
+        cursor: pointer;
+    }
+
+    ${(props) => props.nestedState && css`
+        transform: rotate(0);
+
+        &:hover {
+            border-bottom: 2px solid #fff;
+            border-top: none;
         }
-        return "rotate(180deg)"
-    }};
+    `}
 `
 
 StyledNav.Divider = styled.div`

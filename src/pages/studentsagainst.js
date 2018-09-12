@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import MasonryMobile from '../components/MasonryMobile';
 import MasonryDesktop from '../components/MasonryDesktop';
 import Header from '../components/Header/Header';
@@ -40,24 +39,27 @@ class StudentsAgainst extends Component {
     bricks: null
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidMount() {
     window.dataLayer = window.dataLayer || [];
-    const brickOrder = [
-      "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square"
-    ]
+  }
+
+  componentWillReceiveProps(nextProps) {
+
+    //   const brickOrder = [
+    //     "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square"
+    //   ]
     //grabs pictures array of object pulled from S3
     let bricks = nextProps.pictures;
 
-    //adds the brick type to create the masonry
-    bricks.map((brick, index) => {
-      brick.type = brickOrder[index];
-    })
+    //   //adds the brick type to create the masonry
+    //   bricks.map((brick, index) => {
+    //     brick.type = brickOrder[index];
+    //   })
 
     this.setState({ bricks: bricks })
 
   }
   render() {
-    console.log(fromThemeProps("red"));
 
     return (
       <div style={{ background: '#fff' }}>
@@ -114,6 +116,7 @@ class StudentsAgainst extends Component {
         {this.renderMasonry()}
         <a name="join" />
         {this.renderAction()}
+        <a name="video" />
         {this.renderVideo()}
         <Footer
           triggerItem={
