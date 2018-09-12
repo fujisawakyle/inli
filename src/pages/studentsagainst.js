@@ -14,8 +14,9 @@ import { H1, H2, H3, H4, P, Button } from '../styles/styledComponents/elements';
 import data from '../data/data.json';
 import emailIcon from '../assets/svg/emailIcon.svg';
 import { AboutTHLMarkup } from '../components/Modal/ModalMarkup';
-
+import Video from '../components/Video';
 import withPictures from '../components/withPictures/withPictures';
+import StyledVideo from '../styles/styledComponents/blocks/styledVideo';
 
 import {
   Container,
@@ -28,8 +29,8 @@ import {
   Button as AltButton
 } from '../components/ActionsBar/Action.style';
 
-import "../styles/styles.css";
 import { fromThemeProps } from '../helpers/utilities';
+import "../styles/scss/burgerStyles.scss";
 
 class StudentsAgainst extends Component {
   state = {
@@ -42,7 +43,7 @@ class StudentsAgainst extends Component {
   componentWillReceiveProps(nextProps) {
     window.dataLayer = window.dataLayer || [];
     const brickOrder = [
-      "portrait", "square", "square", "square", "square", "square", "square", "portrait", "square", "portrait", "square", "square"
+      "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square"
     ]
     //grabs pictures array of object pulled from S3
     let bricks = nextProps.pictures;
@@ -56,6 +57,7 @@ class StudentsAgainst extends Component {
 
   }
   render() {
+    console.log(fromThemeProps("red"));
 
     return (
       <div style={{ background: '#fff' }}>
@@ -112,6 +114,7 @@ class StudentsAgainst extends Component {
         {this.renderMasonry()}
         <a name="join" />
         {this.renderAction()}
+        {this.renderVideo()}
         <Footer
           triggerItem={
             <a
@@ -135,7 +138,7 @@ class StudentsAgainst extends Component {
   renderHero() {
     return (
       <Themed dark>
-        <StyledSection shaded backgroundImage={heroBgLg} padding="0.5em" paddingTop="6em" paddingBottom="0">
+        <StyledSection shaded backgroundImageSm={heroBgSm} backgroundImageLg={heroBgLg} padding="0.5em" paddingTop="6em" paddingBottom="0">
           <H1>{data.students.hero.title}</H1>
           <H3>{data.students.hero.subtitle}</H3>
           <Button href="#join">{data.students.hero.buttonText}</Button>
@@ -184,40 +187,56 @@ class StudentsAgainst extends Component {
   renderAction() {
     return (
       <Themed dark >
-        <Container height="max-content" padding="2em 1em" background={fromThemeProps("red")}>
-          <H1>{data.students.action.title}</H1>
-          <ActionIcon src={emailIcon} />
-          <H2>
-            {data.students.action.subtitle}
-            <ActionHR />
-          </H2>
-          <ActionFields>
-            <P marginBottom="0" marginTop="1em"> To </P>
-            <EmailRecipient
-              type="text"
-              value={this.state.emailRecipientValue}
-              onChange={e => this.handleChange(e, 'emailRecipientValue')}
-            />
-            <br />
-            <P marginBottom="0" marginTop="1em"> Subject </P>
-            <EmailSubject
-              type="text"
-              value={this.state.emailSubjectValue}
-              onChange={e => this.handleChange(e, 'emailSubjectValue')}
-            />
-            <br />
-            <P marginBottom="0" marginTop="1em"> Message </P>
-            <EmailBody
-              type="text"
-              value={decodeURIComponent(this.state.emailBodyValue)}
-              onChange={e => this.handleChange(e, 'emailBodyValue')}
-            />
-          </ActionFields>
-          <AltButton onClick={() => {
-            this.handleSubmit()
-          }}>{data.students.action.buttonText}</AltButton>
-        </Container>
+        <StyledSection background={fromThemeProps("altRed")}>
+          <Container height="max-content" padding="2em 1em">
+            <H1>{data.students.action.title}</H1>
+            <ActionIcon src={emailIcon} />
+            <H2>
+              {data.students.action.subtitle}
+              <ActionHR />
+            </H2>
+            <P maxWidth="570px">
+              {data.students.action.body}
+            </P>
+            <ActionFields>
+              <P small marginBottom="0" marginTop="1em"> To </P>
+              <EmailRecipient
+                type="text"
+                value={this.state.emailRecipientValue}
+                onChange={e => this.handleChange(e, 'emailRecipientValue')}
+              />
+              <br />
+              <P small marginBottom="0" marginTop="1em"> Subject </P>
+              <EmailSubject
+                type="text"
+                value={this.state.emailSubjectValue}
+                onChange={e => this.handleChange(e, 'emailSubjectValue')}
+              />
+              <br />
+              <P small marginBottom="0" marginTop="1em"> Message </P>
+              <EmailBody
+                type="text"
+                value={decodeURIComponent(this.state.emailBodyValue)}
+                onChange={e => this.handleChange(e, 'emailBodyValue')}
+              />
+            </ActionFields>
+            <AltButton onClick={() => {
+              this.handleSubmit()
+            }}>{data.students.action.buttonText}</AltButton>
+          </Container>
+        </ StyledSection>
       </Themed>
+    )
+  }
+
+  renderVideo() {
+    return (
+      <div style={{ background: "#222", boxShadow: "-3px -4px 5px 3px #000" }}>
+        <StyledVideo.Container>
+          <Video videoURL={`https://www.youtube.com/embed/${data.students.video.id}?rel=0&amp;showinfo=0`} />
+        </StyledVideo.Container>
+        <hr style={{ marginBottom: "2px" }} />
+      </div>
     )
   }
 

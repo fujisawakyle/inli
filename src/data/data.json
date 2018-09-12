@@ -290,10 +290,14 @@
     "action": {
       "title": "Join the movement",
       "subtitle": "Connect with a local campaigner",
+      "body": "to learn how you and your school can get involved in the campaign and make the world a more compassionate place for chickens!",
       "buttonText": "email",
       "emailRecipient": "imnotlovinit@thlcampaigns.org",
       "emailSubject": "I'd like to join the campaign!",
       "emailBody": "I want to raise my voice and take action to create a more compassionate world for the millions of chickens suffering for McDonald’s.%0A%0ASincerely%2C%0A"
+    },
+    "video": {
+      "id": "E604bA30_OY"
     }
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled, { css } from "styled-components";
 import { fromThemeProps } from "../../../helpers/utilities";
-import Media from "../../../helpers/media";
+import media from "../../../helpers/media";
 
 const SectionContainer = styled.div`
   position: relative;
@@ -10,10 +10,17 @@ const SectionContainer = styled.div`
     if (props.background) { return props.background; }
     return props.theme.secondary;
   }};
-  ${(props) => props.backgroundImage && css`
-    background: url(${props.backgroundImage});
+  
+  ${(props) => props.backgroundImageSm && props.backgroundImageLg && css`
+    background: url(${props.backgroundImageSm});
     background-size: cover;
     background-position: center;
+
+    ${media.sm`
+      background: url(${props.backgroundImageLg});
+      background-size: cover;
+      background-position: center;
+    `}
   `}
 `;
 
@@ -33,7 +40,7 @@ const ContentContainer = styled.div`
   }
   max-width: 950px;
 
-  ${Media.md`
+  ${media.md`
     width: ${props => props.width ||
       props.theme.contentWidth};
   `}
@@ -49,10 +56,10 @@ const Shade = styled.div`
 `;
 
 const StyledSection = (props) => {
-  const { backgroundImage, children, shaded, width, padding, paddingTop, paddingBottom } = props;
+  const { background, backgroundImageSm, backgroundImageLg, children, shaded, width, padding, paddingTop, paddingBottom } = props;
   const shade = shaded && <Shade />;
   return (
-    <SectionContainer backgroundImage={backgroundImage}>
+    <SectionContainer background={background} backgroundImageSm={backgroundImageSm} backgroundImageLg={backgroundImageLg}>
       {shade}
       <ContentContainer padding={padding} paddingTop={paddingTop} paddingBottom={paddingBottom} width={width}>
         {children}

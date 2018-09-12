@@ -9,22 +9,22 @@ class Masonry extends Component {
   }
 
   componentDidMount() {
-    const numBricks = 12
+    const numBricks = 15
     this.setState({
       masonryBricks: this.props.bricks.slice(0, numBricks).map(brick => {
-        if (brick.type === "portrait") {
-          return (
-            <StyledMasonry.PortraitBrick>
-              <StyledMasonry.Image src={brick.src} />
-            </StyledMasonry.PortraitBrick>
-          )
-        } else if (brick.type === "square") {
-          return (
-            <StyledMasonry.SquareBrick>
-              <StyledMasonry.Image src={brick.src} />
-            </StyledMasonry.SquareBrick>
-          )
-        }
+        // if (brick.type === "portrait") {
+        //   return (
+        //     <StyledMasonry.PortraitBrick>
+        //       <StyledMasonry.Image src={brick.src} />
+        //     </StyledMasonry.PortraitBrick>
+        //   )
+        // } else if (brick.type === "square") {
+        return (
+          <StyledMasonry.SquareBrick>
+            <StyledMasonry.Image src={brick.src} />
+          </StyledMasonry.SquareBrick>
+        )
+        // }
       }),
       currentBrick: numBricks - 1
     })
@@ -35,15 +35,15 @@ class Masonry extends Component {
     setInterval(() => {
       switch (iterator) {
         case 0:
-          randInt = Math.floor(Math.random() * 4);
+          randInt = Math.floor(Math.random() * 5);
           iterator += 1;
           break;
         case 1:
-          randInt = Math.floor(Math.random() * (8 - 4) + 4);
+          randInt = Math.floor(Math.random() * (10 - 5) + 5);
           iterator += 1;
           break;
         case 2:
-          randInt = Math.floor(Math.random() * (12 - 8) + 8);
+          randInt = Math.floor(Math.random() * (15 - 10) + 10);
           iterator = 0;
           break;
         default:
@@ -63,20 +63,20 @@ class Masonry extends Component {
   swapBrick = number => {
     const nextBrick = this.state.currentBrick + 1;
 
-    if (number == 0 || number == 7 || number == 9) {
-      const removed = this.state.masonryBricks.splice(number, 1, (
-        <StyledMasonry.PortraitBrick>
-          <StyledMasonry.Image src={this.props.bricks[nextBrick].src} />
-        </StyledMasonry.PortraitBrick>
-      ));
-    }
-    else {
-      const removed = this.state.masonryBricks.splice(number, 1, (
-        <StyledMasonry.SquareBrick>
-          <StyledMasonry.Image src={this.props.bricks[nextBrick].src} />
-        </StyledMasonry.SquareBrick>
-      ));
-    }
+    // if (number == 0 || number == 7 || number == 9) {
+    //   const removed = this.state.masonryBricks.splice(number, 1, (
+    //     <StyledMasonry.PortraitBrick>
+    //       <StyledMasonry.Image src={this.props.bricks[nextBrick].src} />
+    //     </StyledMasonry.PortraitBrick>
+    //   ));
+    // }
+    // else {
+    const removed = this.state.masonryBricks.splice(number, 1, (
+      <StyledMasonry.SquareBrick>
+        <StyledMasonry.Image src={this.props.bricks[nextBrick].src} />
+      </StyledMasonry.SquareBrick>
+    ));
+    // }
 
     this.setState({
       currentBrick: nextBrick

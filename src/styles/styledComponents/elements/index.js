@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { fromThemeProps } from "../../../helpers/utilities";
 import media from "../../../helpers/media";
@@ -71,10 +71,12 @@ export const H5 = styled.h5`
 export const P = styled.p`
   margin-bottom: ${props => props.marginBottom || "1.5rem"};
   margin-top: ${props => props.marginTop || "0"};
+  max-width: ${props => props.maxWidth};
   color: ${fromThemeProps("pColor")};
   font-family: ${fromThemeProps("pFont")};
   font-size: ${fromThemeProps("pFontSizeMobile")};
   font-weight: ${props => props.weight || fromThemeProps("pWeight")};
+  line-height: 1.5;
 
   ${media.xs`
     font-size: ${fromThemeProps("pFontSizeDesktop")};
@@ -83,6 +85,14 @@ export const P = styled.p`
   &:last-of-type {
     margin-bottom: 0;
   }
+
+  ${props => props.small && css`
+    font-size: 0.9rem;
+
+    ${media.xs`
+      font-size: 0.9rem;
+  `}
+  `}
 `;
 
 export const A = styled.a`
