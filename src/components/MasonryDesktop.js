@@ -9,16 +9,9 @@ class Masonry extends Component {
   }
 
   componentDidMount() {
-    const numBricks = 15
+    const numBricks = 12
     this.setState({
       masonryBricks: this.props.bricks.slice(0, numBricks).map(brick => {
-        // if (brick.type === "portrait") {
-        //   return (
-        //     <StyledMasonry.PortraitBrick>
-        //       <StyledMasonry.Image src={brick.src} />
-        //     </StyledMasonry.PortraitBrick>
-        //   )
-        // } else if (brick.type === "square") {
         return (
           <StyledMasonry.SquareBrick>
             <StyledMasonry.Image src={brick.src} />
@@ -29,28 +22,28 @@ class Masonry extends Component {
       currentBrick: numBricks - 1
     })
 
-    //swaps a brick from of one the columns every second.
+    //swaps a brick from of one the columns every 0.5 seconds.
     let iterator = 0;
     let randInt = null;
     setInterval(() => {
       switch (iterator) {
         case 0:
-          randInt = Math.floor(Math.random() * 5);
+          randInt = Math.floor(Math.random() * 4);
           iterator += 1;
           break;
         case 1:
-          randInt = Math.floor(Math.random() * (10 - 5) + 5);
+          randInt = Math.floor(Math.random() * (8 - 4) + 4);
           iterator += 1;
           break;
         case 2:
-          randInt = Math.floor(Math.random() * (15 - 10) + 10);
+          randInt = Math.floor(Math.random() * (12 - 8) + 8);
           iterator = 0;
           break;
         default:
           break;
       }
       this.swapBrick(randInt);
-    }, 1000)
+    }, 500)
   }
   render() {
     return (
