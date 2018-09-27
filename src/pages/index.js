@@ -19,6 +19,7 @@ import sadTruthBgLg from '../assets/images/campaigns-mcdonalds-website-sad-truth
 import companyLogoSm from '../assets/svg/why/company-logos-mobile.svg';
 import companyLogoLg from '../assets/svg/why/company-logos-desktop.svg';
 import mcNuggetImgSm from '../assets/images/campaigns-mcdonalds-website-chicken-nugget-small.png';
+import { NAVANCHOR } from '../styles/styledComponents/elements';
 
 import {
   SadTruthMarkup,
@@ -34,7 +35,7 @@ export default () => {
     <div>
       <Header header="root" />
       <HeroVideo videoURL={data.videoURL} />
-      <a name="sadTruth" />
+      <NAVANCHOR name="sadTruth" />
       <SadTruthSection
         eventName="sadTruth"
         triggerItem={<RedButton>{data.sadTruth.buttonText}</RedButton>}
@@ -45,9 +46,9 @@ export default () => {
         backgroundSm={sadTruthBgSm}
         backgroundLg={sadTruthBgLg}
       />
-      <a name="takeAction" />
+      <NAVANCHOR name="takeAction" />
       <ActionsBar />
-      <a name="mcNugget" />
+      <NAVANCHOR name="mcNugget" />
       <McNuggetSection
         eventName="mcNugget"
         triggerItem={<RedButton>{data.mcNugget.buttonText}</RedButton>}
@@ -58,14 +59,14 @@ export default () => {
         second={data.mcNugget.second}
         third={data.mcNugget.third}
       />
-      <a name="why" />
+      <NAVANCHOR name="why" />
       <WhySection
         imgSm={companyLogoSm}
         imgLg={companyLogoLg}
         first={data.why.first}
         second={data.why.second}
       />
-      <a name="ronald" />
+      <NAVANCHOR name="ronald" />
       <RonaldSection
         eventName="ronald"
         triggerItem={<RedButton>{data.ronald.buttonText}</RedButton>}
@@ -74,16 +75,16 @@ export default () => {
         second={data.ronald.second}
         third={data.ronald.third}
       />
-      <a name="social" />
+      <NAVANCHOR name="social" />
       <SocialSection first={data.social.first} />
-      <a name="media" />
+      <NAVANCHOR name="media" />
       <MediaSection
         eventName="media"
         triggerItem={<RedButton>{data.media.buttonText}</RedButton>}
         markupToDisplay={MediaMarkup}
         first={data.media.first}
       />
-      <a name="franchisee" />
+      <NAVANCHOR name="franchisee" />
       <FranchiseeSection />
       <FooterSection
         triggerItem={
