@@ -16,6 +16,7 @@ import { AboutTHLMarkup } from '../components/Modal/ModalMarkup';
 import Video from '../components/Video';
 import withPictures from '../components/withPictures/withPictures';
 import StyledVideo from '../styles/styledComponents/blocks/styledVideo';
+import Fade from 'react-reveal/Fade';
 
 import {
   Container,
@@ -50,6 +51,7 @@ class StudentsAgainst extends Component {
     this.setState({ bricks: bricks })
 
   }
+
   render() {
 
     return (
@@ -181,43 +183,46 @@ class StudentsAgainst extends Component {
   renderAction() {
     return (
       <Themed dark >
+
         <StyledSection background={fromThemeProps("altRed")}>
-          <Container height="max-content" padding="2em 1em">
-            <H1>{data.students.action.title}</H1>
-            <ActionIcon src={emailIcon} />
-            <H2>
-              {data.students.action.subtitle}
-              <ActionHR />
-            </H2>
-            <P maxWidth="570px">
-              {data.students.action.body}
-            </P>
-            <ActionFields>
-              <P small marginBottom="0" marginTop="1em"> To </P>
-              <EmailRecipient
-                type="text"
-                value={this.state.emailRecipientValue}
-                onChange={e => this.handleChange(e, 'emailRecipientValue')}
-              />
-              <br />
-              <P small marginBottom="0" marginTop="1em"> Subject </P>
-              <EmailSubject
-                type="text"
-                value={this.state.emailSubjectValue}
-                onChange={e => this.handleChange(e, 'emailSubjectValue')}
-              />
-              <br />
-              <P small marginBottom="0" marginTop="1em"> Message </P>
-              <EmailBody
-                type="text"
-                value={decodeURIComponent(this.state.emailBodyValue)}
-                onChange={e => this.handleChange(e, 'emailBodyValue')}
-              />
-            </ActionFields>
-            <AltButton onClick={() => {
-              this.handleSubmit()
-            }}>{data.students.action.buttonText}</AltButton>
-          </Container>
+          <Fade duration="5000">
+            <Container height="max-content" padding="2em 1em">
+              <H1>{data.students.action.title}</H1>
+              <ActionIcon src={emailIcon} />
+              <H2>
+                {data.students.action.subtitle}
+                <ActionHR />
+              </H2>
+              <P maxWidth="570px">
+                {data.students.action.body}
+              </P>
+              <ActionFields>
+                <P small marginBottom="0" marginTop="1em"> To </P>
+                <EmailRecipient
+                  type="text"
+                  value={this.state.emailRecipientValue}
+                  onChange={e => this.handleChange(e, 'emailRecipientValue')}
+                />
+                <br />
+                <P small marginBottom="0" marginTop="1em"> Subject </P>
+                <EmailSubject
+                  type="text"
+                  value={this.state.emailSubjectValue}
+                  onChange={e => this.handleChange(e, 'emailSubjectValue')}
+                />
+                <br />
+                <P small marginBottom="0" marginTop="1em"> Message </P>
+                <EmailBody
+                  type="text"
+                  value={decodeURIComponent(this.state.emailBodyValue)}
+                  onChange={e => this.handleChange(e, 'emailBodyValue')}
+                />
+              </ActionFields>
+              <AltButton onClick={() => {
+                this.handleSubmit()
+              }}>{data.students.action.buttonText}</AltButton>
+            </Container>
+          </Fade>
         </ StyledSection>
       </Themed>
     )
