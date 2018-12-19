@@ -11,8 +11,12 @@ StyledMasonry.Container = styled.div`
   width: 100%;
 
   ${media.xs`
-    max-height: 1300px;
+    max-height: 1100px;
   `}
+
+  @media only screen and (min-width: 890px)  {
+    max-height: 1300px;
+  } 
 `;
 
 StyledMasonry.PortraitBrick = styled.figure`
