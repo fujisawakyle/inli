@@ -635,7 +635,7 @@ Nuka Carousel
 }
 
 .slider-list {
-  height: 40rem !important;
+  height: 51rem !important;
 }
 
 .container--how .slider-list {
@@ -691,7 +691,7 @@ Nuka Carousel
 
 @media screen and (min-width: 790px) {
   .slider-list {
-    height: 38rem !important;
+    height: 44rem !important;
   }
   .container--how .slider-list {
     min-height: 550px !important;
@@ -909,6 +909,23 @@ form small.error {
 
 .at-row.FirstName.LastName > label.at-text {
   min-width: auto;
+}
+
+.at-text.MobilePhone small {
+  color: rgba(255,255,255,0.6);
+}
+
+.at-row.at-row-solo.SmsLegalDisclaimer p {
+  color: rgba(255,255,255,0.6);
+  padding-top: .5em;
+  margin-bottom: .5em;
+}
+
+.at-markup.FooterHtml.clearfix p {
+  color: rgba(255,255,255,0.6);
+  font-size: 11px;
+  max-width: 330px;
+  margin: 0 auto;
 }
 
 /*

@@ -4,7 +4,7 @@ import media from '../../layouts/media';
 export const Container = styled.div`
   background: ${props => props.background || "#ef4446"};
   text-align: center;
-  height: ${props => props.height || "580px"};
+  height: ${props => props.height || "735px"};
   padding: ${props => props.padding};
   text-align: center;
   display: flex;
