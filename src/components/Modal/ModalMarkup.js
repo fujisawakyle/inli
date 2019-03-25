@@ -440,7 +440,7 @@ export const AboutTHLMarkup = (
   <FlexCenter>
     <Container className="container--aboutTHL">
       <Logo src={thlLogo} />
-      <ShortHR />
+      <ShortHR style={{ marginTop: '.5em' }} />
       <Intro>
         The Humane League’s mission is to reduce the suffering of as many
         animals as possible, as effectively as possible.

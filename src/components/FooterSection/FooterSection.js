@@ -11,7 +11,7 @@ export default class FooterSection extends Component {
     return (
       <Container>
         <a
-          style={{ marginBottom: '1em' }}
+          style={{ marginTop: '.5em', marginBottom: '1em' }}
           href="https://thehumaneleague.org"
           target="_blank"
         >
