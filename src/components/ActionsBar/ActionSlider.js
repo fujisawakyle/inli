@@ -81,12 +81,12 @@ export default class ActionSlider extends Component {
         style={{ position: 'relative', margin: '0 auto', maxWidth: '600px' }}
       >
         <Carousel dragging={false} decorators={decorators}>
-          <Action
+          {/* <Action
             onClick={e => e.stopPropagation()}
             actionIcon={petitionIcon}
             handleActionTaken={this.handleActionTaken}
             actionNumber="1"
-          />
+          /> */}
           <Action
             actionIcon={twitterIcon}
             handleActionTaken={this.handleActionTaken}
